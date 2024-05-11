@@ -1,5 +1,5 @@
 num,name,difficulty,length,points,series,part,release_date,members_only
-1,Cook\'s Assistant,Novice,Very Short,1,,,4 January 2001,false
+1,Cook's Assistant,Novice,Very Short,1,,,4 January 2001,false
 2,Demon Slayer,Novice,Short,3,Demon Slayer,1,4 January 2001,false
 3,The Restless Ghost,Novice,Short,1,,,4 January 2001,false
 4,Romeo & Juliet,Novice,Short,5,,,4 January 2001,false
@@ -9,13 +9,13 @@ num,name,difficulty,length,points,series,part,release_date,members_only
 8,Vampyre Slayer,Intermediate,Very Short,3,,,28 January 2001,false
 9,Imp Catcher,Novice,Short,1,,,16 February 2001,false
 10,Prince Ali Rescue,Novice,Short,3,Kharidian,1,28 February 2001,false
-11,Doric\'s Quest,Novice,Very Short,1,,,6 April 2001,false
-12,Black Knights\' Fortress,Intermediate,Very Short,3,,,6 April 2001,false
-13,Witch\'s Potion,Novice,Very Short,1,,,6 April 2001,false
-14,The Knight\'s Sword,Intermediate,Short,1,,,6 April 2001,false
+11,Doric's Quest,Novice,Very Short,1,,,6 April 2001,false
+12,Black Knights' Fortress,Intermediate,Very Short,3,,,6 April 2001,false
+13,Witch's Potion,Novice,Very Short,1,,,6 April 2001,false
+14,The Knight's Sword,Intermediate,Short,1,,,6 April 2001,false
 15,Goblin Diplomacy,Novice,Very Short,5,,,8 May 2001,false
-16,Pirate\'s Treasure,Novice,Very Short,2,,,11 June 2001,false
-17,Dragon Slayer I,Experienced,Medium,2,Dragonkin,1, 23 September 2001,false
+16,Pirate's Treasure,Novice,Very Short,2,,,11 June 2001,false
+17,Dragon Slayer I,Experienced,Medium,2,Dragonkin,1,23 September 2001,false
 51,Rune Mysteries,Novice,Short,1,Order of Wizards,1,29 March 2004,false
 129,Misthalin Mystery,Novice,Short,1,,,26 January 2017,false
 135,The Corsair Curse,Intermediate,Short,2,,,7 December 2017,false
@@ -23,14 +23,14 @@ num,name,difficulty,length,points,series,part,release_date,members_only
 148,Below Ice Mountain,Novice,Short,1,,,14 April 2021,false
 18,Druidic Ritual,Novice,Very Short,4,,,27 February 2002,true
 19,Lost City,Intermediate,Short,3,,,27 February 2002,true
-20,Witch\'s House,Intermediate,Very Short,4,,,27 February 2002,true
-21,Merlin\'s Crystal,Intermediate,Short,6,Camelot,1,27 February 2002,true
-22,Heroes\' Quest,Experienced,Medium,1,,,27 February 2002,true
+20,Witch's House,Intermediate,Very Short,4,,,27 February 2002,true
+21,Merlin's Crystal,Intermediate,Short,6,Camelot,1,27 February 2002,true
+22,Heroes' Quest,Experienced,Medium,1,,,27 February 2002,true
 23,Scorpion Catcher,Intermediate,Short,1,,,25 March 2002,true
 24,Family Crest,Experienced,Medium,1,,,9 April 2002,true
-25,Tribal Totem,Intermediate,Vey Short,1,,,30 April 2002,true
+25,Tribal Totem,Intermediate,Very Short,1,,,30 April 2002,true
 26,Fishing Contest,Novice,Very Short,1,,,28 May 2002,true
-27,Monk\'s Friend,Novice,Very Short,1,,,28 May 2002,true
+27,Monk's Friend,Novice,Very Short,1,,,28 May 2002,true
 28,Temple of Ikov,Intermediate,Medium,1,Mahjarrat,5,17 June 2002,true
 29,Clock Tower,Novice,Very Short,1,,,17 June 2002,true
 30,Holy Grail,Intermediate,Short,2,Camelot,2,23 July 2002,true
@@ -39,155 +39,155 @@ num,name,difficulty,length,points,series,part,release_date,members_only
 33,Hazeel Cult,Novice,Very Short,1,Mahjarrat,2,15 August 2002,true
 34,Sheep Herder,Novice,Short,4,,,15 August 2002,true
 35,Plague City,Novice,Very Short,1,Elf,1,27 August 2002,true
-36,
-37,
-38,
-39,
-40,
-41,
-42,
-43,
-44,
-45,
-46,
-47,
-48,
-49,
-50,
-52,
-53,
-54,
-55,
-56,
-57,
-58,
-59,
-60,
-61,
-62,
-63,
-64,
-65,
-66,
-67,
-68,
-69,
-70,
-71,
-72,
-73,
-74,
-75,
-76,
-77,
-78,
-79,
-80,
-81,
-82,
-83,
-84,
-85,
-86,
-87,
-88,
-89,
-90,
-91,
-92,
-93,
-94,
-95,
-96,
-97,
-98,
-99,
-100,
-100.1,
-100.10,
-100.2,
-100.3,
-100.4,
-100.5,
-100.6,
-100.7,
-100.8,
-100.9,
-101,
-102,
-103,
-104,
-105,
-106,
-107,
-108,
-109,
-110,
-111,
-112,
-113,
-114,
-115,
-116,
-117,
-118,
-119,
-120,
-121,
-122,
-123,
-124,
-125,
-126,
-127,
-128,
-130,
-131,
-132,
-133,
-134,
-136,
-137,
-138,
-139,
-140,
-141,
-143,
-144,
-145,
-146,
-147,
-149,
-150,
-151,
-152,
-153,
-154,
-155,
-156,
-157,
-158,
-159,
-160,
-161,
-162,
-163,
-164,
-MQ1,
-MQ2,
-MQ3,
-MQ4,
-MQ5,
-MQ6,
-MQ7,
-MQ8,
-MQ9,
-MQ10,
-MQ11,
-MQ12,
-MQ13,
-MQ14,
-MQ15,
-MQ16,
-MQ17,
-MQ18,
+36,Sea Slug,Intermediate,Short,1,Temple Knight,3,9 September 2002,true
+37,Waterfall Quest,Intermediate,Short,1,,,24 September 2002,true
+38,Biohazard,Novice,Short,3,Elf,2,23 October 2002,true
+39,Jungle Potion,Novice,Short,1,,,23 October 2002,true
+40,The Grand Tree,Intermediate,Medium,5,Gnome,1,12 December 2002,true
+41,Shilo Village,Intermediate,Medium,2,,,27 January 2003,true
+42,Underground Pass,Experienced,Long,5,Elf,3,3 March 2003,true
+43,Observatory Quest,Intermediate,Short,2,,,17 March 2003,true
+44,The Tourist Trap,Intermediate,Medium,2,,,14 April 2003,true
+45,Watchtower,Intermediate,Medium,4,,,7 May 2003,true
+46,Dwarf Cannon,Novice,Short,1,,,27 May 2003,true
+47,Murder Mystery,Novice,Short,3,,,9 June 2003,true
+48,The Dig Site,Intermediate,Medium,2,Mahjarrat,1,9 July 2003,true
+49,Gertrude's Cat,Novice,Very Short,1,,,28 July 2003,true
+50,Legends' Quest,Master,Long,4,,,20 August 2003,true
+52,Big Chompy Bird Hunting,Intermediate,Short,2,,,18 May 2004,true
+53,Elemental Workshop I,Novice,Very Short,1,Elemental Workshop,1,2 June 2004,true
+54,Priest in Peril,Novice,Short,1,Myreque,,29 June 2004,true
+55,Nature Spirit,Intermediate,Short,2,,,13 July 2004,true
+56,Death Plateau,Novice,Short,1,Troll,1,9 August 2004,true
+57,Troll Stronghold,Intermediate,Short,1,Troll,2,24 August 2004,true
+58,Tai Bwo Wannai Trio,Intermediate,Medium,2,,,14 September 2004,true
+59,Regicide,Experienced,Long,3,Elf,4,20 September 2004,true
+60,Eadgar's Ruse,Intermediate,Medium,1,Troll,3,5 October 2004,true
+61,Shades of Mort'ton,Intermediate,Short,3,,,18 October 2004,true
+62,The Fremennik Trials,Intermediate,Medium,3,Fremennik,1,2 November 2004,true
+63,Horror from the Deep,Intermediate,Short,2,,,17 November 2004,true
+64,Throne of Miscellania,Experienced,Medium,1,Miscellania,1,29 November 2004,true
+65,Monkey Madness I,Master,Long,3,Gnome,4,6 December 2004,true
+66,Haunted Mine,Experienced,Short,2,,,21 December 2004,true
+67,Troll Romance,Intermediate,Short,2,,,5 January 2005,true
+68,In Search of the Myreque,Intermediate,Short,2,Myreque,1,10 January 2005,true
+69,Creature of Fenkenstrain,Intermediate,Medium,2,,,31 January 2005,true
+70,Roving Elves,Experienced,Short,1,Elf,5,7 February 2005,true
+71,Ghosts Ahoy,Intermediate,Medium,2,,,15 February 2005,true
+72,One Small Favour,Experienced,Long,2,,,28 February 2005,true
+73,Mountain Daughter,Intermediate,Medium,2,,,7 March 2005,true
+74,Between a Rock...,Experienced,Medium,2,,,21 March 2005,true
+75,The Feud,Intermediate,Medium,1,,,4 April 2005,true
+76,The Golem,Intermediate,Short,1,,,11 April 2005,true
+77,Desert Treasure I,Master,Long,3,Mahjarrat,7,18 April 2005,true
+78,Icthlarin's Little Helper,Intermediate,Medium,2,Kharidian,2,26 April 2005,true
+79,Tears of Guthix,Intermediate,Very Short,1,,,4 May 2005,true
+80,Zogre Flesh Eaters,Intermediate,Short,1,,,17 May 2005,true
+81,The Lost Tribe,Intermediate,Short,1,Dorgeshuun,1,31 May 2005,true
+82,The Giant Dwarf,Intermediate,Medium,2,Red Axe,1,31 May 2005,true
+83,Recruitment Drive,Novice,Short,1,Temple Knight,1,27 June 2005,true
+84,Mourning's End Part I,Master,Medium,2,Elf,6,19 July 2005,true
+85,Forgettable Tale...,Intermediate,Long,2,Red Axe,2,26 July 2005,true
+86,Garden of Tranquillity,Intermediate,Long,2,,,30 August 2005,true
+87,A Tail of Two Cats,Intermediate,Medium,2,Dragonkin,2,26 September 2005,true
+88,Wanted!,Intermediate,Medium,1,Temple Knight,2,17 October 2005,true
+89,Mourning's End Part II,Master,Long,2,Elf,7,17 October 2005,true
+90,Rum Deal,Experienced,Medium,2,Pirate,1,31 October 2005,true
+91,Shadow of the Storm,Intermediate,Medium,1,Demon Slayer,2,14 November 2005,true
+92,Making History,Intermediate,Short,3,,,22 November 2005,true
+93,Ratcatchers,Intermediate,Medium,2,,,28 November 2005,true
+94,Spirits of the Elid,Intermediate,Short,2,,,5 December 2005,true
+95,Devious Minds,Experienced,Short,1,Mahjarrat,10,19 December 2005,true
+96,The Hand in the Sand,Intermediate,Short,1,,,10 January 2006,true
+97,Enakhra's Lament,Experienced,Medium,2,Mahjarrat,4,23 January 2006,true
+98,Cabin Fever,Experienced,Short,2,Pirate,2,7 February 2006,true
+99,Fairytale I - Growing Pains,Intermediate,Medium,2,Fairytale,1,27 February 2006,true
+100,Recipe for Disaster,Special,Very Long,10,,,15 March 2006,true
+100.1,Recipe for Disaster/Another Cook's Quest,Special,Short,1,,,15 March 2006,true
+100.10,Recipe for Disaster/Defeating the Culinaromancer,Special,Short,1,,,15 March 2006,true
+100.2,Recipe for Disaster/Freeing the Mountain Dwarf,Special,Short,1,,,15 March 2006,true
+100.3,Recipe for Disaster/Freeing the Goblin generals,Special,Short,1,,,15 March 2006,true
+100.4,Recipe for Disaster/Freeing Pirate Pete,Special,Medium,1,,,15 March 2006,true
+100.5,Recipe for Disaster/Freeing the Lumbridge Guide,Special,Short,1,,,15 March 2006,true
+100.6,Recipe for Disaster/Freeing Evil Dave,Special,Medium,1,,,15 March 2006,true
+100.7,Recipe for Disaster/Freeing King Awowogei,Special,Long,1,,,15 March 2006,true
+100.8,Recipe for Disaster/Freeing Sir Amik Varze,Special,Medium,1,,,15 March 2006,true
+100.9,Recipe for Disaster/Freeing Skrach Uglogwee,Special,Medium,1,,,15 March 2006,true
+101,In Aid of the Myreque,Intermediate,Medium,2,Myreque,2,22 March 2006,true
+102,A Soul's Bane,Intermediate,Short,1,,,3 April 2006,true
+103,Rag and Bone Man I,Novice,Short,1,Rag and Bone Man,1,10 April 2006,true
+104,Swan Song,Master,Medium,2,,,2 May 2006,true
+105,Royal Trouble,Experienced,Medium,1,Miscellania,2,22 May 2006,true
+106,Death to the Dorgeshuun,Intermediate,Medium,1,Dorgeshuun,2,21 June 2006,true
+107,Fairytale II - Cure a Queen,Experienced,Medium,2,Fairytale,2,11 July 2006,true
+108,Lunar Diplomacy,Experienced,Long,2,Fremennik,3,24 July 2006,true
+109,The Eyes of Glouphrie,Intermediate,Medium,2,Gnome,2,15 August 2006,true
+110,Darkness of Hallowvale,Experienced,Long,2,Myreque,3,4 September 2006,true
+111,The Slug Menace,Intermediate,Medium,1,Temple Knight,4,20 September 2006,true
+112,Elemental Workshop II,Intermediate,Short,1,Elemental Workshop,2,2 October 2006,true
+113,My Arm's Big Adventure,Experienced,Medium,1,Troll,4,23 October 2006,true
+114,Enlightened Journey,Intermediate,Short,1,,,6 November 2006,true
+115,Eagles' Peak,Novice,Short,2,,,28 November 2006,true
+116,Animal Magnetism,Intermediate,Medium,1,,,12 December 2006,true
+117,Contact!,Experienced,Short,1,Kharidian,3,10 January 2007,true
+118,Cold War,Intermediate,Medium,1,Penguin,1,29 January 2007,true
+119,The Fremennik Isles,Experienced,Medium,1,Fremennik,2,6 February 2007,true
+120,Tower of Life,Novice,Medium,2,,,19 February 2007,true
+121,The Great Brain Robbery,Experienced,Medium,2,Pirate,3,6 March 2007,true
+122,What Lies Below,Intermediate,Short,1,,,27 March 2007,true
+123,Olaf's Quest,Intermediate,Short,1,,,10 April 2007,true
+124,Another Slice of H.A.M.,Intermediate,Short,1,Dorgeshuun,3,24 April 2007,true
+125,Dream Mentor,Master,Medium,2,,,15 May 2007,true
+126,Grim Tales,Master,Medium,1,,,4 June 2007,true
+127,King's Ransom,Experienced,Medium,1,Camelot,3,24 July 2007,true
+128,Monkey Madness II,Grandmaster,Very Long,4,Gnome,5,6 May 2016,true
+130,Client of Kourend,Novice,Short,1,Great Kourend,2,20 April 2017,true
+131,Rag and Bone Man II,Experienced,Medium,1,Rag and Bone Man,2,10 April 2006,true
+132,Bone Voyage,Intermediate,Short,1,,,7 September 2017,true
+133,The Queen of Thieves,Intermediate,Very Short,1,Great Kourend,3,9 November 2017,true
+134,The Depths of Despair,Intermediate,Short,1,Great Kourend,4,9 November 2017,true
+136,Dragon Slayer II,Grandmaster,Very Long,5,Dragonkin,3,4 January 2018,true
+137,Tale of the Righteous,Intermediate,Short,1,Great Kourend,7,19 April 2018,true
+138,A Taste of Hope,Experienced,Medium,1,Myreque,4,24 May 2018,true
+139,Making Friends with My Arm,Master,Medium,2,Troll,5,6 September 2018,true
+140,The Forsaken Tower,Intermediate,Short,1,Great Kourend,6,10 January 2019,true
+141,The Ascent of Arceuus,Intermediate,Short,1,Great Kourend,5,10 January 2019,true
+143,Song of the Elves,Grandmaster,Very Long,4,Elf,8,25 July 2019,true
+144,The Fremennik Exiles,Master,Medium,2,Fremennik,4,26 September 2019,true
+145,Sins of the Father,Master,Long,2,Myreque,5,4 June 2020,true
+146,A Porcine of Interest,Novice,Very Short,1,,,10 September 2020,true
+147,Getting Ahead,Intermediate,Short,1,Twisted Tales,,25 November 2020,true
+149,A Night at the Theatre,Master,Medium,2,,,3 June 2021,true
+150,A Kingdom Divided,Experienced,Long,2,Great Kourend,8,16 June 2021,true
+151,Land of the Goblins,Experienced,Medium,2,Dorgeshuun,4,9 February 2022,true
+152,Temple of the Eye,Intermediate,Short,1,Order of Wizards,3,23 March 2022,true
+153,Beneath Cursed Sands,Master,Medium,2,Kharidian,4,27 April 2022,true
+154,Sleeping Giants,Intermediate,Short,1,,,8 June 2022,true
+155,The Garden of Death,Intermediate,Short,1,Twisted Tales,,30 November 2022,true
+156,Secrets of the North,Master,Medium,2,Mahjarrat,12,11 January 2023,true
+157,Desert Treasure II - The Fallen Empire,Grandmaster,Very Long,5,Mahjarrat,13,26 July 2023,true
+158,The Path of Glouphrie,Experienced,Medium,2,Gnome,3,13 September 2023,true
+159,Children of the Sun,Novice,Short,1,Twilight Emissaries,1,10 January 2024,true
+160,Defender of Varrock,Experienced,Medium,2,Mahjarrat,6,21 February 2024,true
+161,Twilight's Promise,Intermediate,Short,1,Twilight Emissaries,2,20 March 2024,true
+162,At First Light,Novice,Short,1,,,20 March 2024,true
+163,Perilous Moons,Master,Medium,2,,,20 March 2024,true
+164,The Ribbiting Tale of a Lily Pad Labour Dispute,Novice,Very Short,1,,,20 March 2024,true
+MQ1,Alfred Grimhand's Barcrawl,Novice,Medium,,,,25 March 2002,true
+MQ2,Barbarian Training,Experienced,Medium,,,,3 July 2007,true
+MQ3,Bear Your Soul,Intermediate,Short,,Great Kourend,,19 May 2016,true
+MQ4,Curse of the Empty Lord,Experienced,Medium,,Mahjarrat,8,26 July 2005,true
+MQ5,Daddy's Home,Novice,Short,,,,26 August 2020,true
+MQ6,The Enchanted Key,Intermediate,Medium,,,,22 November 2005,true
+MQ7,Enter the Abyss,Intermediate,Very Short,,Order of Wizards,2,13 June 2005,true
+MQ8,Family Pest,Intermediate,Short,,,,1 September 2016,true
+MQ9,The Frozen Door,Master,Short,,,,16 December 2021,true
+MQ10,The General's Shadow,Experienced,Medium,,Mahjarrat,9,12 February 2007,true
+MQ11,His Faithful Servants,Experienced,Short,,Mahjarrat,11,14 June 2023,true
+MQ12,Hopespear's Will,Master,Short,,,,9 February 2022,true
+MQ13,In Search of Knowledge,Experienced,Medium,,,,4 July 2019,true
+MQ14,Into the Tombs,Master,Medium,,Kharidian,5,24 August 2022,true
+MQ15,Lair of Tarn Razorlor,Experienced,Medium,,,,22 January 2007,true
+MQ16,Mage Arena I,Experienced,Short,,,,22 September 2003,true
+MQ17,Mage Arena II,Master,Medium,,,,23 November 2017,true
+MQ18,Skippy and the Mogres,Novice,Very Short,,,,24 October 2005,true

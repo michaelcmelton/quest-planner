@@ -1,6 +1,12 @@
-version: '3.8'
+volumes:
+  pgdata:
+
 services:
   postgres:
+    networks:
+      local:
+        aliases:
+          - postgres
     image: postgres:latest
     environment:
       POSTGRES_DB: postgres
@@ -15,12 +21,11 @@ services:
       interval: 10s
       timeout: 3s
       retries: 5
+
   migrate:
     image: migrate/migrate
-    volumes:
-      - .:/app/migrations
-    command: ["-path", "/app/migrations", "-database", "postgres://postgres:postgres@postgres:5432/qp?sslmode=disable", "up"]
-    depends_on:
-      - postgres
-volumes:
-  pgdata:
+     networks:
+        - local
+  
+  networks:
+    local:

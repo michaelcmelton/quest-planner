@@ -4,12 +4,11 @@
 curl https://oldschool.runescape.wiki/api.php\?action\=ask\&format\=json\&query\=%5B%5BQuest%20JSON%3A%3A%2B%5D%5D%7C%3FQuest%20JSON%7Climit%3D10000\&formatversion\=2 > ./quest_json.json
 
 # prevent the printing of the directory with command substitution
-sed -iE 's/\* /*/g' "./quest_json.json"
-
+sed -iE 's/\* /*/g' ./quest_json.json
 echo $(cat ./quest_json.json | jq '.query.results') > ./quest_json.json
 
 # Replace HTML Enitities with proper characters
-FILE_CONTENTS=$(cat quest_json.json | perl -CS -MHTML::Entities -ne 'print decode_entities($_)') 
+FILE_CONTENTS=$(cat ./quest_json.json | perl -CS -MHTML::Entities -ne 'print decode_entities($_)') 
 
 # Replace ''' with '
 FILE_CONTENTS=$(echo $FILE_CONTENTS | sed -E 's/\'\'\'/'/g')
@@ -43,3 +42,5 @@ FILE_CONTENTS=$(echo $FILE_CONTENTS | sed -E 's/SMW\\Serializers\\QueryResultSer
 echo "$FILE_CONTENTS" > ./updated.json
 
 echo $(cat updated.json | jq 'with_entries(.value |= .printouts."Quest JSON")') > ./updated.json
+
+rm ./quest_json.jsonE

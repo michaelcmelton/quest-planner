@@ -53,91 +53,36 @@ async function fetchQuests() {
 }
 
 function parseQuestData(rawData) {
-    console.log('Raw data structure:', Object.keys(rawData));
-    if (rawData.query) {
-        console.log('Query structure:', Object.keys(rawData.query));
+    const quests = [];
+    
+    for (const [id, data] of Object.entries(rawData)) {
+        try {
+            // Extract quest points from the details field
+            const qpMatch = data.details.match(/\|qp\s*=\s*(\d+)/);
+            const questPoints = qpMatch ? parseInt(qpMatch[1]) : 1; // Default to 1 if not found
+
+            // Extract rewards from the details field
+            const rewardsMatch = data.details.match(/\|rewards\s*=\s*([^}]+)/);
+            const rewards = rewardsMatch ? rewardsMatch[1].trim() : '';
+
+            const quest = {
+                id,
+                name: data.name,
+                description: data.description,
+                difficulty: data.difficulty,
+                length: data.length,
+                questPoints,
+                rewards,
+                start: data.start,
+                ironman: data.ironman || false
+            };
+            
+            quests.push(quest);
+        } catch (error) {
+            console.error(`Error processing quest ${id}:`, error);
+        }
     }
     
-    const quests = {};
-    const questResults = rawData.query?.results;
-
-    if (!questResults) {
-        console.error('No quest results found in data');
-        console.error('Raw data:', JSON.stringify(rawData, null, 2));
-        return quests;
-    }
-
-    // Each key in questResults is a quest name
-    for (const [questName, questData] of Object.entries(questResults)) {
-        console.log('Processing quest:', questName);
-        
-        // Create a quest ID from the name
-        const questId = generateQuestId(questName);
-        
-        // Get the actual quest data from printouts["Quest JSON"]
-        if (!questData.printouts || !questData.printouts["Quest JSON"]) {
-            console.warn(`No Quest JSON data found for ${questName}`);
-            continue;
-        }
-
-        try {
-            const decodedJson = decodeHtmlEntities(questData.printouts["Quest JSON"][0]);
-            const questJson = JSON.parse(decodedJson);
-            
-            // Parse requirements
-            const requirements = {};
-
-            // Parse quest requirements
-            if (questJson.requirements?.quests?.length > 0) {
-                requirements.quests = questJson.requirements.quests.map(quest => ({
-                    id: generateQuestId(quest.name),
-                    name: quest.name
-                }));
-            }
-
-            // Parse skill requirements
-            if (questJson.requirements?.skills?.length > 0) {
-                requirements.skills = questJson.requirements.skills.map(skill => ({
-                    name: skill.skill,
-                    level: skill.level
-                }));
-            }
-
-            // Parse item requirements
-            if (questJson.requirements?.items?.length > 0) {
-                requirements.items = questJson.requirements.items.map(item => ({
-                    name: item.name,
-                    quantity: item.quantity || 1
-                }));
-            }
-
-            // Parse kill requirements
-            if (questJson.requirements?.kills?.length > 0) {
-                requirements.kills = questJson.requirements.kills.map(kill => ({
-                    name: kill.name,
-                    quantity: kill.quantity || 1
-                }));
-            }
-
-            // Create the quest object
-            quests[questId] = {
-                id: questId,
-                name: questName, // Use the original quest name from the key
-                description: questJson.desc || '', // Use desc field from Quest JSON
-                difficulty: questJson.difficulty || 'Novice',
-                length: questJson.length || 'Medium',
-                questPoints: questJson.questPoints || 0,
-                requirements: Object.keys(requirements).length > 0 ? requirements : undefined,
-                start: questJson.start || undefined,
-                ironman: questJson.ironman || false
-            };
-        } catch (error) {
-            console.error(`Error processing quest ${questName}:`, error);
-            console.error('Raw JSON:', questData.printouts["Quest JSON"][0]);
-            continue;
-        }
-    }
-
     return quests;
 }
 

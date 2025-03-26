@@ -16,11 +16,10 @@ export function parseMediaText(text: string): string {
     let parsed = text;
 
     // Clean up skill requirements format
-    parsed = parsed.replace(/<span[^>]*?data-skill="([^"]+)"[^>]*?>\[\[File:[^]]+\]\]\s*(\d+)\s*\[\[[^]|]+\]\]<\/span>/g, '$1 $2');
-    parsed = parsed.replace(/link=([^|]+)\|alt=\1\s+(\d+)\s+\1(?:\s*(?:\([^)]+\))*)?/g, (match, skill, level) => {
+    parsed = parsed.replace(/<span[^>]*?data-skill="([^"]+)"[^>]*?data-level="(\d+)"[^>]*?>.*?<\/span>/g, (match, skill, level) => {
         const url = `${OSRS_WIKI_BASE_URL}/w/${encodeURIComponent(skill.replace(/ /g, '_'))}`;
-        const extraText = match.slice(match.indexOf(level) + level.length).replace(skill, '').trim();
-        return `<a href="${url}" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline dark:text-blue-400">${skill}</a> ${level}${extraText ? ' ' + extraText : ''}`;
+        const iconPath = `/icons/skills/${skill.toLowerCase()}-icon.png`;
+        return `<span class="inline-flex items-center gap-1"><img src="${iconPath}" alt="${skill}" class="w-4 h-4" /><a href="${url}" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline dark:text-blue-400">${skill}</a> ${level}</span>`;
     });
 
     // Handle wiki links with display text: [[page|display]]

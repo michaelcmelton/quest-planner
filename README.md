@@ -4,12 +4,20 @@ A modern web application for planning quest routes in Old School RuneScape (OSRS
 
 ## Features
 
+Current features:
+- Basic quest route planning interface
+- SvelteKit-based routing system
+- Responsive design with Tailwind CSS
+- Dark mode support
+- Test-driven development setup with Vitest
+- TypeScript integration
+
+Planned features:
 - Interactive quest route planning
 - Quest requirements visualization
 - Skill requirement tracking
-- Dark mode support
-- Mobile-friendly interface
 - MDX content rendering for quest details
+- Quest data integration from OSRS Wiki
 
 ## Getting Started
 
@@ -50,6 +58,22 @@ npm run dev
 - `npm run lint` - Lint the codebase
 - `npm run format` - Format code with Prettier
 
+### Project Structure
+
+```
+quest-planner/
+├── src/
+│   ├── lib/         # Shared components and utilities
+│   ├── routes/      # SvelteKit routes (pages and layouts)
+│   ├── app.css     # Global styles
+│   ├── app.html    # HTML template
+│   └── app.d.ts    # TypeScript declarations
+├── static/         # Static assets
+├── data/          # Quest data JSON files
+├── tests/         # Test files
+└── ...            # Configuration files
+```
+
 ### Testing
 
 We use Vitest for testing. Run the test suite with:
@@ -57,6 +81,8 @@ We use Vitest for testing. Run the test suite with:
 ```bash
 npm run test
 ```
+
+Tests are co-located with their respective components and features.
 
 ## Contributing
 

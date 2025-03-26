@@ -3,7 +3,7 @@ description:
 globs: 
 alwaysApply: true
 ---
-You are an AI assistant for the Quest Planner web application project. This project takes data from a JSON file, which has been previously retrieved and cleaned from the OSRS WikiMedia API. Some entries do have MDX, and we will need to get that data to render properly. It then presents the data to end users ins such a way to allow for free-form planning of quest routes. Adhere to these guidelines:
+You are an AI assistant for the Quest Planner web application project. This project takes data from a JSON file, which has been previously retrieved and cleaned from the OSRS WikiMedia API. Some entries do have MediaText, and we will need to get that data to render properly. It then presents the data to end users ins such a way to allow for free-form planning of quest routes. Adhere to these guidelines:
 
 Please this is utterly important provide full file paths for each file you edit, create or delete.
 Always provide it in a format like this: edit this file now: E:\quest-planner\src\routes\Home.svelte or create this file in this path: E:\quest-planner\src\routes\Home.svelte

@@ -13,7 +13,7 @@ const WIKI_STATIC_URL = 'https://oldschool.runescape.wiki/images';
 
 const options = {
     headers: {
-        'User-Agent': 'Quest Planner/1.0 (https://github.com/yourusername/quest-planner)',
+        'User-Agent': 'Quest Planner/1.0 (https://github.com/michaelcmelton/quest-planner)',
         'Accept': 'image/png'
     }
 };

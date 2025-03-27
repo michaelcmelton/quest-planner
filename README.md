@@ -5,7 +5,6 @@ A modern web application for planning quest routes in Old School RuneScape (OSRS
 ## Features
 
 Current features:
-- Basic quest route planning interface
 - SvelteKit-based routing system
 - Responsive design with Tailwind CSS
 - Dark mode support
@@ -13,11 +12,12 @@ Current features:
 - TypeScript integration
 
 Planned features:
-- Interactive quest route planning
+- Interactive quest route planning interface
+- OSRS Wiki data integration
 - Quest requirements visualization
 - Skill requirement tracking
 - MDX content rendering for quest details
-- Quest data integration from OSRS Wiki
+- Quest data from OSRS WikiMedia API
 
 ## Getting Started
 
@@ -63,15 +63,22 @@ npm run dev
 ```
 quest-planner/
 ├── src/
-│   ├── lib/         # Shared components and utilities
-│   ├── routes/      # SvelteKit routes (pages and layouts)
-│   ├── app.css     # Global styles
-│   ├── app.html    # HTML template
-│   └── app.d.ts    # TypeScript declarations
-├── static/         # Static assets
-├── data/          # Quest data JSON files
-├── tests/         # Test files
-└── ...            # Configuration files
+│   ├── lib/               # Shared components and utilities
+│   │   ├── components/    # Reusable UI components
+│   │   ├── stores/       # Svelte stores
+│   │   └── utils/        # Utility functions
+│   ├── routes/           # SvelteKit routes (pages and layouts)
+│   │   ├── about/        # About page
+│   │   ├── planner/      # Quest planner feature
+│   │   ├── +layout.svelte # Root layout
+│   │   └── +page.svelte  # Home page
+│   ├── app.css          # Global styles
+│   ├── app.html         # HTML template
+│   └── app.d.ts         # TypeScript declarations
+├── static/              # Static assets
+├── data/               # Quest data JSON files
+├── tests/              # Test files
+└── ...                 # Configuration files
 ```
 
 ### Testing
@@ -82,7 +89,7 @@ We use Vitest for testing. Run the test suite with:
 npm run test
 ```
 
-Tests are co-located with their respective components and features.
+Tests are co-located with their respective components and features. We maintain a minimum test coverage of 80%.
 
 ## Contributing
 
@@ -100,3 +107,4 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 - Data provided by the OSRS Wiki
 - Built with SvelteKit and Tailwind CSS
+- Special thanks to the OSRS community for their support and feedback

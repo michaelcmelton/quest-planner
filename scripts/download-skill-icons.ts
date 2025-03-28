@@ -1,19 +1,11 @@
 import fs from 'fs';
 import path from 'path';
 import https from 'https';
-
-const SKILLS = [
-    'Attack', 'Defence', 'Strength', 'Hitpoints', 'Ranged', 'Prayer',
-    'Magic', 'Cooking', 'Woodcutting', 'Fletching', 'Fishing', 'Firemaking',
-    'Crafting', 'Smithing', 'Mining', 'Herblore', 'Agility', 'Thieving',
-    'Slayer', 'Farming', 'Runecraft', 'Hunter', 'Construction'
-];
-
-const WIKI_STATIC_URL = 'https://oldschool.runescape.wiki/images';
+import { SKILLS, USER_AGENT, WIKI_STATIC_URL, ICON_DIRECTORY } from './constants';
 
 const options = {
     headers: {
-        'User-Agent': 'Quest Planner/1.0 (https://github.com/michaelcmelton/quest-planner)',
+        'User-Agent': USER_AGENT,
         'Accept': 'image/png'
     }
 };
@@ -34,18 +26,16 @@ async function downloadImage(url, filepath) {
 }
 
 async function main() {
-    const outputDir = path.join(process.cwd(), 'static', 'icons', 'skills');
-    
     // Create the skills directory if it doesn't exist
-    if (!fs.existsSync(outputDir)) {
-        fs.mkdirSync(outputDir, { recursive: true });
+    if (!fs.existsSync(ICON_DIRECTORY)) {
+        fs.mkdirSync(ICON_DIRECTORY, { recursive: true });
     }
 
     console.log('Downloading skill icons...');
 
     for (const skill of SKILLS) {
         const filename = `${skill.toLowerCase()}-icon.png`;
-        const filepath = path.join(outputDir, filename);
+        const filepath = path.join(ICON_DIRECTORY, filename);
         const url = `${WIKI_STATIC_URL}/${skill}_icon.png`;
 
         try {

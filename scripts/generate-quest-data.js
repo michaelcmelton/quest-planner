@@ -15,11 +15,13 @@ async function main() {
       const infobox = getInfobox(unparsedQuestData);
       const questRewards = getQuestRewards(unparsedQuestData);
       const questRequirements = getQuestRequirements(unparsedQuestData);
+      const questDescription = getQuestDescription(unparsedQuestData);
       const questData = {
         name: questName,
-        infobox,
+        ...infobox,
         rewards: questRewards,
         requirements: questRequirements,
+        description: questDescription,
       };
       questData[questName] = questData;
     }

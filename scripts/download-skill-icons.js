@@ -1,19 +1,11 @@
 import fs from 'fs';
 import path from 'path';
 import https from 'https';
-
-const SKILLS = [
-    'Attack', 'Defence', 'Strength', 'Hitpoints', 'Ranged', 'Prayer',
-    'Magic', 'Cooking', 'Woodcutting', 'Fletching', 'Fishing', 'Firemaking',
-    'Crafting', 'Smithing', 'Mining', 'Herblore', 'Agility', 'Thieving',
-    'Slayer', 'Farming', 'Runecraft', 'Hunter', 'Construction'
-];
-
-const WIKI_STATIC_URL = 'https://oldschool.runescape.wiki/images';
+import { SKILLS, WIKI_STATIC_URL, USER_AGENT } from './constants.js';
 
 const options = {
     headers: {
-        'User-Agent': 'Quest Planner/1.0 (https://github.com/michaelcmelton/quest-planner)',
+        'User-Agent': USER_AGENT,
         'Accept': 'image/png'
     }
 };

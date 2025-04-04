@@ -4,24 +4,22 @@
 
 import { CACHE_FILE } from './constants.js';
 import fs from 'fs';
-
+import { getInfobox, getQuestRewards, getQuestDetails } from './parser.js';
 async function main() {
   try {
     const cache = JSON.parse(fs.readFileSync(CACHE_FILE, 'utf8'));
     const questData = {};
 
     for (const questName in cache) {
-      const unparsedQuestData = cache[questName];
+      const unparsedQuestData = JSON.parse(cache[questName]);
       const infobox = getInfobox(unparsedQuestData);
       const questRewards = getQuestRewards(unparsedQuestData);
-      const questRequirements = getQuestRequirements(unparsedQuestData);
-      const questDescription = getQuestDescription(unparsedQuestData);
+      const questDetails = getQuestDetails(unparsedQuestData);
       const questData = {
         name: questName,
         ...infobox,
         rewards: questRewards,
-        requirements: questRequirements,
-        description: questDescription,
+        ...questDetails,
       };
       questData[questName] = questData;
     }

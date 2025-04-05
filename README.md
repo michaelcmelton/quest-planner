@@ -52,6 +52,7 @@ Planned features:
   - Vitest for testing
   - TypeScript for type safety
   - SvelteKit for routing and SSR
+  - NVM for Node.js version management
 
 ## Getting Started
 
@@ -59,6 +60,7 @@ Planned features:
 
 - Node.js (v20.11.1 or higher)
 - npm (v10.2.4 or higher)
+- NVM (Node Version Manager) - [Installation instructions](https://github.com/nvm-sh/nvm#installing-and-updating)
 
 ### Installation
 
@@ -68,17 +70,26 @@ git clone https://github.com/yourusername/quest-planner.git
 cd quest-planner
 ```
 
-2. Install dependencies:
+2. Install and use the correct Node.js version:
+```bash
+# Install the correct Node.js version
+nvm install
+
+# Use the correct Node.js version
+nvm use
+```
+
+3. Install dependencies:
 ```bash
 npm install
 ```
 
-3. Start the development server:
+4. Start the development server:
 ```bash
 npm run dev
 ```
 
-4. Open your browser and navigate to `http://localhost:5173`
+5. Open your browser and navigate to `http://localhost:5173`
 
 ## Development
 

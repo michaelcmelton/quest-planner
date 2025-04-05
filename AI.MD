@@ -1,22 +1,44 @@
 # Quest Planner - Project Documentation
 
 ## Project Overview
-Quest Planner is a web application that helps users plan their quest routes in Old School RuneScape (OSRS). The application will use pre-processed data from the OSRS WikiMedia API and present it in an interactive, user-friendly interface. The project follows modern web development practices and emphasizes maintainability, performance, and user experience.
+Quest Planner is a web application that helps users plan their quest routes in Old School RuneScape (OSRS). The application uses pre-processed data from the OSRS WikiMedia API and presents it in an interactive, user-friendly interface. The project follows modern web development practices and emphasizes maintainability, performance, and user experience.
 
 ## Current State
 - Basic routing system implemented
 - Test infrastructure set up with Vitest and @testing-library/svelte
 - Core layout and navigation in place
 - Development environment configured with TypeScript and Tailwind CSS
-- Dark mode support implemented
-- Responsive design implemented
+- Quest Data sourcing and reusable pipelines from the OSRS Wiki completed.
+
 
 ## Planned Features
-- Interactive quest route planning interface
-- OSRS Wiki data integration
-- MDX content rendering for quest details
-- Quest requirements visualization
-- Skill requirement tracking
+1. Interactive Quest Route Planning Interface
+   - Drag-and-drop quest ordering
+   - Visual quest dependency graph
+   - Real-time requirement tracking
+   - Progress tracking and completion status
+   - Quest grouping and categorization
+
+2. Quick Sorting Features
+   - Sort by quest difficulty (Novice to Grandmaster)
+   - Sort by quest length (Very Short to Very Long)
+   - Sort by skill requirements
+   - Sort by quest series
+   - Sort by region
+   - Custom sorting filters
+
+3. Quest Detail View
+   - Comprehensive quest information display
+   - Required items and skills visualization
+   - Quest rewards breakdown
+   - Quest walkthrough integration
+   - Interactive maps and locations
+   - Quest series context
+
+4. Quest Route Saving
+   - Save multiple routes
+   - Share routes with others
+   - Track progress on saved routes
 
 ## Tech Stack
 - Frontend & Backend: SvelteKit

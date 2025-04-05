@@ -10,14 +10,48 @@ Current features:
 - Dark mode support
 - Test-driven development setup with Vitest
 - TypeScript integration
+- Quest Data sourcing and reusable pipelines from the OSRS Wiki completed
 
 Planned features:
-- Interactive quest route planning interface
-- OSRS Wiki data integration
-- Quest requirements visualization
-- Skill requirement tracking
-- MDX content rendering for quest details
-- Quest data from OSRS WikiMedia API
+1. Interactive Quest Route Planning Interface
+   - Drag-and-drop quest ordering
+   - Visual quest dependency graph
+   - Real-time requirement tracking
+   - Progress tracking and completion status
+   - Quest grouping and categorization
+
+2. Quick Sorting Features
+   - Sort by quest difficulty (Novice to Grandmaster)
+   - Sort by quest length (Very Short to Very Long)
+   - Sort by skill requirements
+   - Sort by quest series
+   - Sort by region
+   - Custom sorting filters
+
+3. Quest Detail View
+   - Comprehensive quest information display
+   - Required items and skills visualization
+   - Quest rewards breakdown
+   - Quest walkthrough integration
+   - Interactive maps and locations
+   - Quest series context
+
+4. Quest Route Saving
+   - Save multiple routes
+   - Share routes with others
+   - Track progress on saved routes
+
+## Tech Stack
+- Frontend & Backend: SvelteKit
+- Styling: Tailwind CSS
+- Testing: Vitest + @testing-library/svelte
+- Language: TypeScript
+- Development Tools:
+  - ESLint for linting
+  - Prettier for code formatting
+  - Vitest for testing
+  - TypeScript for type safety
+  - SvelteKit for routing and SSR
 
 ## Getting Started
 
@@ -64,22 +98,56 @@ npm run dev
 quest-planner/
 ├── src/
 │   ├── lib/               # Shared components and utilities
-│   │   ├── components/    # Reusable UI components
-│   │   ├── stores/       # Svelte stores
-│   │   └── utils/        # Utility functions
-│   ├── routes/           # SvelteKit routes (pages and layouts)
-│   │   ├── about/        # About page
-│   │   ├── planner/      # Quest planner feature
+│   │   └── data/          # Quest data
+│   ├── routes/            # SvelteKit routes
 │   │   ├── +layout.svelte # Root layout
-│   │   └── +page.svelte  # Home page
-│   ├── app.css          # Global styles
-│   ├── app.html         # HTML template
-│   └── app.d.ts         # TypeScript declarations
-├── static/              # Static assets
-├── data/               # Quest data JSON files
-├── tests/              # Test files
-└── ...                 # Configuration files
+│   │   └── +page.svelte   # Home page
+│   ├── app.css            # Global styles
+│   ├── app.html           # Main HTML template
+│   └── app.d.ts           # TypeScript declarations
+├── static/                # Static assets
+└── configuration files    # Various config files
 ```
+
+### Development Guidelines
+
+#### Code Style
+- Use TypeScript for all new code
+- Follow SOLID, DRY, KISS, and YAGNI principles
+- Implement proper error handling
+- Write comprehensive tests
+- Use JSDoc comments for documentation
+- Follow SvelteKit best practices
+- Use proper TypeScript types and interfaces
+
+#### Testing Strategy
+- Write tests before implementing features (TDD)
+- Co-locate test files with their components
+- Use @testing-library/svelte for component testing
+- Test files should follow the pattern: `ComponentName.test.ts`
+- Maintain minimum 80% test coverage
+- Include integration tests for critical user flows
+- Test error handling and edge cases
+
+#### UI/UX Standards
+- Implement responsive design using Tailwind CSS
+- Support dark mode
+- Follow accessibility best practices (WCAG 2.1)
+- Use semantic HTML
+- Ensure mobile-first approach
+- Implement proper loading states
+- Provide clear error messages
+- Use consistent spacing and typography
+
+#### Performance Guidelines
+- Implement lazy loading for routes
+- Optimize bundle size
+- Use proper image optimization
+- Implement proper caching strategies
+- Monitor and optimize rendering performance
+- Use proper code splitting
+- Implement proper error boundaries
+- Optimize API calls and data fetching
 
 ### Testing
 

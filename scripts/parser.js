@@ -1,3 +1,5 @@
+import { normalizeQuestName } from './utils.js';
+
 /**
  * @typedef {Object} Infobox
  * @property {string} name - The name of the quest
@@ -21,8 +23,9 @@
 /**
  * @typedef {Object} QuestRequirements
  * @property {Array<{skill: string, level: number, boostable: boolean}>} requirements - Array of skill requirements
- * @property {Array<string>} quests - Array of quest names to be completed before this quest 
- */
+ * @property {Array<string>} quests - Array of top-level quest ids to be completed before this quest 
+ * @property {Array<string>} other - Array of other requirements (e.g. items, access, etc.)
+*/
 
 /**
  * @typedef {Object} QuestDetails
@@ -115,7 +118,7 @@ export function getQuestRewards(questData) {
     }
 
     // Extract experience rewards using a more precise pattern
-    const expMatches = rewardsContent.matchAll(/\*{{SCP\|(.*)\|(.*)}}.* experience/g);
+    const expMatches = rewardsContent.matchAll(/\*{{SCP\|(\w+)\|(\d+,?\d+)\|?(link=.*)?}} experience/g);
     for (const match of expMatches) {
       const [, skill, amount] = match;
       rewards.experienceRewards.push({
@@ -138,6 +141,11 @@ export function getQuestRewards(questData) {
 
       // Clean up the reward text
       const cleanReward = line.trim().substring(1);
+
+      if (line.startsWith('==') && line.endsWith('==')) {
+        break;
+      }
+
       rewards.otherRewards.push(cleanReward);
     }
   }
@@ -145,83 +153,296 @@ export function getQuestRewards(questData) {
   return rewards;
 }
 
-// /**
-//  * Extracts the quest details from the quest's raw data
-//  * @param {string} questData - The raw quest data from the cache
-//  * @returns {QuestDetails} The parsed quest details
-//  */
+/**
+ * Parses quest requirements from requirement lines
+ * @param {string[]} requirementLines - Array of requirement lines to parse
+ * @returns {QuestRequirements} The parsed quest requirements
+ */
+function parseQuestRequirements(requirementLines) {
+  /** @type {QuestRequirements} */
+  const requirements = {
+    skills: [],
+    quests: [],
+    other: []
+  };
 
-// export function getQuestDetails(questData) {
-//   /** @type {QuestDetails} */
-//   const details = {
-//     start: '',
-//     difficulty: '',
-//     length: '',
-//     description: '',
-//     requirements: {
-//       skills: [],
-//       quests: []
-//     },
-//     items: [],
-//     recommended: [],
-//     kills: [],
-//     ironman: []
-//   };
+  for (const reqLine of requirementLines) {
+    // Check for skill requirements (e.g. *{{SCP|Combat|85}} [[Combat level|Combat]])
+    // optionally, the SCP tag can include a link tag that is a yes field. (e.g. *{{SCP|Combat|85|link=yes}} [[Combat level|Combat]])
+    const skillMatch = reqLine.match(/{{SCP\|(.+)\|(\d+)(?:\|link=?.*)?}}(?:\s+(\[\[.+\]\])?)/);
+    if (skillMatch) {
+      requirements.skills.push({
+        skill: skillMatch[1].trim(),
+        level: parseInt(skillMatch[2]),
+        boostable: reqLine.includes('{{Boostable|yes}}'),
+        required: reqLine.includes('{{Questreqstart|yes}}'),
+        link: skillMatch[3] || `[[${skillMatch[1].trim()} level|${skillMatch[1].trim()}]]`
+      });
+      continue;
+    }
 
-//   // Extract quest details template content
-//   const detailsMatch = questData.match(/{{Quest details\n((.*\n)+)(?=}})}}/);
-//   console.log(`details match: ${detailsMatch}`);
-//   if (detailsMatch) {
-//     const detailsContent = detailsMatch[1];
-//     const lines = detailsContent.split('\n').filter(line => line.trim());
+    // Check for top-level quest requirements (lines starting with ** followed by [[Quest Name]])
+    // Only match lines with single ** to get top-level requirements
+    const questMatch = reqLine.match(/^\*\*\[\[(.*?)\]\]/);
+    if (questMatch && !reqLine.includes('***')) {
+      // Convert quest name to snake_case id and remove special characters
+      const questId = normalizeQuestName(questMatch[1]);
+      requirements.quests.push(questId);
+      continue;
+    }
+
+    // If line doesn't match skills or quests, and isn't a quest requirement, it's an "other" requirement
+    if (reqLine.startsWith('*') && !reqLine.includes('Completion of') && !reqLine.includes('[[')) {
+      requirements.other.push(reqLine.substring(1).trim());
+    }
+  }
+
+  return requirements;
+}
+
+/**
+ * Parses items from the quest details
+ * @param {string[]} lines - Array of lines from the quest details section
+ * @returns {string[]} The parsed items
+ */
+function parseItems(lines) {
+  const items = [];
+  
+  // Process each line
+  for (const line of lines) {
+    // Skip empty lines
+    if (!line.trim()) continue;
+
+    // If line starts with **, it's a part of a sublist of items, so we can ignore
+    if(line.startsWith('**')) {
+      continue;
+    }
     
-//     for (const line of lines) {
-//       const [key, ...valueParts] = line.split('=').map(s => s.trim());
-//       if (key && valueParts.length > 0) {
-//         const value = valueParts.join('=').trim();
-//         const cleanKey = key.replace('|', '');
-        
-//         switch (cleanKey) {
-//           case 'start':
-//             details.start = value.replace(/\[\[(?:File:)?([^\]]+)\]\]/g, '$1').trim();
-//             break;
-//           case 'startmap':
-//             details.startmap = value.trim();
-//             break;
-//           case 'difficulty':
-//             details.difficulty = value.trim();
-//             break;
-//           case 'length':
-//             details.length = value.trim();
-//             break;
-//           case 'requirements':
-//             // Parse skill requirements
-//             const reqMatches = value.matchAll(/\*\{\{SCP\|([^}]+)\|(\d+)\}\}\s*(?:{{Boostable\|}})?/g);
-//             for (const match of reqMatches) {
-//               const [, skill, level] = match;
-//               details.requirements.push({
-//                 skill: skill.trim(),
-//                 level: parseInt(level),
-//                 boostable: value.includes('{{Boostable|}}')
-//               });
-//             }
-//             break;
-//           case 'items':
-//             details.items = value.split('*').filter(Boolean).map(item => item.trim());
-//             break;
-//           case 'recommended':
-//             details.recommended = value.split('*').filter(Boolean).map(item => item.trim());
-//             break;
-//           case 'kills':
-//             details.kills = value.split('*').filter(Boolean).map(item => item.trim());
-//             break;
-//           case 'ironman':
-//             details.ironman = value.split('*').filter(Boolean).map(item => item.trim());
-//             break;
-//         }
-//       }
-//     }
-//   }
+    // If line starts with *, it's an item
+    if (line.startsWith('*')) {
+      items.push(line.substring(1).trim());
+    }
+  }
 
-//   return details;
-// }
+  return items;
+}
+
+/**
+ * Parses kills from the quest details
+ * @param {string[]} lines - Array of lines from the quest details section
+ * @returns {string[]} The parsed kills
+ */
+function parseKills(lines) {
+  const kills = [];
+  
+  // Process each line
+  for (const line of lines) {
+    // Skip empty lines
+    if (!line.trim()) continue;
+    
+    // If line starts with *, it's a kill requirement
+    if (line.startsWith('*')) {
+      kills.push(line.substring(1).trim());
+    }
+  }
+
+  return kills;
+}
+
+/**
+ * Parses ironman-specific concerns from the quest details
+ * @param {string[]} lines - Array of lines from the quest details section
+ * @returns {string[]} The parsed ironman concerns
+ */
+function parseIronman(lines) {
+  const ironman = [];
+  
+  // Process each line
+  for (const line of lines) {
+    // Skip empty lines
+    if (!line.trim()) continue;
+    
+    // If line starts with *, it's an ironman concern
+    if (line.startsWith('*')) {
+      ironman.push(line.substring(1).trim());
+    } else {
+      ironman.push(line.trim());
+    }
+  }
+
+  return ironman;
+}
+
+/**
+ * Parses league region from the quest details
+ * @param {string[]} lines - Array of lines from the quest details section
+ * @returns {string} The parsed league region
+ */
+function parseLeagueRegion(lines) {
+  // Join all lines and trim the result
+  return lines.join('').trim();
+}
+
+/**
+  * Extracts the quest details from the quest's raw data
+  * @param {string} questData - The raw quest data from the cache
+  * @returns {QuestDetails} The parsed quest details
+  */
+export function getQuestDetails(questData) {
+  /** @type {QuestDetails} */  
+  const details = {
+    start: '',
+    startmap: '',
+    difficulty: '',
+    description: '',
+    length: '',
+    requirements: {
+      skills: [],
+      quests: [],
+      other: []
+    },
+    items: [],
+    recommended: [],
+    kills: [],
+    ironman: [],
+    leagueRegion: ''
+  };
+
+  // Extract quest details template content with a more precise pattern that stops at the next template
+  const detailsMatch = questData.match(/{{Quest details\n((.*\n)+)(?=}})}}/);
+
+  const singleLineKeys = ['start', 'startmap', 'difficulty', 'length'];
+  if (detailsMatch) {
+    const detailsContent = detailsMatch[1];
+    const lines = detailsContent.split('\n').filter(line => line.trim());
+
+    for (const line of lines) {
+      const [key, ...valueParts] = line.split('=').map(s => s.trim());
+      if (singleLineKeys.includes(key.substring(1))) {
+         details[key.substring(1)] = valueParts.join('');
+       }
+
+      // Handle description section which can span multiple lines
+      if (key.substring(1) === 'description') {
+        // Initialize description array to collect all lines
+        const descriptionLines = [];
+        descriptionLines.push(valueParts.join(''));
+        let currentIndex = lines.indexOf(line) + 1;
+
+        // Keep collecting lines until we hit another section or end of content
+        while (currentIndex < lines.length && 
+               !lines[currentIndex].trim().startsWith('==') &&
+               !lines[currentIndex].trim().startsWith('|') &&
+               lines[currentIndex].trim() !== '}}') {
+          descriptionLines.push(lines[currentIndex].trim());
+          currentIndex++;
+        }
+
+        // Parse the description using the dedicated function
+        details.description =descriptionLines.join(' ');
+      }
+
+      // Handle requirements section which can span multiple lines
+      if (key.substring(1) === 'requirements') {
+        // Initialize requirements array to collect all lines
+        const requirementLines = [];
+        requirementLines.push(valueParts.join(''));
+        let currentIndex = lines.indexOf(line) + 1;
+        
+        // Keep collecting lines until we hit another section or end of content
+        while (currentIndex < lines.length && 
+               !lines[currentIndex].trim().startsWith('==') &&
+               !lines[currentIndex].trim().startsWith('|') &&
+               lines[currentIndex].trim() !== '}}') {
+          requirementLines.push(lines[currentIndex].trim());
+          currentIndex++;
+        }
+
+        // Parse the requirements using the dedicated function
+        details.requirements = parseQuestRequirements(requirementLines);
+      }
+
+      // Handle items section
+      if (key.substring(1) === 'items') {
+        // Initialize items array to collect all lines
+        const itemLines = [];
+        itemLines.push(valueParts.join(''));
+        let currentIndex = lines.indexOf(line) + 1;
+        
+        // Keep collecting lines until we hit another section or end of content
+        while (currentIndex < lines.length && 
+               !lines[currentIndex].trim().startsWith('|') &&
+               !lines[currentIndex].trim().startsWith('==') &&
+               lines[currentIndex].trim() !== '}}') {
+          itemLines.push(lines[currentIndex].trim());
+          currentIndex++;
+        }
+
+        // Parse the items using the dedicated function
+        details.items = parseItems(itemLines);
+      }
+
+      // Handle kills section
+      if (key.substring(1) === 'kills') {
+        // Initialize kills array to collect all lines
+        const killLines = [];
+        killLines.push(valueParts.join(''));
+        let currentIndex = lines.indexOf(line) + 1;
+        
+        // Keep collecting lines until we hit another section or end of content
+        while (currentIndex < lines.length && 
+               !lines[currentIndex].trim().startsWith('|') &&
+               !lines[currentIndex].trim().startsWith('==') &&
+               lines[currentIndex].trim() !== '}}') {
+          killLines.push(lines[currentIndex].trim());
+          currentIndex++;
+        }
+
+        // Parse the kills using the dedicated function
+        details.kills = parseKills(killLines);
+      }
+
+      // Handle ironman section
+      if (key.substring(1) === 'ironman') {
+        // Initialize ironman array to collect all lines
+        const ironmanLines = [];
+        ironmanLines.push(valueParts.join(''));
+        let currentIndex = lines.indexOf(line) + 1;
+        
+        // Keep collecting lines until we hit another section or end of content
+        while (currentIndex < lines.length && 
+               !lines[currentIndex].trim().startsWith('|') &&
+               !lines[currentIndex].trim().startsWith('==') &&
+               lines[currentIndex].trim() !== '}}') {
+          ironmanLines.push(lines[currentIndex].trim());
+          currentIndex++;
+        }
+
+        // Parse the ironman concerns using the dedicated function
+        details.ironman = parseIronman(ironmanLines);
+      }
+
+      // Handle league region section
+      if (key.substring(1) === 'leagueRegion') {
+        // Initialize league region array to collect all lines
+        const leagueRegionLines = [];
+        leagueRegionLines.push(valueParts.join(''));
+        let currentIndex = lines.indexOf(line) + 1;
+        
+        // Keep collecting lines until we hit another section or end of content
+        while (currentIndex < lines.length && 
+               !lines[currentIndex].trim().startsWith('|') &&
+               lines[currentIndex].trim() !== '}}') {
+          leagueRegionLines.push(lines[currentIndex].trim());
+          currentIndex++;
+        }
+
+        // Parse the league region using the dedicated function
+        details.leagueRegion = parseLeagueRegion(leagueRegionLines);
+      }
+    }
+  }
+
+  return details;
+}
+

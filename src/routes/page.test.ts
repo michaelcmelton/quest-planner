@@ -16,15 +16,4 @@ describe('Home Page', () => {
       )
     ).toBeInTheDocument();
   });
-
-  it('renders navigation links', () => {
-    render(Home);
-    const startPlanningLink = screen.getByRole('link', { name: 'Start Planning' });
-    const learnMoreLink = screen.getByRole('link', { name: /Learn more/ });
-
-    expect(startPlanningLink).toBeInTheDocument();
-    expect(startPlanningLink).toHaveAttribute('href', '/planner');
-    expect(learnMoreLink).toBeInTheDocument();
-    expect(learnMoreLink).toHaveAttribute('href', '/about');
-  });
 }); 

@@ -2,7 +2,7 @@
  * Generate quest data file from the quest data cache
  */
 
-import { CACHE_FILE } from './constants.js';
+import { CACHE_FILE, QUEST_DATA_FILE } from './constants.js';
 import fs from 'fs';
 import { getInfobox, getQuestRewards, getQuestDetails } from './parser.js';
 async function main() {
@@ -11,17 +11,17 @@ async function main() {
     const questData = {};
 
     for (const questName in cache) {
-      const unparsedQuestData = JSON.parse(cache[questName]);
+      const unparsedQuestData = cache[questName];
       const infobox = getInfobox(unparsedQuestData);
       const questRewards = getQuestRewards(unparsedQuestData);
       const questDetails = getQuestDetails(unparsedQuestData);
-      const questData = {
+      const singleQuestData = {
         name: questName,
         ...infobox,
         rewards: questRewards,
         ...questDetails,
       };
-      questData[questName] = questData;
+      questData[questName] = singleQuestData;
     }
     fs.writeFileSync(QUEST_DATA_FILE, JSON.stringify(questData, null, 2));
   } catch (error) {

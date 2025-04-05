@@ -1,4 +1,5 @@
 import { assert } from 'console';
+import { normalizeQuestName } from './utils.js';
 import { WIKI_API_URL, USER_AGENT, CACHE_FILE } from './constants.js';
 import fs from 'fs';
 
@@ -151,19 +152,6 @@ async function getQuestData(questName) {
   } catch (error) {
     throw new Error(`Failed to get quest data: ${error}`);
   }
-}
-
-/**
- * Normalize a quest name to use as an ID
- * @param {string} questName
- * @returns {string}
-return questName
- */
-function normalizeQuestName(questName) {
-  return questName
-    .toLowerCase()
-    .replace(/[^a-z0-9\s]/g, '')
-    .replace(/\s+/g, '_');
 }
 
 async function getCachedQuestData() {

@@ -158,4 +158,133 @@ quest-planner/
 - Monitor and update dependencies regularly
 - Follow security best practices
 - Keep performance metrics in mind
-- Maintain proper error handling throughout the application 
+- Maintain proper error handling throughout the application
+
+# Quest Planner Development Guidelines
+
+## Current Development Status
+
+### Completed Features
+- Basic routing structure with SvelteKit
+- Responsive layout with Tailwind CSS
+- Dark mode support
+- Navigation system
+- About page with project information
+- Footer with dynamic year and attribution
+
+### In Progress
+- Quest Summary component
+- Quest Planner interface
+- Quest Browser implementation
+- Route management system
+
+### Upcoming Features
+- Quest data integration
+- Interactive route planning
+- Progress tracking
+- User authentication
+- Route sharing functionality
+
+## Development Guidelines
+
+### Code Organization
+- Follow SvelteKit's file-based routing
+- Keep components small and focused
+- Use TypeScript for type safety
+- Maintain consistent file structure
+
+### Testing Standards
+- Write tests before implementation (TDD)
+- Use Vitest and @testing-library/svelte
+- Maintain 80%+ test coverage
+- Test files co-located with components
+
+### UI/UX Principles
+- Mobile-first responsive design
+- Dark mode support
+- Accessible components
+- Consistent spacing and typography
+- Clear visual hierarchy
+
+### Performance Guidelines
+- Optimize bundle size
+- Implement proper code splitting
+- Use efficient data fetching
+- Optimize rendering performance
+
+## File Structure
+
+```
+src/
+├── routes/
+│   ├── +layout.svelte      # Main layout with navigation
+│   ├── +page.svelte        # Home/Landing page
+│   ├── about/              # About page
+│   ├── planner/            # Quest planner interface
+│   ├── quests/             # Quest browser
+│   └── routes/             # Saved routes management
+├── lib/                    # Shared utilities and components
+└── app.css                # Global styles
+```
+
+## Component Guidelines
+
+### Layout Components
+- Use semantic HTML
+- Implement responsive design
+- Support dark mode
+- Maintain consistent spacing
+
+### Page Components
+- Follow SvelteKit conventions
+- Use proper loading states
+- Implement error handling
+- Maintain clean structure
+
+### Shared Components
+- Keep components reusable
+- Document props and events
+- Include proper TypeScript types
+- Add comprehensive tests
+
+## Testing Strategy
+
+### Component Tests
+- Test rendering
+- Test user interactions
+- Test state changes
+- Test edge cases
+
+### Page Tests
+- Test routing
+- Test data loading
+- Test error states
+- Test responsive behavior
+
+## Performance Optimization
+
+### Build Optimization
+- Use proper code splitting
+- Optimize assets
+- Implement caching
+- Minimize bundle size
+
+### Runtime Optimization
+- Use efficient data structures
+- Implement proper memoization
+- Optimize re-renders
+- Use proper event handling
+
+## Documentation Standards
+
+### Code Documentation
+- Use JSDoc for functions
+- Document complex logic
+- Explain non-obvious decisions
+- Keep comments up-to-date
+
+### Project Documentation
+- Keep README.md current
+- Update AI.MD regularly
+- Document architectural decisions
+- Maintain changelog 

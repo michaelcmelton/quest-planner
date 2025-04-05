@@ -38,10 +38,14 @@ async function main() {
     for (const skill of SKILLS) {
         const filename = `${skill.toLowerCase()}-icon.png`;
         const filepath = path.join(outputDir, filename);
-        const url = `${WIKI_STATIC_URL}/${skill}_icon.png`;
+        let url = `${WIKI_STATIC_URL}/${skill}_icon.png`;
+
+        if (skill === 'Quests' || skill === 'Multicombat') {
+            url = `${WIKI_STATIC_URL}/${skill}.png`;
+        }   
 
         try {
-            console.log(`Downloading ${skill} icon...`);
+            console.log(`Downloading ${skill} icon at ${url}...`);
             await downloadImage(url, filepath);
             console.log(`✓ Downloaded ${skill} icon`);
         } catch (error) {

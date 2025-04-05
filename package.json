@@ -16,7 +16,7 @@
 		"test:watch": "vitest --watch",
 		"test": "npm run test:unit -- --run",
 		"fetch-quests": "node scripts/fetch-quests.js",
-		"fetch-skill-icons": "node scripts/generate-skill-icons.js",
+		"fetch-skill-icons": "node scripts/download-skill-icons.js",
 		"generate-quest-data": "node scripts/generate-quest-data.js"
 	},
 	"devDependencies": {

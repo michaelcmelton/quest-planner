@@ -8,7 +8,7 @@ export const SKILLS = [
     'Attack', 'Defence', 'Strength', 'Hitpoints', 'Ranged', 'Prayer',
     'Magic', 'Cooking', 'Woodcutting', 'Fletching', 'Fishing', 'Firemaking',
     'Crafting', 'Smithing', 'Mining', 'Herblore', 'Agility', 'Thieving',
-    'Slayer', 'Farming', 'Runecraft', 'Hunter', 'Construction'
+    'Slayer', 'Farming', 'Runecraft', 'Hunter', 'Construction', 'Quests', 'Multicombat'
 ];
 export const WIKI_STATIC_URL = 'https://oldschool.runescape.wiki/images';
 export const WIKI_BASE_URL = 'https://oldschool.runescape.wiki';

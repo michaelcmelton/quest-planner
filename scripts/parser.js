@@ -118,7 +118,7 @@ export function getQuestRewards(questData) {
     }
 
     // Extract experience rewards using a more precise pattern
-    const expMatches = rewardsContent.matchAll(/\*{{SCP\|(\w+)\|(\d+,?\d+)\|?(link=.*)?}} experience/g);
+    const expMatches = rewardsContent.matchAll(/\*{{SCP\|(\w+)\|(\d+,?\d+)\|?(link=.*)?}}.+experience/g);
     for (const match of expMatches) {
       const [, skill, amount] = match;
       rewards.experienceRewards.push({

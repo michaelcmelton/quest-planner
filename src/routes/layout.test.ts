@@ -2,15 +2,23 @@ import { render, screen } from '@testing-library/svelte';
 import { describe, it, expect } from 'vitest';
 import Layout from './+layout.svelte';
 
-describe('Layout', () => {
-  it('renders the header with app title', () => {
+describe('Layout Component', () => {
+  it('renders the navigation header', () => {
     render(Layout);
     expect(screen.getByText('Quest Planner')).toBeInTheDocument();
   });
 
-  it('renders the footer with copyright notice', () => {
+  it('contains all navigation links', () => {
+    render(Layout);
+    expect(screen.getByText('Planner')).toBeInTheDocument();
+    expect(screen.getByText('Quests')).toBeInTheDocument();
+    expect(screen.getByText('My Routes')).toBeInTheDocument();
+    expect(screen.getByText('About')).toBeInTheDocument();
+  });
+
+  it('renders the footer with current year', () => {
     render(Layout);
     const currentYear = new Date().getFullYear();
-    expect(screen.getByText(`© ${currentYear} Quest Planner. Data provided by OSRS Wiki.`)).toBeInTheDocument();
+    expect(screen.getByText(`© ${currentYear} Quest Planner. Data from OSRS Wiki.`)).toBeInTheDocument();
   });
 }); 

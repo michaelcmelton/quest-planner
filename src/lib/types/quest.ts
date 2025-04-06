@@ -53,16 +53,3 @@ export interface QuestData {
   }>;
   leagueRegion?: string;
 }
-
-export interface QuestSummaryProps {
-  name: string;
-  difficulty: 'Novice' | 'Intermediate' | 'Experienced' | 'Master' | 'Grandmaster';
-  length: 'Very Short' | 'Short' | 'Medium' | 'Long' | 'Very Long';
-  questPoints: number;
-  requirements: {
-    quests?: string[];
-    skills?: Array<{ name: string; level: number }>;
-    items?: string[];
-  };
-  isCompleted?: boolean;
-} 

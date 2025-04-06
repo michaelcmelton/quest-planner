@@ -5,7 +5,7 @@
     "image": "Animal Magnetism.png|300px",
     "release": "12 December 2006",
     "update": "Animal Magnetism",
-    "members": "Yes",
+    "members": true,
     "series": "None",
     "developer": "Matt H",
     "rewards": {
@@ -100,7 +100,7 @@
     "image": "Another Slice Of H.A.M.png|300px",
     "release": "24 April 2007",
     "update": "Another Slice of H.A.M.",
-    "members": "Yes",
+    "members": true,
     "series": "Dorgeshuun, #3",
     "developer": "John A",
     "rewards": {
@@ -170,7 +170,7 @@
     "image": "The Ascent of Arceuus.png|300px",
     "release": "10 January 2019",
     "update": "The Kebos Lowlands",
-    "members": "Yes",
+    "members": true,
     "series": "Great Kourend, #3C",
     "developer": "Mod Ed",
     "rewards": {
@@ -227,7 +227,7 @@
     "image": "At First Light.png|300px",
     "release": "20 March 2024",
     "update": "Varlamore: Part One",
-    "members": "Yes",
+    "members": true,
     "series": "None",
     "developer": "",
     "rewards": {
@@ -286,7 +286,7 @@
     "image": "Below Ice Mountain.png|300px",
     "release": "14 April 2021",
     "update": "Below Ice Mountain",
-    "members": "No",
+    "members": false,
     "series": "None",
     "developer": "Mod Oasis, Mod Tide",
     "rewards": {
@@ -334,7 +334,7 @@
     "image": "Beneath Cursed Sands.png|300px",
     "release": "27 April 2022",
     "update": "Beneath Cursed Sands",
-    "members": "Yes",
+    "members": true,
     "series": "Kharidian, #4",
     "developer": "Mod Ed",
     "rewards": {
@@ -409,7 +409,7 @@
     "image": "Between a Rock....png|300px",
     "release": "21 March 2005",
     "update": "Between a Rock...",
-    "members": "Yes",
+    "members": true,
     "series": "None",
     "developer": "Vincent Van M",
     "rewards": {
@@ -489,7 +489,7 @@
     "image": "Big Chompy Bird Hunting.png|300px",
     "release": "18 May 2004",
     "update": "Big Chompy Bird Hunting",
-    "members": "Yes",
+    "members": true,
     "series": "None",
     "developer": "Tytn H",
     "rewards": {
@@ -573,7 +573,7 @@
     "image": "Biohazard.png|300px",
     "release": "23 October 2002",
     "update": "Updates galore!",
-    "members": "Yes",
+    "members": true,
     "series": "Elf, #2",
     "developer": "Tom W",
     "rewards": {
@@ -617,7 +617,7 @@
     "image": "Black Knights' Fortress.png|300px",
     "release": "6 April 2001",
     "update": "Massive update!",
-    "members": "No",
+    "members": false,
     "series": "None",
     "developer": "{{RSL|Paul Gower",
     "rewards": {
@@ -659,7 +659,7 @@
     "image": "Bone Voyage.png|300px",
     "release": "7 September 2017",
     "update": "Fossil Island",
-    "members": "Yes",
+    "members": true,
     "series": "None",
     "developer": "Mod Jed",
     "rewards": {
@@ -694,7 +694,7 @@
     "image": "Cabin Fever.png|300px",
     "release": "7 February 2006",
     "update": "Cabin Fever",
-    "members": "Yes",
+    "members": true,
     "series": "Pirate, #2",
     "developer": "Anthony W",
     "rewards": {
@@ -775,7 +775,7 @@
     "image": "Children of the Sun.png|300px",
     "release": "10 January 2024",
     "update": "Children of the Sun",
-    "members": "Yes",
+    "members": true,
     "series": "Twilight Emissaries, #1",
     "developer": "",
     "rewards": {
@@ -807,7 +807,7 @@
     "image": "Client of Kourend.png|300px",
     "release": "20 April 2017",
     "update": "Client of Kourend",
-    "members": "Yes",
+    "members": true,
     "series": "Great Kourend, #2",
     "developer": "Mod Wolf",
     "rewards": {
@@ -844,7 +844,7 @@
     "image": "Clock Tower.png|300px",
     "release": "17 June 2002",
     "update": "Latest RuneScape News (17 June 2002)",
-    "members": "Yes",
+    "members": true,
     "series": "None",
     "developer": "{{RSL|Mod Tom|Tom W",
     "rewards": {
@@ -878,7 +878,7 @@
     "image": "Cold War.png|300px",
     "release": "29 January 2007",
     "update": "What's black and white and goes green when it's finished?",
-    "members": "Yes",
+    "members": true,
     "series": "Penguin, #1",
     "developer": "Nancy J",
     "rewards": {
@@ -976,7 +976,7 @@
     "image": "Contact!.png|300px",
     "release": "10 January 2007",
     "update": "Contact!",
-    "members": "Yes",
+    "members": true,
     "series": "Kharidian, #3",
     "developer": "Chris J, Matt H",
     "rewards": {
@@ -1028,7 +1028,7 @@
     "image": "Cook's Assistant.png|300px",
     "release": "4 January 2001",
     "update": "Runescape beta is now online!",
-    "members": "No",
+    "members": false,
     "series": "None",
     "developer": "Paul Gower",
     "rewards": {
@@ -1063,7 +1063,7 @@
     "image": "The Corsair Curse.png|300px",
     "release": "7 December 2017",
     "update": "The Corsair Curse and Wilderness Chaos Altar",
-    "members": "No",
+    "members": false,
     "series": "None",
     "developer": "Mod Ash",
     "rewards": {
@@ -1100,7 +1100,7 @@
     "image": "Creature of Fenkenstrain.png|300px",
     "release": "31 January 2005",
     "update": "Creature of Fenkenstrain",
-    "members": "Yes",
+    "members": true,
     "series": "None",
     "developer": "Martin B",
     "rewards": {
@@ -1167,7 +1167,7 @@
     "image": "Darkness of Hallowvale.png|300px",
     "release": "4 September 2006",
     "update": "Myreque Pt III - Darkness of Hallowvale",
-    "members": "Yes",
+    "members": true,
     "series": "Myreque, #3",
     "developer": "Tytn H",
     "rewards": {
@@ -1272,7 +1272,7 @@
     "image": "Death on the Isle.png|300px",
     "release": "25 September 2024",
     "update": "Varlamore: The Rising Darkness is OUT NOW",
-    "members": "Yes",
+    "members": true,
     "series": "None",
     "developer": "Mod Other",
     "rewards": {
@@ -1323,7 +1323,7 @@
     "image": "Death Plateau.png|300px",
     "release": "9 August 2004",
     "update": "Death Plateau Quest",
-    "members": "Yes",
+    "members": true,
     "series": "Troll, #1",
     "developer": "Jon S",
     "rewards": {
@@ -1370,7 +1370,7 @@
     "image": "Death to the Dorgeshuun.png|300px",
     "release": "21 June 2006",
     "update": "Death to the Dorgeshuun!",
-    "members": "Yes",
+    "members": true,
     "series": "Dorgeshuun, #2",
     "developer": "John A",
     "rewards": {
@@ -1440,7 +1440,7 @@
     "image": "Defender of Varrock.png|300px",
     "release": "21 February 2024",
     "update": "Defender of Varrock",
-    "members": "Yes",
+    "members": true,
     "series": "Mahjarrat, #6",
     "developer": "Paul Gower (original), Mod Ed (Old School)",
     "aka": "DoV",
@@ -1499,15 +1499,14 @@
     "leagueRegion": "<poem>Unlocking {{RE|Misthalin}} {{okay}} will auto-complete the quest</poem>"
   },
   "demon_slayer": {
-    "name": "demon_slayer",
-    " name": "Demon Slayer",
-    " number": "2",
-    " image": "300px",
-    " release": "4 January 2001",
-    " update": "Runescape beta is now online!",
-    " members": "No",
-    " series": "Demon Slayer, #1",
-    " developer": "{{RSL|Paul Gower",
+    "name": "Demon Slayer",
+    "number": 2,
+    "image": "Demon Slayer.png|300px",
+    "release": "4 January 2001",
+    "update": "Runescape beta is now online!",
+    "members": false,
+    "series": "Demon Slayer, #1",
+    "developer": "{{RSL|Paul Gower",
     "rewards": {
       "questPoints": 3,
       "experienceRewards": [],
@@ -1542,7 +1541,7 @@
     "image": "The Depths of Despair.png|300px",
     "release": "9 November 2017",
     "update": "The Queen of Thieves & The Depths of Despair",
-    "members": "Yes",
+    "members": true,
     "series": "Great Kourend, #3B",
     "developer": "Mod Ed",
     "rewards": {
@@ -1593,7 +1592,7 @@
     "release": "18 April 2005",
     "update": "Desert Treasure",
     "aka": "DT, DT1",
-    "members": "Yes",
+    "members": true,
     "series": "Mahjarrat, #7",
     "developer": "James B",
     "rewards": {
@@ -1690,7 +1689,7 @@
     "release": "26 July 2023",
     "update": "Desert Treasure II - The Fallen Empire",
     "aka": "DT2",
-    "members": "Yes",
+    "members": true,
     "series": "Mahjarrat, #14",
     "developer": "Mod Ed",
     "rewards": {
@@ -1798,7 +1797,7 @@
     "image": "Devious Minds.png|300px",
     "release": "19 December 2005",
     "update": "Devious Minds",
-    "members": "Yes",
+    "members": true,
     "series": "Mahjarrat, #11",
     "developer": "Graham B",
     "rewards": {
@@ -1875,7 +1874,7 @@
     "image": "The Dig Site.png|300px",
     "release": "9 July 2003",
     "update": "New Digsite Quest!",
-    "members": "Yes",
+    "members": true,
     "series": "Mahjarrat, #1",
     "developer": "{{RSL|Mod Ian|Ian T",
     "rewards": {
@@ -1943,7 +1942,7 @@
     "image": "Doric's Quest.png|300px",
     "release": "6 April 2001",
     "update": "Massive update!",
-    "members": "No",
+    "members": false,
     "series": "None",
     "developer": "Rob Law",
     "rewards": {
@@ -1989,7 +1988,7 @@
     "image": "Dragon Slayer.png|300px",
     "release": "23 September 2001",
     "update": "Dragon quest online!",
-    "members": "No",
+    "members": false,
     "series": "Dragonkin, #1",
     "developer": "{{RSL|Paul Gower",
     "rewards": {
@@ -2066,7 +2065,7 @@
     "image": "Dragon Slayer II.png|300px",
     "release": "4 January 2018",
     "update": "Dragon Slayer II",
-    "members": "Yes",
+    "members": true,
     "series": "Dragonkin, #3",
     "developer": "Mod Ed",
     "rewards": {
@@ -2239,7 +2238,7 @@
     "image": "Dream Mentor.png|300px",
     "release": "15 May 2007",
     "update": "Dream Mentor",
-    "members": "Yes",
+    "members": true,
     "series": "None",
     "developer": "Tim C",
     "rewards": {
@@ -2312,7 +2311,7 @@
     "image": "Druidic Ritual.png|300px",
     "release": "27 February 2002",
     "update": "Latest RuneScape News (27 February 2002)",
-    "members": "Yes",
+    "members": true,
     "series": "None",
     "developer": "Paul Gower",
     "rewards": {
@@ -2349,7 +2348,7 @@
     "image": "Dwarf Cannon.png|300px",
     "release": "27 May 2003",
     "update": "New Dwarf Cannon Quest",
-    "members": "Yes",
+    "members": true,
     "series": "None",
     "developer": "{{RSL|Mod Tom|Tom W",
     "rewards": {
@@ -2385,7 +2384,7 @@
     "image": "Eadgar's Ruse.png|300px",
     "release": "5 October 2004",
     "update": "Eadgars Ruse",
-    "members": "Yes",
+    "members": true,
     "series": "Troll, #3",
     "developer": "Chris S",
     "rewards": {
@@ -2444,7 +2443,7 @@
     "image": "Eagles' Peak.png|300px",
     "release": "28 November 2006",
     "update": "Eagles' Peak",
-    "members": "Yes",
+    "members": true,
     "series": "None",
     "developer": "Ian Gower",
     "rewards": {
@@ -2498,7 +2497,7 @@
     "image": "Elemental Workshop I.png|300px",
     "release": "2 June 2004",
     "update": "Elemental Workshop Quest",
-    "members": "Yes",
+    "members": true,
     "series": "Elemental Workshop, #1",
     "developer": "Dylan C",
     "rewards": {
@@ -2575,7 +2574,7 @@
     "release": "2 October 2006",
     "update": "Elemental Workshop II",
     "aka": "",
-    "members": "Yes",
+    "members": true,
     "series": "Elemental Workshop, #2",
     "developer": "Dylan C",
     "rewards": {
@@ -2637,7 +2636,7 @@
     "image": "Enakhra's Lament.png|300px",
     "release": "23 January 2006",
     "update": "Enakhra's Lament",
-    "members": "Yes",
+    "members": true,
     "series": "Mahjarrat, #4",
     "developer": "Isobel H",
     "rewards": {
@@ -2736,7 +2735,7 @@
     "image": "Enlightened Journey.png|300px",
     "release": "6 November 2006",
     "update": "Enlightened Journey",
-    "members": "Yes",
+    "members": true,
     "series": "None",
     "developer": "Nancy J",
     "rewards": {
@@ -2833,7 +2832,7 @@
     "image": "Ernest the Chicken.png|300px",
     "release": "21 January 2001",
     "update": "Newsletter 1",
-    "members": "No",
+    "members": false,
     "series": "None",
     "developer": "{{RSL|Paul Gower",
     "rewards": {
@@ -2870,7 +2869,7 @@
     "image": "Ethically Acquired Antiquities.png",
     "release": "25 September 2024",
     "update": "Varlamore: The Rising Darkness is OUT NOW",
-    "members": "Yes",
+    "members": true,
     "series": "None",
     "developer": "",
     "rewards": {
@@ -2913,7 +2912,7 @@
     "image": "The Eyes of Glouphrie.png|300px",
     "release": "15 August 2006",
     "update": "The Eyes of Glouphrie",
-    "members": "Yes",
+    "members": true,
     "series": "Gnome, #2",
     "developer": "Chihiro Y",
     "rewards": {
@@ -2990,7 +2989,7 @@
     "release": "27 February 2006",
     "update": "A Fairy Tale Part I - Growing Pains",
     "aka": "",
-    "members": "Yes",
+    "members": true,
     "series": "Fairytale, #1",
     "developer": "Greg V",
     "rewards": {
@@ -3050,7 +3049,7 @@
     "release": "11 July 2006",
     "update": "Fairy Tale II - Cure a Queen",
     "aka": "",
-    "members": "Yes",
+    "members": true,
     "series": "Fairytale, #2",
     "developer": "Greg V",
     "rewards": {
@@ -3123,7 +3122,7 @@
     "image": "Family Crest.png|300px",
     "release": "9 April 2002",
     "update": "New members quest online!",
-    "members": "Yes",
+    "members": true,
     "series": "None",
     "developer": "{{RSL|Paul Gower",
     "rewards": {
@@ -3207,7 +3206,7 @@
     "image": "The Feud.png|300px",
     "release": "4 April 2005",
     "update": "Ali Morrisane and Pollnivneach",
-    "members": "Yes",
+    "members": true,
     "series": "None",
     "developer": "Chris J",
     "rewards": {
@@ -3269,7 +3268,7 @@
     "image": "Fight Arena - Fighting General Khazard.png|300px",
     "release": "23 July 2002",
     "update": "Members' quests",
-    "members": "Yes",
+    "members": true,
     "series": "Mahjarrat, #3",
     "developer": "{{RSL|Paul Gower",
     "rewards": {
@@ -3321,7 +3320,7 @@
     "release": "28 May 2002",
     "update": "Latest RuneScape News (28 May 2002)",
     "aka": "",
-    "members": "Yes",
+    "members": true,
     "series": "None",
     "developer": "{{RSL|Paul Gower",
     "rewards": {
@@ -3373,7 +3372,7 @@
     "image": "Forgettable Tale....png|300px",
     "release": "26 July 2005",
     "update": "The Forgettable Tale...",
-    "members": "Yes",
+    "members": true,
     "series": "Red Axe, #2",
     "developer": "Vincent van M",
     "rewards": {
@@ -3443,7 +3442,7 @@
     "image": "The Forsaken Tower.png|300px",
     "release": "10 January 2019",
     "update": "The Kebos Lowlands",
-    "members": "Yes",
+    "members": true,
     "series": "Great Kourend, #3D",
     "developer": "Mod Ed",
     "rewards": {
@@ -3491,7 +3490,7 @@
     "image": "The Fremennik Exiles.png|300px",
     "release": "26 September 2019",
     "update": "The Fremennik Exiles",
-    "members": "Yes",
+    "members": true,
     "series": "Fremennik, #4",
     "developer": "Mod Ed, Mod Wolf",
     "rewards": {
@@ -3600,7 +3599,7 @@
     "image": "The Fremennik Isles.png|300px",
     "release": "6 February 2007",
     "update": "Fremennik Isles",
-    "members": "Yes",
+    "members": true,
     "series": "Fremennik, #2",
     "developer": "Chihiro Y, Ben W, Douglas H",
     "rewards": {
@@ -3681,7 +3680,7 @@
     "image": "The Fremennik Trials.png|300px",
     "release": "2 November 2004",
     "update": "The Fremennik Trials",
-    "members": "Yes",
+    "members": true,
     "series": "Fremennik, #1",
     "developer": "James B",
     "rewards": {
@@ -3760,7 +3759,7 @@
     "name": "The Garden of Death",
     "image": "The Garden of Death.png|300px",
     "number": 155,
-    "members": "Yes",
+    "members": true,
     "release": "30 November 2022",
     "update": "The Garden of Death & More",
     "series": "Twisted Tales",
@@ -3807,7 +3806,7 @@
     "image": "Garden of Tranquillity.png|300px",
     "release": "30 August 2005",
     "update": "Garden Of Tranquillity",
-    "members": "Yes",
+    "members": true,
     "series": "None",
     "developer": "Martin B",
     "rewards": {
@@ -3874,7 +3873,7 @@
     "image": "Gertrude's Cat.png|300px",
     "release": "28 July 2003",
     "update": "New Members Quest Online",
-    "members": "Yes",
+    "members": true,
     "series": "None",
     "developer": "{{RSL|Mod Tom|Tom W",
     "rewards": {
@@ -3915,7 +3914,7 @@
     "name": "Getting Ahead",
     "image": "Getting Ahead.png|300px",
     "number": 147,
-    "members": "Yes",
+    "members": true,
     "release": "25 November 2020",
     "update": "Twisted Tales - Getting Ahead Launch",
     "series": "Twisted Tales",
@@ -3988,7 +3987,7 @@
     "image": "Ghosts Ahoy.png|300px",
     "release": "15 February 2005",
     "update": "Ghosts Ahoy and Slayer Update",
-    "members": "Yes",
+    "members": true,
     "series": "None",
     "developer": "Martin B",
     "rewards": {
@@ -4058,7 +4057,7 @@
     "image": "The Giant Dwarf.png|300px",
     "release": "31 May 2005",
     "update": "Keldagrim - The Dwarven City",
-    "members": "Yes",
+    "members": true,
     "series": "Red Axe, #1",
     "developer": "Vincent M",
     "rewards": {
@@ -4152,7 +4151,7 @@
     "image": "Goblin Diplomacy.png|300px",
     "release": "8 May 2001",
     "update": "Runescape updated (8 May 2001)",
-    "members": "No",
+    "members": false,
     "series": "None",
     "developer": "{{RSL|Paul Gower",
     "rewards": {
@@ -4188,7 +4187,7 @@
     "image": "The Golem.png|300px",
     "release": "11 April 2005",
     "update": "The Golem",
-    "members": "Yes",
+    "members": true,
     "series": "None",
     "developer": "John A",
     "rewards": {
@@ -4252,7 +4251,7 @@
     "image": "The Grand Tree.png|300px",
     "release": "12 December 2002",
     "update": "Agility skill online",
-    "members": "Yes",
+    "members": true,
     "series": "Gnome, #1",
     "developer": "{{RSL|Mod Tom|Tom W",
     "rewards": {
@@ -4315,7 +4314,7 @@
     "image": "The Great Brain Robbery.png|300px",
     "release": "6 March 2007",
     "update": "Great Brain Robbery",
-    "members": "Yes",
+    "members": true,
     "series": "Pirate, #3",
     "developer": "Anthony W",
     "rewards": {
@@ -4403,7 +4402,7 @@
     "image": "Grim Tales.png|300px",
     "release": "4 June 2007",
     "update": "Grim Tales",
-    "members": "Yes",
+    "members": true,
     "series": "None",
     "developer": "Danny J",
     "rewards": {
@@ -4508,7 +4507,7 @@
     "image": "The Hand in the Sand.png|300px",
     "release": "10 January 2006",
     "update": "The Hand in the Sand",
-    "members": "Yes",
+    "members": true,
     "series": "None",
     "developer": "Marion C",
     "rewards": {
@@ -4578,7 +4577,7 @@
     "image": "Haunted Mine.png|300px",
     "release": "21 December 2004",
     "update": "The Haunted Mine",
-    "members": "Yes",
+    "members": true,
     "series": "None",
     "developer": "Ian G<!--",
     "graphics": "Ian G, Ian T",
@@ -4631,7 +4630,7 @@
     "image": "Hazeel Cult.png|300px",
     "release": "15 August 2002",
     "update": "Sheep and cults",
-    "members": "Yes",
+    "members": true,
     "series": "Mahjarrat, #2",
     "developer": "{{RSL|Mod Tom|Tom W",
     "rewards": {
@@ -4671,7 +4670,7 @@
     "image": "The Heart of Darkness.png",
     "release": "25 September 2024",
     "update": "Varlamore: The Rising Darkness is OUT NOW",
-    "members": "Yes",
+    "members": true,
     "series": "Twilight Emissaries, #3",
     "developer": "",
     "rewards": {
@@ -4761,7 +4760,7 @@
     "image": "Heroes' Quest.png|300px",
     "release": "27 February 2002",
     "update": "Latest RuneScape News (27 February 2002)",
-    "members": "Yes",
+    "members": true,
     "series": "None",
     "developer": "{{RSL|Paul Gower",
     "rewards": {
@@ -4901,7 +4900,7 @@
     "image": "Holy Grail.png|300px",
     "release": "23 July 2002",
     "update": "Members' quests",
-    "members": "Yes",
+    "members": true,
     "series": "Camelot, #2",
     "developer": "{{RSL|Paul Gower",
     "rewards": {
@@ -4959,7 +4958,7 @@
     "image": "Horror from the Deep.png|300px",
     "release": "17 November 2004",
     "update": "Horror From The Deep",
-    "members": "Yes",
+    "members": true,
     "series": "None",
     "developer": "James B",
     "rewards": {
@@ -5021,7 +5020,7 @@
     "image": "Icthlarin's Little Helper.png|300px",
     "release": "26 April 2005",
     "update": "Desert Month Finale",
-    "members": "Yes",
+    "members": true,
     "series": "Kharidian, #2",
     "developer": "Chris J",
     "rewards": {
@@ -5085,7 +5084,7 @@
     "image": "Imp Catcher.png|300px",
     "release": "16 February 2001",
     "update": "New quest, and more fixes",
-    "members": "No",
+    "members": false,
     "series": "None",
     "developer": "{{RSL|Paul Gower",
     "rewards": {
@@ -5130,7 +5129,7 @@
     "image": "In Aid of the Myreque.png|300px",
     "release": "22 March 2006",
     "update": "In Aid of the Myreque",
-    "members": "Yes",
+    "members": true,
     "series": "Myreque, #2",
     "developer": "Tytn H",
     "rewards": {
@@ -5220,7 +5219,7 @@
     "release": "10 January 2005",
     "update": "In Search Of The Myreque",
     "aka": "ISOM, In Search",
-    "members": "Yes",
+    "members": true,
     "series": "Myreque, #1",
     "developer": "Tytn H",
     "rewards": {
@@ -5299,7 +5298,7 @@
     "image": "Jungle Potion.png|300px",
     "release": "23 October 2002",
     "update": "Updates galore!",
-    "members": "Yes",
+    "members": true,
     "series": "None",
     "developer": "{{RSL|Mod Tytn|Tytn H",
     "rewards": {
@@ -5343,7 +5342,7 @@
     "release": "24 July 2007",
     "update": "King's Ransom",
     "aka": "",
-    "members": "Yes",
+    "members": true,
     "series": "Camelot, #3",
     "developer": "Nancy J",
     "rewards": {
@@ -5405,7 +5404,7 @@
     "image": "A Kingdom Divided.png|300px",
     "release": "16 June 2021",
     "update": "A Kingdom Divided",
-    "members": "Yes",
+    "members": true,
     "aka": "AKD",
     "series": "Great Kourend, #4",
     "developer": "Mod Ed",
@@ -5511,7 +5510,7 @@
     "image": "The Knight's Sword.png|300px",
     "release": "6 April 2001",
     "update": "Massive update!",
-    "members": "No",
+    "members": false,
     "series": "None",
     "developer": "{{RSL|Paul Gower",
     "rewards": {
@@ -5561,7 +5560,7 @@
     "image": "Land of the Goblins.png|300px",
     "release": "9 February 2022",
     "update": "Land of the Goblins",
-    "members": "Yes",
+    "members": true,
     "series": "Dorgeshuun, #4",
     "developer": "John A (original), Mod Ed (Old School)",
     "rewards": {
@@ -5647,7 +5646,7 @@
     "image": "Legends' Quest - Fighting Nezikchened.png|300px",
     "release": "20 August 2003",
     "update": "New - Legends Quest!",
-    "members": "Yes",
+    "members": true,
     "series": "None",
     "developer": "{{RSL|Mod Tytn|Tytn H",
     "rewards": {
@@ -5790,7 +5789,7 @@
     "release": "27 February 2002",
     "update": "Latest RuneScape News (27 February 2002)",
     "aka": "",
-    "members": "Yes",
+    "members": true,
     "series": "None",
     "developer": "{{RSL|Paul Gower",
     "rewards": {
@@ -5850,7 +5849,7 @@
     "image": "The Lost Tribe.png|300px",
     "release": "31 May 2005",
     "update": "New Appointment in Lumbridge",
-    "members": "Yes",
+    "members": true,
     "series": "Dorgeshuun, #1",
     "developer": "John A",
     "rewards": {
@@ -5916,7 +5915,7 @@
     "image": "Lunar Diplomacy.png|300px",
     "release": "24 July 2006",
     "update": "Lunar Diplomacy",
-    "members": "Yes",
+    "members": true,
     "series": "Fremennik, #3",
     "developer": "Tim C, James B",
     "rewards": {
@@ -6034,7 +6033,7 @@
     "image": "Making Friends with My Arm.png|300px",
     "release": "6 September 2018",
     "update": "Making Friends With My Arm, Deadman Autumn Finals and Full Mobile Launch",
-    "members": "Yes",
+    "members": true,
     "series": "Troll, #5",
     "developer": "Mod Ash, Mod Munro",
     "rewards": {
@@ -6134,7 +6133,7 @@
     "image": "Outpost.png|300px",
     "release": "22 November 2005",
     "update": "Making History and minor changes",
-    "members": "Yes",
+    "members": true,
     "series": "None",
     "developer": "Tim C",
     "rewards": {
@@ -6188,7 +6187,7 @@
     "image": "Meat and Greet.png|300px",
     "release": "25 September 2024",
     "update": "Varlamore: The Rising Darkness is OUT NOW",
-    "members": "Yes",
+    "members": true,
     "series": "None",
     "developer": "",
     "rewards": {
@@ -6223,7 +6222,7 @@
     "image": "Merlin's Crystal.png|300px",
     "release": "27 February 2002",
     "update": "Latest RuneScape News (27 February 2002)",
-    "members": "Yes",
+    "members": true,
     "series": "Camelot, #1",
     "developer": "{{RSL|Paul Gower",
     "rewards": {
@@ -6264,7 +6263,7 @@
     "image": "Misthalin Mystery.png|300px",
     "release": "26 January 2017",
     "update": "Prayers Scrolls, QoL & a Quest",
-    "members": "No",
+    "members": false,
     "series": "None",
     "developer": "Mod Jed, Mod TomH,",
     "rewards": {
@@ -6307,7 +6306,7 @@
     "image": "Monk's Friend.png|300px",
     "release": "28 May 2002",
     "update": "Latest RuneScape News (28 May 2002)",
-    "members": "Yes",
+    "members": true,
     "series": "None",
     "developer": "{{RSL|Mod Tom|Tom W.",
     "rewards": {
@@ -6343,7 +6342,7 @@
     "image": "Monkey Madness I.png|300px",
     "release": "6 December 2004",
     "update": "Monkey Madness",
-    "members": "Yes",
+    "members": true,
     "series": "Gnome, #4",
     "developer": "Rahul V",
     "rewards": {
@@ -6388,7 +6387,7 @@
     "image": "Monkey Madness II.png|300px",
     "release": "6 May 2016",
     "update": "Monkey Madness II",
-    "members": "Yes",
+    "members": true,
     "series": "Gnome, #5",
     "developer": "Mod Jed, Ian Gower, Mod Ash, Mod Maz, {{RSL|Mod Bond",
     "rewards": {
@@ -6521,7 +6520,7 @@
     "image": "Mountain Daughter.png|300px",
     "release": "7 March 2005",
     "update": "Mountain Daughter and Changes",
-    "members": "Yes",
+    "members": true,
     "series": "None",
     "developer": "Vincent Van M",
     "rewards": {
@@ -6584,7 +6583,7 @@
     "release": "19 July 2005",
     "update": "Plague City Series Continued",
     "aka": "ME1, MEP1",
-    "members": "Yes",
+    "members": true,
     "series": "Elf, #6",
     "developer": "Dylan C",
     "rewards": {
@@ -6666,7 +6665,7 @@
     "release": "17 October 2005",
     "update": "Mourning's Ends Pt II",
     "aka": "MEP2",
-    "members": "Yes",
+    "members": true,
     "series": "Elf, #7",
     "developer": "Dylan C, Graham B",
     "rewards": {
@@ -6712,7 +6711,7 @@
     "image": "Murder Mystery.png|300px",
     "release": "9 June 2003",
     "update": "New Murder Mystery Quest!",
-    "members": "Yes",
+    "members": true,
     "series": "None",
     "developer": "{{RSL|Mod James|James B",
     "rewards": {
@@ -6751,7 +6750,7 @@
     "image": "My Arm's Big Adventure.png|300px",
     "release": "23 October 2006",
     "update": "Would you like to see My Arm?",
-    "members": "Yes",
+    "members": true,
     "series": "Troll, #4",
     "developer": "Ashleigh B",
     "rewards": {
@@ -6821,7 +6820,7 @@
     "image": "Nature Spirit.png|300px",
     "release": "13 July 2004",
     "update": "Nature Spirit Quest",
-    "members": "Yes",
+    "members": true,
     "series": "None",
     "developer": "Tytn H",
     "rewards": {
@@ -6873,7 +6872,7 @@
     "image": "A Night at the Theatre.png|300px",
     "release": "3 June 2021",
     "update": "Theatre of Blood: New Modes",
-    "members": "Yes",
+    "members": true,
     "series": "None",
     "developer": "Mod Ed",
     "rewards": {
@@ -6922,7 +6921,7 @@
     "image": "Observatory Quest.png|300px",
     "release": "17 March 2003",
     "update": "Observatory Quest online!",
-    "members": "Yes",
+    "members": true,
     "series": "None",
     "developer": "{{RSL|Mod James|James B",
     "rewards": {
@@ -6972,7 +6971,7 @@
     "image": "Olaf's Quest.png|300px",
     "release": "10 April 2007",
     "update": "Olaf's Quest",
-    "members": "Yes",
+    "members": true,
     "series": "None",
     "developer": "Anthony W",
     "rewards": {
@@ -7038,7 +7037,7 @@
     "release": "28 February 2005",
     "update": "One Small Favour",
     "aka": "OSF",
-    "members": "Yes",
+    "members": true,
     "series": "None",
     "developer": "Tytn H",
     "rewards": {
@@ -7118,7 +7117,7 @@
     "image": "The Path of Glouphrie.png",
     "release": "13 September 2023",
     "update": "The Path of Glouphrie",
-    "members": "Yes",
+    "members": true,
     "aka": "PoG",
     "series": "Gnome, #3",
     "developer": "Mods Chihiro and Tytn (original), Mod Ed (Old School)",
@@ -7203,7 +7202,7 @@
     "image": "Perilous Moons.png|300px",
     "release": "20 March 2024",
     "update": "Varlamore: Part One",
-    "members": "Yes",
+    "members": true,
     "series": "None",
     "developer": "Mod Rice",
     "rewards": {
@@ -7283,7 +7282,7 @@
     "image": "Pirate's Treasure.png|300px",
     "release": "11 June 2001",
     "update": "The island of Karamja is open",
-    "members": "No",
+    "members": false,
     "series": "None",
     "developer": "{{RSL|Paul Gower",
     "rewards": {
@@ -7322,7 +7321,7 @@
     "image": "Plague City.png|300px",
     "release": "27 August 2002",
     "update": "Multi-part quest",
-    "members": "Yes",
+    "members": true,
     "series": "Elf, #1",
     "developer": "{{RSL|Paul Gower",
     "rewards": {
@@ -7362,7 +7361,7 @@
     "image": "A Porcine of Interest.png|300px",
     "release": "10 September 2020",
     "update": "A Porcine of Interest",
-    "members": "Yes",
+    "members": true,
     "series": "None",
     "developer": "Mod Mack, Mod Ry",
     "rewards": {
@@ -7406,7 +7405,7 @@
     "image": "Priest in Peril.png|300px",
     "release": "29 June 2004",
     "update": "Priest In Peril Quest",
-    "members": "Yes",
+    "members": true,
     "series": "Myreque",
     "developer": "James B",
     "rewards": {
@@ -7446,7 +7445,7 @@
     "image": "Prince Ali Rescue.png|300px",
     "release": "28 February 2001",
     "update": "Yet another new quest, and new options menu",
-    "members": "No",
+    "members": false,
     "series": "Kharidian, #1",
     "developer": "Rob L, {{RSL|Paul Gower",
     "rewards": {
@@ -7494,7 +7493,7 @@
     "image": "The Queen of Thieves.png|300px",
     "release": "9 November 2017",
     "update": "The Queen of Thieves & The Depths of Despair",
-    "members": "Yes",
+    "members": true,
     "series": "Great Kourend, #3A",
     "developer": "Mod Ed",
     "rewards": {
@@ -7545,7 +7544,7 @@
     "image": "Rag and Bone Man.png|300px",
     "release": "10 April 2006",
     "update": "Rag and Bone Man",
-    "members": "Yes",
+    "members": true,
     "series": "Rag and Bone Man, #1",
     "developer": "Anthony W",
     "rewards": {
@@ -7586,7 +7585,7 @@
     "image": "Rag and Bone Man.png|300px",
     "release": "10 April 2006",
     "update": "Rag and Bone Man",
-    "members": "Yes",
+    "members": true,
     "series": "Rag and Bone Man, #2",
     "developer": "Anthony W",
     "rewards": {
@@ -7654,7 +7653,7 @@
     "image": "Ratcatchers.png|300px",
     "release": "28 November 2005",
     "update": "Rat Catchers and Rat Pits!",
-    "members": "Yes",
+    "members": true,
     "series": "None",
     "developer": "Chris J",
     "rewards": {
@@ -7712,7 +7711,7 @@
     "release": "15 March 2006",
     "update": "Hundredth Quest - Recipe for Disaster!",
     "aka": "RFD",
-    "members": "Yes",
+    "members": true,
     "series": "None",
     "developer": "James B (framework)",
     "rewards": {
@@ -7948,7 +7947,7 @@
     "image": "Recruitment Drive.png|300px",
     "release": "27 June 2005",
     "update": "Recruitment Drive",
-    "members": "Yes",
+    "members": true,
     "series": "Temple Knight, #1",
     "developer": "James B",
     "rewards": {
@@ -7988,7 +7987,7 @@
     "image": "Regicide.png|300px",
     "release": "20 September 2004",
     "update": "Plague City Part 4 Released",
-    "members": "Yes",
+    "members": true,
     "series": "Elf, #4",
     "developer": "Dylan C",
     "rewards": {
@@ -8058,7 +8057,7 @@
     "image": "The Restless Ghost.png|300px",
     "release": "4 January 2001",
     "update": "Runescape beta is now online!",
-    "members": "No",
+    "members": false,
     "series": "None",
     "developer": "{{RSL|Paul Gower",
     "rewards": {
@@ -8095,7 +8094,7 @@
     "image": "The Ribbiting Tale of a Lily Pad Labour Dispute.png|300px",
     "release": "20 March 2024",
     "update": "Varlamore: Part One",
-    "members": "Yes",
+    "members": true,
     "series": "None",
     "developer": "",
     "rewards": {
@@ -8144,7 +8143,7 @@
     "image": "Romeo & Juliet.png|300px",
     "release": "4 January 2001",
     "update": "Runescape beta is now online!",
-    "members": "No",
+    "members": false,
     "series": "None",
     "developer": "Rob L, {{RSL|Paul Gower",
     "rewards": {
@@ -8176,7 +8175,7 @@
     "image": "Roving Elves.png|300px",
     "release": "7 February 2005",
     "update": "Roving Elves",
-    "members": "Yes",
+    "members": true,
     "series": "Elf, #5",
     "developer": "Dylan C",
     "rewards": {
@@ -8232,7 +8231,7 @@
     "image": "Royal Trouble.png",
     "release": "22 May 2006",
     "update": "Royal Trouble",
-    "members": "Yes",
+    "members": true,
     "series": "Miscellania, #2",
     "developer": "Isobel H",
     "rewards": {
@@ -8294,7 +8293,7 @@
     "image": "Rum Deal.png|300px",
     "release": "31 October 2005",
     "update": "Rum Deal",
-    "members": "Yes",
+    "members": true,
     "series": "Pirate, #1",
     "developer": "Anthony W",
     "rewards": {
@@ -8387,7 +8386,7 @@
     "image": "Rune Mysteries.png|300px",
     "release": "29 March 2004",
     "update": "RS2 Launched!",
-    "members": "No",
+    "members": false,
     "series": "Order of Wizards, #1",
     "developer": "{{RSL|Mod James|James B",
     "rewards": {
@@ -8422,7 +8421,7 @@
     "image": "Scorpion Catcher.png|300px",
     "release": "25 March 2002",
     "update": "Latest RuneScape News (25 March 2002)",
-    "members": "Yes",
+    "members": true,
     "series": "None",
     "developer": "{{RSL|Paul Gower",
     "rewards": {
@@ -8471,7 +8470,7 @@
     "image": "Sea Slug.png|300px",
     "release": "9 September 2002",
     "update": "Sea Slug Quest",
-    "members": "Yes",
+    "members": true,
     "series": "Temple Knight, #3",
     "developer": "{{RSL|Mod Tom|Tom W",
     "rewards": {
@@ -8519,7 +8518,7 @@
     "image": "Secrets of the North.png|300px",
     "release": "11 January 2023",
     "update": "Secrets of the North & More!",
-    "members": "Yes",
+    "members": true,
     "series": "Mahjarrat, #13",
     "developer": "Mod Ed",
     "rewards": {
@@ -8601,7 +8600,7 @@
     "release": "18 October 2004",
     "update": "Mortton Shades and Mage Armour",
     "aka": "",
-    "members": "Yes",
+    "members": true,
     "series": "None",
     "developer": "Tytn H",
     "rewards": {
@@ -8676,7 +8675,7 @@
     "image": "Shadow of the Storm.png|300px",
     "release": "14 November 2005",
     "update": "Shadow of the Storm",
-    "members": "Yes",
+    "members": true,
     "series": "Demon Slayer, #2",
     "developer": "John A",
     "rewards": {
@@ -8732,7 +8731,7 @@
     "release": "15 August 2002",
     "update": "Sheep and cults",
     "aka": "",
-    "members": "Yes",
+    "members": true,
     "series": "None",
     "developer": "{{RSL|Mod Tom|Tom W",
     "rewards": {
@@ -8766,7 +8765,7 @@
     "image": "Sheep Shearer.png|300px",
     "release": "4 January 2001",
     "update": "Runescape beta is now online!",
-    "members": "No",
+    "members": false,
     "series": "None",
     "developer": "{{RSL|Paul Gower",
     "rewards": {
@@ -8806,7 +8805,7 @@
     "image": "Shield of Arrav.png|300px",
     "release": "4 January 2001",
     "update": "Runescape beta is now online!",
-    "members": "No",
+    "members": false,
     "series": "None",
     "developer": "{{RSL|Mod Greg|Greg V",
     "rewards": {
@@ -8847,7 +8846,7 @@
     "image": "Shilo Village.png|300px",
     "release": "27 January 2003",
     "update": "Shilo Village Quest online",
-    "members": "Yes",
+    "members": true,
     "series": "None",
     "developer": "Tytn H",
     "rewards": {
@@ -8915,7 +8914,7 @@
     "image": "Sins of the Father.png",
     "release": "4 June 2020",
     "update": "Darkmeyer",
-    "members": "Yes",
+    "members": true,
     "series": "Myreque, #5",
     "developer": "Mod Ed",
     "rewards": {
@@ -9027,7 +9026,7 @@
     "image": "Sleeping Giants.png|300px",
     "release": "8 June 2022",
     "update": "Giants' Foundry",
-    "members": "Yes",
+    "members": true,
     "series": "None",
     "developer": "Mod Oasis",
     "rewards": {
@@ -9076,7 +9075,7 @@
     "image": "Witchaven.png|300px",
     "release": "20 September 2006",
     "update": "Slug Menace",
-    "members": "Yes",
+    "members": true,
     "series": "Temple Knight, #4",
     "developer": "Chris LC",
     "rewards": {
@@ -9166,7 +9165,7 @@
     "release": "25 July 2019",
     "update": "Song of the Elves",
     "aka": "SotE",
-    "members": "Yes",
+    "members": true,
     "series": "Elf, #8",
     "developer": "'' Development and testing''': Mod Ed, Mod Curse, Mod Lenny, Mod Tide<br/>'''Art and graphics''': Mod Gee, Mod Ghost, Mod West, Mod Ry<br/>'''Audio''': Mod Ian, Mod Slippers, Mod Surma",
     "rewards": {
@@ -9339,7 +9338,7 @@
     "image": "A Soul's Bane.png|300px",
     "release": "3 April 2006",
     "update": "A Soul's Bane",
-    "members": "Yes",
+    "members": true,
     "series": "None",
     "developer": "Tim C",
     "rewards": {
@@ -9383,7 +9382,7 @@
     "image": "Spirits of the Elid.png|300px",
     "release": "5 December 2005",
     "update": "Nardah, Tool Sheds & Spirits of the Elid",
-    "members": "Yes",
+    "members": true,
     "series": "None",
     "developer": "Paul G",
     "rewards": {
@@ -9460,7 +9459,7 @@
     "image": "Swan Song.png|300px",
     "release": "2 May 2006",
     "update": "Return of the Wise Old Man!",
-    "members": "Yes",
+    "members": true,
     "series": "None",
     "developer": "Ashleigh B",
     "rewards": {
@@ -9582,7 +9581,7 @@
     "image": "Tai Bwo Wannai Trio.png|300px",
     "release": "14 September 2004",
     "update": "Tai Bwo Wannai Trio",
-    "members": "Yes",
+    "members": true,
     "series": "None",
     "developer": "Rahul V",
     "rewards": {
@@ -9675,7 +9674,7 @@
     "image": "A Tail of Two Cats.png|300px",
     "release": "26 September 2005",
     "update": "A Tail of Two Cats",
-    "members": "Yes",
+    "members": true,
     "series": "Dragonkin, #2",
     "developer": "Jonathan S",
     "rewards": {
@@ -9725,7 +9724,7 @@
     "image": "Tale of the Righteous.png|300px",
     "release": "19 April 2018",
     "update": "Tale of the Righteous and Kourend Favour",
-    "members": "Yes",
+    "members": true,
     "series": "Great Kourend, #3E",
     "developer": "Mod Ed, Mod Kieren",
     "rewards": {
@@ -9784,7 +9783,7 @@
     "image": "A Taste of Hope.png|300px",
     "release": "24 May 2018",
     "update": "A Taste of Hope",
-    "members": "Yes",
+    "members": true,
     "series": "Myreque, #4",
     "developer": "Mod Ed",
     "rewards": {
@@ -9869,7 +9868,7 @@
     "image": "Tears of Guthix.png|300px",
     "release": "4 May 2005",
     "update": "Earthquake Rocks Lumbridge",
-    "members": "Yes",
+    "members": true,
     "series": "None",
     "developer": "John A",
     "rewards": {
@@ -9949,7 +9948,7 @@
     "image": "Temple of Ikov.png|300px",
     "release": "17 June 2002",
     "update": "Latest RuneScape News (17 June 2002)",
-    "members": "Yes",
+    "members": true,
     "series": "Mahjarrat, #5",
     "developer": "Paul Gower",
     "rewards": {
@@ -10024,7 +10023,7 @@
     "image": "Temple of the Eye.png|300px",
     "release": "23 March 2022",
     "update": "Guardians of the Rift Launch",
-    "members": "Yes",
+    "members": true,
     "series": "Order of Wizards, #3",
     "developer": "Mod Ed, Mod Husky",
     "rewards": {
@@ -10072,7 +10071,7 @@
     "release": "6 November 2024",
     "update": "The Curse of Arrav & Mobile Anniversary Update",
     "aka": "CoA",
-    "members": "Yes",
+    "members": true,
     "series": "Mahjarrat, #10",
     "developer": "Paul Gower (original), Mod Ed, Mod Lenny (Old School)",
     "rewards": {
@@ -10121,7 +10120,7 @@
     "image": "Throne of Miscellania.png|300px",
     "release": "29 November 2004",
     "update": "Throne Of Miscellania",
-    "members": "Yes",
+    "members": true,
     "series": "Miscellania, #1",
     "developer": "Chris S, Jonathan S",
     "rewards": {
@@ -10159,7 +10158,7 @@
     "image": "The Tourist Trap.png|300px",
     "release": "14 April 2003",
     "update": "Tourist Trap Quest Online!",
-    "members": "Yes",
+    "members": true,
     "series": "None",
     "developer": "{{RSL|Mod Tytn|Tytn H",
     "rewards": {
@@ -10221,7 +10220,7 @@
     "image": "Tower of Life.png|300px",
     "release": "19 February 2007",
     "update": "The Tower of Life",
-    "members": "Yes",
+    "members": true,
     "series": "None",
     "developer": "Tim C",
     "rewards": {
@@ -10279,7 +10278,7 @@
     "image": "Tree Gnome Village.png|300px",
     "release": "23 July 2002",
     "update": "Members' quests",
-    "members": "Yes",
+    "members": true,
     "series": "Gnome quest series",
     "developer": "{{RSL|Mod Tom|Tom W",
     "rewards": {
@@ -10325,7 +10324,7 @@
     "image": "Tribal Totem.png|300px",
     "release": "30 April 2002",
     "update": "Latest RuneScape News (30 April 2002)",
-    "members": "Yes",
+    "members": true,
     "series": "None",
     "developer": "{{RSL|Paul Gower",
     "rewards": {
@@ -10370,7 +10369,7 @@
     "image": "Troll Romance.png|300px",
     "release": "5 January 2005",
     "update": "Troll Romance, Banks and Chat",
-    "members": "Yes",
+    "members": true,
     "series": "None",
     "developer": "Simon S",
     "rewards": {
@@ -10439,7 +10438,7 @@
     "image": "Troll Stronghold.png|300px",
     "release": "24 August 2004",
     "update": "Troll Stronghold Quest",
-    "members": "Yes",
+    "members": true,
     "series": "Troll, #2",
     "developer": "Chris S",
     "rewards": {
@@ -10490,7 +10489,7 @@
     "image": "Twilight's Promise.png|300px",
     "release": "20 March 2024",
     "update": "Varlamore: Part One",
-    "members": "Yes",
+    "members": true,
     "series": "Twilight Emissaries, #2",
     "developer": "",
     "rewards": {
@@ -10528,7 +10527,7 @@
     "image": "Underground Pass.png|300px",
     "release": "3 March 2003",
     "update": "New Quest Online - Part Three",
-    "members": "Yes",
+    "members": true,
     "series": "Elf, #3",
     "developer": "{{RSL|Mod Tom|Tom W",
     "rewards": {
@@ -10590,7 +10589,7 @@
     "image": "Vampyre Slayer.png|300px",
     "release": "28 January 2001",
     "update": "New Quest: Vampire Slayer",
-    "members": "No",
+    "members": false,
     "series": "None",
     "developer": "{{RSL|Paul Gower",
     "rewards": {
@@ -10633,7 +10632,7 @@
     "image": "Wanted!.png|300px",
     "release": "17 October 2005",
     "update": "Wanted!",
-    "members": "Yes",
+    "members": true,
     "series": "Temple Knight, #2",
     "developer": "James B",
     "rewards": {
@@ -10692,7 +10691,7 @@
     "image": "Watchtower.png|300px",
     "release": "7 May 2003",
     "update": "New - Watch Tower Quest!",
-    "members": "Yes",
+    "members": true,
     "series": "None",
     "developer": "Ian T",
     "rewards": {
@@ -10785,7 +10784,7 @@
     "image": "Waterfall Quest.png|300px",
     "release": "24 September 2002",
     "update": "Tutorial island",
-    "members": "Yes",
+    "members": true,
     "series": "None",
     "developer": "{{RSL|Mod Tom|Tom W",
     "rewards": {
@@ -10831,7 +10830,7 @@
     "image": "What Lies Below.png|300px",
     "release": "27 March 2007",
     "update": "What Lies Below",
-    "members": "Yes",
+    "members": true,
     "series": "None",
     "developer": "Danny J",
     "rewards": {
@@ -10895,7 +10894,7 @@
     "release": "10 July 2024",
     "update": "While Guthix Sleeps",
     "aka": "WGS",
-    "members": "Yes",
+    "members": true,
     "series": "Mahjarrat, #15",
     "developer": "Mod Ed",
     "rewards": {
@@ -11026,7 +11025,7 @@
     "image": "Witch's House.png|300px",
     "release": "27 February 2002",
     "update": "Latest RuneScape News (27 February 2002)",
-    "members": "Yes",
+    "members": true,
     "series": "None",
     "developer": "{{RSL|Paul Gower",
     "rewards": {
@@ -11066,7 +11065,7 @@
     "image": "Witch's Potion.png|300px",
     "release": "6 April 2001",
     "update": "Massive update!",
-    "members": "No",
+    "members": false,
     "series": "None",
     "developer": "{{RSL|Paul Gower",
     "rewards": {
@@ -11101,7 +11100,7 @@
     "image": "X Marks the Spot.png|300px",
     "release": "7 February 2019",
     "update": "X Marks The Spot",
-    "members": "No",
+    "members": false,
     "series": "Great Kourend, #1",
     "developer": "Mod Ed",
     "rewards": {
@@ -11136,7 +11135,7 @@
     "image": "Zogre Flesh Eaters.png|300px",
     "release": "17 May 2005",
     "update": "Zogre Flesh Eaters",
-    "members": "Yes",
+    "members": true,
     "series": "None",
     "developer": "Tytn H",
     "rewards": {

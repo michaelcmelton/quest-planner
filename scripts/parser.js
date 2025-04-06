@@ -8,7 +8,7 @@ import { normalizeQuestName } from './utils.js';
  * @property {string} release - The release date of the quest
  * @property {string} update - The update that introduced the quest
  * @property {string} [aka] - Alternative names for the quest (optional)
- * @property {string} members - Whether the quest is members-only
+ * @property {boolean} members - Whether the quest is members-only
  * @property {string} series - The quest series this quest belongs to
  * @property {string} developer - The developer who created the quest
  */
@@ -61,7 +61,7 @@ export function getInfobox(questData) {
       const [key, ...valueParts] = line.split('=').map(s => s.trim());
       if (key && valueParts.length > 0) {
         const value = valueParts.join('=').trim();
-        const cleanKey = key.replace('|', '');
+        const cleanKey = key.replace('|', '').trim();
         
         let cleanValue;
         
@@ -83,6 +83,8 @@ export function getInfobox(questData) {
         if (cleanKey === 'number') {
           const numValue = parseInt(cleanValue);
           infobox[cleanKey] = isNaN(numValue) ? 0 : numValue;
+        } else if (cleanKey === 'members') {
+          infobox[cleanKey] = cleanValue === 'Yes' ? true : false;
         } else {
           infobox[cleanKey] = cleanValue;
         }

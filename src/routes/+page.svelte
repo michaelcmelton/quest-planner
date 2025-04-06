@@ -21,7 +21,7 @@
 					</svg>
 				</a>
 				<a
-					href="/quests"
+					href="/quest-explorer"
 					class="inline-flex items-center justify-center px-6 py-3 text-base font-semibold text-gray-700 dark:text-gray-200 bg-gray-200 dark:bg-gray-700 rounded-lg hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors border border-gray-300 dark:border-gray-600"
 				>
 					Browse Quests

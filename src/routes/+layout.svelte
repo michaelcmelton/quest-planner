@@ -33,6 +33,12 @@
 					>
 					About
 					</a>
+					<a
+					href="/quest-list"
+					class="text-gray-600 dark:text-gray-300 hover:text-gray-800 dark:hover:text-white transition-colors {$page.url.pathname === '/quest-explorer' ? 'font-semibold' : ''}"
+					>
+					Quest List
+					</a>
 					<button
 						on:click={toggleTheme}
 						class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"

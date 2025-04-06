@@ -141,8 +141,13 @@ export function getQuestRewards(questData) {
           line.includes('|rewards') ||
           line.includes('}}')) continue;
 
-      // Clean up the reward text
-      const cleanReward = line.trim().substring(1);
+      let cleanReward;
+          // Clean up the reward text
+      if (line.startsWith('**')) {
+        cleanReward = line.trim().substring(2);
+      } else {
+        cleanReward = line.trim().substring(1);
+      }
 
       if (line.startsWith('==') && line.endsWith('==')) {
         break;
@@ -195,7 +200,11 @@ function parseQuestRequirements(requirementLines) {
 
     // If line doesn't match skills or quests, and isn't a quest requirement, it's an "other" requirement
     if (reqLine.startsWith('*') && !reqLine.includes('Completion of') && !reqLine.includes('[[')) {
-      requirements.other.push(reqLine.substring(1).trim());
+      if (reqLine.startsWith('**')) {
+        requirements.other.push(reqLine.substring(2).trim());
+      } else {
+        requirements.other.push(reqLine.substring(1).trim());
+      }
     }
   }
 

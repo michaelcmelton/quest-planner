@@ -166,6 +166,64 @@
     "ironman": [],
     "leagueRegion": "<poem>{{RE|Asgarnia}} — location requirement{{RE|Fremennik}} — location requirement</poem>"
   },
+  "the_ascent_of_arceuus": {
+    "id": "the_ascent_of_arceuus",
+    "name": "The Ascent of Arceuus",
+    "number": 141,
+    "image": "The Ascent of Arceuus.png|300px",
+    "release": "10 January 2019",
+    "update": "The Kebos Lowlands",
+    "members": true,
+    "series": "Great Kourend, #3C",
+    "developer": "Mod Ed",
+    "rewards": {
+      "questPoints": 1,
+      "experienceRewards": [
+        {
+          "skill": "Hunter",
+          "amount": 1500
+        },
+        {
+          "skill": "Runecraft",
+          "amount": 500
+        }
+      ],
+      "otherRewards": [
+        "A page for [[Kharedst's memoirs]], '[[A dark disposition]].' It teleports players to the centre of Arceuus.",
+        "Ability to recolour the [[graceful outfit]] to the colours of [[Arceuus]].",
+        "Ability to receive [[Arceuus signet]]s from [[Tyss]].",
+        "Ability to fight the [[Trapped Soul]] within the [[Nightmare Zone]]."
+      ]
+    },
+    "start": "Speak to [[Mori]] in [[Arceuus]].",
+    "startmap": "1700,3742",
+    "difficulty": "Intermediate",
+    "description": "A long time ago, the citizens of Arceuus house gave up their human bodies and claimed immortality. This event was known as the Ascent of Arceuus and it marked the end of death within Arceuus house. Or so they believed. For the first time in a thousand years, a member of Arceuus house has fallen. You will need to solve the mystery of this death. However, time is of the essence and the fate of Arceuus house lies in your hands.",
+    "length": "Short",
+    "requirements": {
+      "skills": [
+        {
+          "skill": "Hunter",
+          "level": 12,
+          "boostable": false,
+          "required": true,
+          "link": "[[Hunter level|Hunter]]"
+        }
+      ],
+      "quests": [
+        "client_of_kourend"
+      ],
+      "other": []
+    },
+    "items": [],
+    "recommended": [],
+    "kills": [
+      "5 [[Tormented Soul]]s (Level 16)",
+      "[[Trapped Soul]] (Level 30)"
+    ],
+    "ironman": [],
+    "leagueRegion": "<poem>Unlocking {{RE|Kourend}} {{okay}} will auto-complete the quest</poem>"
+  },
   "at_first_light": {
     "id": "at_first_light",
     "name": "At First Light",
@@ -2083,12 +2141,12 @@
       "otherRewards": [
         "Ability to speak to cats without the [[Catspeak amulet]]",
         "Access to the [[Myths' Guild]]",
-        "*Access to the pettable [[Dog (Myths' Guild)|dog]]",
-        "*Ability to make [[super antifire potion]]s by speaking to [[Primula]]",
-        "*Access to [[Fountain of Uhld]] where dragonstone jewellery (excluding the [[ring of wealth]]) can be recharged",
-        "*Access to the [[Pool of Dreams]] where players can choose to fight [[Galvek]] again or rewatch [[cutscene]]s from the quest",
-        "*Access to the [[Wrath Altar]]",
-        "*Access to the shop to buy the [[mythical cape]]",
+        "Access to the pettable [[Dog (Myths' Guild)|dog]]",
+        "Ability to make [[super antifire potion]]s by speaking to [[Primula]]",
+        "Access to [[Fountain of Uhld]] where dragonstone jewellery (excluding the [[ring of wealth]]) can be recharged",
+        "Access to the [[Pool of Dreams]] where players can choose to fight [[Galvek]] again or rewatch [[cutscene]]s from the quest",
+        "Access to the [[Wrath Altar]]",
+        "Access to the shop to buy the [[mythical cape]]",
         "Access to [[adamant dragon|adamant]] and [[rune dragon]]s in the [[Lithkren Vault]]",
         "Access to a stronger version of [[Vorkath]] on [[Ungael]]",
         "Ability to reforge the [[dragon platebody]] and [[dragon kiteshield|kiteshield]]",
@@ -2593,7 +2651,7 @@
       ],
       "otherRewards": [
         "The ability to make and use elemental mind equipment",
-        "*To make a [[mind shield]]: have the [[slashed book]] from the [[Elemental Workshop I]] quest in your inventory, then smith a [[Mind bar|primed mind bar]] into a mind shield"
+        "To make a [[mind shield]]: have the [[slashed book]] from the [[Elemental Workshop I]] quest in your inventory, then smith a [[Mind bar|primed mind bar]] into a mind shield"
       ]
     },
     "start": "Search the bookcases in the [[Exam Centre]]'s library and read the [[beaten book]]",
@@ -2764,7 +2822,7 @@
       ],
       "otherRewards": [
         "The [[Bomber jacket]] and [[Bomber cap|cap]]",
-        "*[[Gnome goggles]] from the [[Gnome Restaurant]] [[Minigames|minigame]] can be combined with the bomber cap by talking with [[Auguste]]",
+        "[[Gnome goggles]] from the [[Gnome Restaurant]] [[Minigames|minigame]] can be combined with the bomber cap by talking with [[Auguste]]",
         "Access to the [[balloon transport system]]",
         "Ability to make [[origami balloon]]s"
       ]
@@ -3139,7 +3197,7 @@
       "questPoints": 1,
       "experienceRewards": [],
       "otherRewards": [
-        "*The steel gauntlets offer useful perks. Each brother will imbue them with a special ability. They will initially do this for free. Be careful choosing, though, since you can only have one effect, and it will cost you 25,000 [[coins]] to change them. [[Dimintheis]] will provide you with a \"magically\" found pair should you lose them.",
+        "The steel gauntlets offer useful perks. Each brother will imbue them with a special ability. They will initially do this for free. Be careful choosing, though, since you can only have one effect, and it will cost you 25,000 [[coins]] to change them. [[Dimintheis]] will provide you with a \"magically\" found pair should you lose them.",
         ":'''Note: '''Although they are called \"steel\", players with 1 [[Defence]] can wear them."
       ]
     },
@@ -5009,7 +5067,7 @@
       "experienceRewards": [],
       "otherRewards": [
         "A [[damaged book]] of your choice which, when complete, will become: a [[Holy book]] ([[Saradomin]]), an [[Unholy book]] ([[Zamorak]]), or a [[Book of balance]] ([[Guthix]]).",
-        "*Further damaged [[God book|books]] can be purchased from Jossik for 5,000 coins each, even if you have not filled your other book(s).",
+        "Further damaged [[God book|books]] can be purchased from Jossik for 5,000 coins each, even if you have not filled your other book(s).",
         "Access to the [[Lighthouse]] [[general store]] and the [[Dagannoth]] caves underneath.",
         "nlocks:",
         " [[Dagannoth mother]] accessible in the [[Nightmare Zone]]."
@@ -5465,7 +5523,7 @@
       "experienceRewards": [],
       "otherRewards": [
         " The [[book of the dead]]",
-        "* If players claimed the antique lamp from the [[Architectural Alliance]] miniquest before [[10 January]] [[2024]], they will only receive one lamp.",
+        " If players claimed the antique lamp from the [[Architectural Alliance]] miniquest before [[10 January]] [[2024]], they will only receive one lamp.",
         " 24 new spells made available in the [[Arceuus spellbook]] (all combat spells with the exception of Ghostly Grasp and Inferior Demonbane, and all utility spells with the exception of Resurrect Crops and reanimation spells)."
       ]
     },
@@ -5534,7 +5592,7 @@
         "tale_of_the_righteous"
       ],
       "other": [
-        "*The above quests all require the following quests to be completed:"
+        "The above quests all require the following quests to be completed:"
       ]
     },
     "items": [
@@ -6971,7 +7029,7 @@
       "questPoints": 2,
       "experienceRewards": [],
       "otherRewards": [
-        "* If players completed the quest before 28 July 2021 and have already used the original two antique lamps that were rewarded, they will only receive two additional antique lamp upon re-completing the quest."
+        " If players completed the quest before 28 July 2021 and have already used the original two antique lamps that were rewarded, they will only receive two additional antique lamp upon re-completing the quest."
       ]
     },
     "start": "You can start this quest by talking to the Mysterious Stranger inside Ver Sinhaza, south-east of Meiyerditch.",
@@ -7022,14 +7080,14 @@
       "experienceRewards": [],
       "otherRewards": [
         "Your item reward depends on what astrological sign you see when you look through the telescope. It is different for each person. Each one rewards an [[uncut sapphire]] as well as the following:",
-        "*Aquarius: 25 [[water rune]]s",
-        "*Cancer: An [[amulet of defence]]",
-        "*Gemini: A [[black 2h sword]]",
-        "*Libra: 3 [[law rune]]s",
-        "*Pisces: 3 [[tuna]]",
-        "*Sagittarius: A [[maple longbow]]",
-        "*Scorpio: [[Weapon poison]]",
-        "*Taurus: A 1-dose [[super strength]] potion",
+        "Aquarius: 25 [[water rune]]s",
+        "Cancer: An [[amulet of defence]]",
+        "Gemini: A [[black 2h sword]]",
+        "Libra: 3 [[law rune]]s",
+        "Pisces: 3 [[tuna]]",
+        "Sagittarius: A [[maple longbow]]",
+        "Scorpio: [[Weapon poison]]",
+        "Taurus: A 1-dose [[super strength]] potion",
         "The [[Spirit of Scorpius]] will now give you a [[Unholy mould|mould]] to make [[unholy symbol]]s, and he will bless them for you too. He can be found in the graveyard north of the [[Observatory]].",
         "Talk to the [[Observatory assistant]] after the [[quest]] and he will reward you with a [[jug of wine]] as well as tell you his and the professor's real name.",
         "Access to the grappling [[shortcut]] rock outside the Observatory.",
@@ -7836,8 +7894,8 @@
       "otherRewards": [
         "n total, completing all 10 subquests for \"Recipe for Disaster\" awards:",
         "Access to the following areas:",
-        "*[[Mogre Camp]]",
-        "*[[Evil Chicken's Lair]]",
+        "[[Mogre Camp]]",
+        "[[Evil Chicken's Lair]]",
         "Ability to dive for crabs",
         "Ability to cook [[crab meat]]",
         "Ability to catch [[hell-rat]]s",
@@ -7846,10 +7904,10 @@
         "Ability to use the boat trip to travel between [[Karamja]] and [[Feldip Hills]]",
         "[[Ape Atoll Teleport (standard)|Ape Atoll Teleport]] spell",
         "Full access to [[Culinaromancer's Chest]]",
-        "*Access to [[Kitchen weaponry]]",
-        "*Access to the banking chest (under Lumbridge Castle)",
-        "*Access to a food store in the [[Culinaromancer's Chest]]",
-        "*Access to buy [[Barrows gloves]]",
+        "Access to [[Kitchen weaponry]]",
+        "Access to the banking chest (under Lumbridge Castle)",
+        "Access to a food store in the [[Culinaromancer's Chest]]",
+        "Access to buy [[Barrows gloves]]",
         "nlocks:",
         " [[Evil Chicken]] accessible in the [[Nightmare Zone]] on completion of [[Recipe for Disaster/Freeing Sir Amik Varze|Recipe for Disaster - Freeing Sir Amik Varze]] subquest.",
         " [[Agrith-Na-Na]], [[Flambeed]], [[Karamel]], [[Dessourt]], [[Gelatinnoth Mother]], [[Culinaromancer]] accessible in the [[Nightmare Zone]] after quest completion."
@@ -8958,8 +9016,8 @@
       "otherRewards": [
         "600 [[coins]]",
         "Additional rewards, which [[members]] can claim, when talking with [[Historian Minas]] in the [[Varrock Museum]]",
-        "*5 [[Kudos]]",
-        "*[[Antique lamp]] awarding 1,000xp in a skill of at least level 20"
+        "5 [[Kudos]]",
+        "[[Antique lamp]] awarding 1,000xp in a skill of at least level 20"
       ]
     },
     "start": "[[Varrock]] Palace library. Talk to [[Reldo]], the librarian, located at the northern end of [[Varrock Castle]].",
@@ -9043,8 +9101,7 @@
       "[[Rope]]",
       "[[Bronze wire]] (can be made from scratch using the General Store and Anvil north of [[Tai Bwo Wannai]])",
       "[[Chisel]]",
-      "3 regular [[bones]] (obtainable during quest, only ''normal'' bones work; a spare is a good idea in case you bury one)",
-      "[[Wampum belt]] (obtainable during quest)"
+      "3 regular [[bones]] (obtainable during quest, only ''normal'' bones work; a spare is a good idea in case you bury one)"
     ],
     "recommended": [],
     "kills": [
@@ -9070,16 +9127,16 @@
       "experienceRewards": [],
       "otherRewards": [
         "Access to [[Darkmeyer]]",
-        "*Access to the [[Daeyalt Essence Mine]]",
-        "*Access to the [[Hallowed Sepulchre]]",
-        "*Ability to shop at stores in Darkmeyer while wearing [[Vyre noble clothing]]",
-        "*Ability to use the [[Wall (Darkmeyer)|wall]] shortcut on the eastern side of Darkmeyer with 63 Agility, after purchasing two [[long rope]]s from the [[Darkmeyer General Store]] and using them on it.",
+        "Access to the [[Daeyalt Essence Mine]]",
+        "Access to the [[Hallowed Sepulchre]]",
+        "Ability to shop at stores in Darkmeyer while wearing [[Vyre noble clothing]]",
+        "Ability to use the [[Wall (Darkmeyer)|wall]] shortcut on the eastern side of Darkmeyer with 63 Agility, after purchasing two [[long rope]]s from the [[Darkmeyer General Store]] and using them on it.",
         "The [[Blisterwood flail]]",
         "Darkmeyer teleport via [[Drakan's medallion]]",
         "Boat travel between [[Burgh de Rott]], [[Slepe]] and the [[Icyene Graveyard]]",
         "Access to the [[mutated bloodvelds]] section of Meiyerditch Laboratories",
         "Access to the [[True Blood Altar]] (with a [[Blood talisman]])",
-        "*Access to the [[Guardian of Blood]] in the [[Guardians of the Rift]] minigame",
+        "Access to the [[Guardian of Blood]] in the [[Guardians of the Rift]] minigame",
         "Promotion to the rank of Lieutenant within The Myreque and its associated [[title]]"
       ]
     },
@@ -9246,8 +9303,8 @@
       ],
       "otherRewards": [
         "Promotion to [[Proselyte]] among the [[Temple Knights]]. This means you can buy and wear [[Proselyte armour]] with a greater [[Prayer]] bonus than [[Initiate]]. You can buy each piece individually, or buy the armour pack which, when opened, gives you the [[Proselyte hauberk|plate]], [[Proselyte sallet|helm]], and [[Proselyte cuisse|legs]]/[[Proselyte tasset|tassets]] all at once. The pack costs 25,000 coins",
-        "*Buying the upgraded armour in separate pieces costs more: the helm costs 8,000 coins, the platelegs and plateskirt cost 10,000 coins, and the platebody costs 12,000 coins for a total of 30,000 coins",
-        "*Required for the [[hard Falador Diary]]"
+        "Buying the upgraded armour in separate pieces costs more: the helm costs 8,000 coins, the platelegs and plateskirt cost 10,000 coins, and the platebody costs 12,000 coins for a total of 30,000 coins",
+        "Required for the [[hard Falador Diary]]"
       ]
     },
     "start": "Speak to [[Sir Tiffy Cashien]] in [[Falador Park]].",
@@ -9357,16 +9414,16 @@
       ],
       "otherRewards": [
         "Access to [[Prifddinas]]",
-        "*Ability to fight [[Zalcano]]",
-        "*Access to [[The Gauntlet]]",
-        "*Access to [[Trahaearn Mine]]",
-        "*Access to [[Iorwerth Dungeon]]",
-        "*Ability to change [[respawn]] point to [[Prifddinas]]",
-        "*Ability to move [[Player-owned house]] to [[Prifddinas]]",
-        "*Ability to teleport to [[Prifddinas]] with a [[teleport crystal]]",
-        "*Access to a new [[spirit tree]] destination in [[Prifddinas]]",
-        "*Ability to make [[divine potion]]s",
-        "*Ability to make [[crystal equipment|crystal tools, armour and weaponry]]",
+        "Ability to fight [[Zalcano]]",
+        "Access to [[The Gauntlet]]",
+        "Access to [[Trahaearn Mine]]",
+        "Access to [[Iorwerth Dungeon]]",
+        "Ability to change [[respawn]] point to [[Prifddinas]]",
+        "Ability to move [[Player-owned house]] to [[Prifddinas]]",
+        "Ability to teleport to [[Prifddinas]] with a [[teleport crystal]]",
+        "Access to a new [[spirit tree]] destination in [[Prifddinas]]",
+        "Ability to make [[divine potion]]s",
+        "Ability to make [[crystal equipment|crystal tools, armour and weaponry]]",
         "nlocks:",
         " [[Arianwyn]] (as ''Elven Traitor'') and [[Essyllt]] accessible in the [[Nightmare Zone]]."
       ]
@@ -9635,12 +9692,12 @@
       "otherRewards": [
         "25,000 [[coins]]",
         "Access to the [[Piscatoris Fishing Colony]]",
-        "*The ability to fish [[monkfish]]",
-        "*The ability to use [[Skeleton Mage]]s for training",
-        "*Use [[Kathy Corkat]]'s boat for free",
+        "The ability to fish [[monkfish]]",
+        "The ability to use [[Skeleton Mage]]s for training",
+        "Use [[Kathy Corkat]]'s boat for free",
         "Access to the following items from [[Malignius Mortifer]] upon request:",
-        "*A [[brown apron]]",
-        "*[[Bone seeds]] (requires an [[airtight pot]])"
+        "A [[brown apron]]",
+        "[[Bone seeds]] (requires an [[airtight pot]])"
       ]
     },
     "start": "The [[Piscatoris Fishing Colony]]. It can be reached via a boat trip from the river to the west of the [[Tree Gnome Stronghold]].",
@@ -9840,7 +9897,7 @@
       "experienceRewards": [],
       "otherRewards": [
         "A [[present]] containing:",
-        "*A [[Mouse toy]] (can be used to play with your cat, and functions as a fun weapon at the [[Emir's Arena]])"
+        "A [[Mouse toy]] (can be used to play with your cat, and functions as a fun weapon at the [[Emir's Arena]])"
       ]
     },
     "start": "Talk to [[Unferth]] at his house in [[Burthorpe]].",

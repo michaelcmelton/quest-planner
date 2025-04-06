@@ -1,9 +1,31 @@
 import { render, screen } from '@testing-library/svelte';
-import { describe, it, expect } from 'vitest';
+import { describe, it, expect, beforeEach, vi } from 'vitest';
 import Layout from './+layout.svelte';
 import { theme } from '$lib/stores/theme';
 import { fireEvent } from '@testing-library/svelte';
+
+interface PageData {
+  url: {
+    pathname: string;
+  };
+}
+
+vi.mock('$app/stores', () => ({
+  page: {
+    subscribe: (fn: (value: PageData) => void) => {
+      fn({ url: { pathname: '/' } });
+      return () => {};
+    }
+  }
+}));
+
 describe('Layout Component', () => {
+  beforeEach(() => {
+    // Reset theme to light mode before each test
+    theme.set('light');
+    document.documentElement.classList.remove('dark');
+  });
+
   it('renders the navigation header', () => {
     render(Layout);
     expect(screen.getByText('Quest Planner')).toBeInTheDocument();

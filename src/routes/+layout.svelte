@@ -35,7 +35,7 @@
 					</a>
 					<a
 					href="/quest-list"
-					class="text-gray-600 dark:text-gray-300 hover:text-gray-800 dark:hover:text-white transition-colors {$page.url.pathname === '/quest-explorer' ? 'font-semibold' : ''}"
+					class="text-gray-600 dark:text-gray-300 hover:text-gray-800 dark:hover:text-white transition-colors {$page.url.pathname === '/quest-list' ? 'font-semibold' : ''}"
 					>
 					Quest List
 					</a>

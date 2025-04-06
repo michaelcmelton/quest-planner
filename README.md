@@ -1,29 +1,56 @@
 # Quest Planner
 
-A modern web application for planning and optimizing quest routes in Old School RuneScape (OSRS). Born from the need to optimize quest routes for specialized accounts, Quest Planner provides an intuitive interface for planning efficient quest completion paths.
+A web application for planning and optimizing quest routes in Old School RuneScape. Built with SvelteKit and Tailwind CSS.
 
 ## Features
 
-### Current Features
-- 🗺️ Interactive quest route planning
-- 🔍 Comprehensive quest information
-- ✅ Real-time requirement validation
-- 🔄 Quest dependency tracking
+- 🎯 Interactive quest planning interface
+- 📊 Quest requirements tracking
+- 🗺️ Route optimization
+- 🌓 Dark mode support
+- 📱 Responsive design
+- 🔄 Real-time validation
 
-### Planned Features
-- 🎮 Advanced route optimization
-- 🤝 Community route sharing
-- 📊 Progress tracking
-- 🔑 User authentication
-- 📱 Mobile support
+## Tech Stack
+
+- **Frontend**: SvelteKit
+- **Styling**: Tailwind CSS
+- **Testing**: Vitest
+- **Type Safety**: TypeScript
+
+## Project Structure
+
+```
+quest-planner/
+├── src/
+│   ├── lib/
+│   │   ├── stores/
+│   │   │   ├── theme.ts           # Theme management store
+│   │   │   └── theme.test.ts      # Theme store tests
+│   │   └── components/
+│   │       └── QuestList.svelte   # Quest list component
+│   ├── routes/
+│   │   ├── +layout.svelte        # Root layout with navigation and theme toggle
+│   │   ├── +page.svelte          # Home page with feature tiles
+│   │   ├── +error.svelte         # Custom 404 error page
+│   │   ├── about/
+│   │   │   └── +page.svelte      # About page
+│   │   ├── quests/
+│   │   │   └── +page.svelte      # Quest list page
+│   │   └── planner/
+│   │       └── +page.svelte      # Quest planner page
+│   └── app.d.ts                  # TypeScript declarations
+├── static/
+│   └── icons/                   # Icons from the wiki
+├── tests/                      # Test files
+├── package.json                # Project dependencies
+├── tailwind.config.js          # Tailwind CSS configuration
+├── vite.config.ts             # Vite configuration
+└── tsconfig.json              # TypeScript configuration
+```
 
 ## Getting Started
 
-### Prerequisites
-- Node.js (v18 or higher)
-- npm (v9 or higher)
-
-### Installation
 1. Clone the repository:
    ```bash
    git clone https://github.com/yourusername/quest-planner.git
@@ -40,92 +67,73 @@ A modern web application for planning and optimizing quest routes in Old School 
    npm run dev
    ```
 
-4. Open your browser and navigate to `http://localhost:5173`
+4. Open [http://localhost:5173](http://localhost:5173) in your browser.
 
-### Development Environment Setup
-1. Install recommended VS Code extensions:
-   - Svelte for VS Code
-   - ESLint
-   - Prettier
-   - Tailwind CSS IntelliSense
+## Development
 
-2. Configure your environment:
-   ```bash
-   # Install global dependencies
-   npm install -g svelte-language-server
-   ```
+### Running Tests
 
-## Project Structure
+```bash
+npm run test
 ```
-src/
-├── lib/
-│   ├── graph/           # Quest graph implementation
-│   │   ├── graph.ts     # Core graph logic
-│   │   └── graph.test.ts # Graph tests
-│   ├── types/           # TypeScript interfaces
-│   │   └── quest.ts     # Quest data types
-│   └── stores/          # Svelte stores
-├── routes/              # SvelteKit routes
-└── components/          # UI components
+
+### Building for Production
+
+```bash
+npm run build
 ```
+
+## Design System
+
+### Layout
+
+- Centered content with proper spacing
+- Responsive design for all screen sizes
+- Consistent padding and margins
+- Dark mode support
+
+### Color Scheme
+
+#### Light Mode
+- Background: Light gray (`bg-gray-100`)
+- Content: White (`bg-white` or `bg-gray-50`)
+- Text: Dark gray (`text-gray-900` for headings, `text-gray-600` for body)
+- Borders: Light gray (`border-gray-300`)
+
+#### Dark Mode
+- Background: Dark gray (`bg-gray-900`)
+- Content: Slightly lighter gray (`bg-gray-800`)
+- Text: White (`text-white` for headings, `text-gray-300` for body)
+- Borders: Dark gray (`border-gray-700`)
+
+### Components
+
+#### Cards
+- Rounded corners (`rounded-xl`)
+- Subtle shadow (`shadow-lg`)
+- Border definition (`border`)
+- Hover effects for interactivity
+
+#### Buttons
+- Primary: Blue with hover state
+- Secondary: Gray with hover state
+- Consistent padding and rounded corners
+- Icon support
 
 ## Contributing
 
-We welcome contributions! Here's how you can help:
-
-1. **Report Issues**
-   - Check existing issues before creating a new one
-   - Use the issue template
-   - Provide detailed reproduction steps
-   - Include relevant screenshots or logs
-
-2. **Submit Pull Requests**
-   - Fork the repository
-   - Create a feature branch
-   - Write tests for new features
-   - Follow the coding standards
-   - Submit a pull request
-
-3. **Development Process**
-   - Write tests first (TDD)
-   - Keep commits focused and atomic
-   - Update documentation
-   - Follow conventional commits
-
-### Code Standards
-- TypeScript for type safety
-- SOLID principles
-- 80%+ test coverage
-- ESLint and Prettier for code formatting
-- JSDoc for documentation (if writing JS)
-
-## Tech Stack
-- Frontend: SvelteKit
-- Styling: Tailwind CSS
-- Testing: Vitest, @testing-library/svelte
-- Language: TypeScript, JavaScript for the `scripts/` directory.
-
-## Support
-
-- 📝 [Documentation](AI.MD)
-- 🐛 [File an Issue](https://github.com/michaelcmelton/quest-planner/issues)
-- 💬 [Discord Community](https://discord.gg/quest-planner)
-- 📧 Email: your-email@example.com
-
-When filing an issue, please:
-1. Check if the issue has already been reported
-2. Use the appropriate issue template
-3. Provide detailed reproduction steps
-4. Include relevant screenshots or logs
-5. Specify your environment (OS, browser, etc.)
-6. Add any relevant error messages
+1. Fork the repository
+2. Create a feature branch
+3. Commit your changes
+4. Push to the branch
+5. Create a Pull Request
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## Acknowledgments
 
 - OSRS Wiki for quest data
-- Svelte and SvelteKit teams
-- All contributors and supporters
+- SvelteKit team for the amazing framework
+- Tailwind CSS for the utility-first CSS framework

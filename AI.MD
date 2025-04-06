@@ -144,4 +144,171 @@ src/
 - Maintain test coverage
 - Update documentation
 - Consider performance implications
-- Validate security considerations 
+- Validate security considerations
+
+# Quest Planner Documentation
+
+## Project Structure
+
+```
+quest-planner/
+├── src/
+│   ├── lib/
+│   │   ├── stores/
+│   │   │   ├── theme.ts           # Theme management store
+│   │   │   └── theme.test.ts      # Theme store tests
+│   │   └── components/
+│   │       └── QuestList.svelte   # Quest list component
+│   ├── routes/
+│   │   ├── +layout.svelte        # Root layout with navigation and theme toggle
+│   │   ├── +page.svelte          # Home page with feature tiles
+│   │   ├── +error.svelte         # Custom 404 error page
+│   │   └── about/
+│   │       └── +page.svelte      # About page
+│   └── app.d.ts                  # TypeScript declarations
+├── static/
+│   └── icons/                   # Icons from the wiki.
+├── package.json                 # Project dependencies
+├── tailwind.config.js           # Tailwind CSS configuration
+├── vite.config.ts              # Vite configuration
+└── tsconfig.json               # TypeScript configuration
+```
+
+## Layout Structure
+
+The application uses a consistent layout structure across all pages:
+
+1. **Root Layout** (`src/routes/+layout.svelte`):
+   - Header with navigation links
+   - Theme toggle button
+   - Main content area with proper spacing
+   - Footer with copyright information
+   - Responsive design for all screen sizes
+
+2. **Page Layout**:
+   - Centered content with `min-h-[calc(100vh-8rem)]` to fill viewport
+   - Consistent padding and margins
+   - Dark mode support
+   - Responsive grid layouts
+
+3. **Error Page** (`src/routes/+error.svelte`):
+   - Centered error message
+   - Clear call-to-action buttons
+   - Consistent styling with main layout
+
+## Styling Guidelines
+
+1. **Color Scheme**:
+   - Light Mode:
+     - Background: `bg-gray-100`
+     - Content: `bg-white` or `bg-gray-50`
+     - Text: `text-gray-900` (headings), `text-gray-600` (body)
+     - Borders: `border-gray-300`
+   - Dark Mode:
+     - Background: `bg-gray-900`
+     - Content: `bg-gray-800`
+     - Text: `text-white` (headings), `text-gray-300` (body)
+     - Borders: `border-gray-700`
+
+2. **Spacing**:
+   - Container padding: `px-4 py-8`
+   - Section margins: `mb-12`
+   - Grid gaps: `gap-6`
+   - Button padding: `px-6 py-3`
+
+3. **Components**:
+   - Cards: `rounded-xl shadow-lg border`
+   - Buttons: 
+     - Primary: `bg-blue-600 hover:bg-blue-700`
+     - Secondary: `bg-gray-200 dark:bg-gray-700`
+   - Icons: `w-6 h-6` with background containers
+
+4. **Responsive Design**:
+   - Mobile-first approach
+   - Breakpoints:
+     - sm: 640px
+     - md: 768px
+     - lg: 1024px
+   - Flexible grids and flex layouts
+
+## Theme Management
+
+The application includes a theme management system:
+
+1. **Theme Store** (`src/lib/stores/theme.ts`):
+   - Persists user preference in localStorage
+   - Respects system color scheme
+   - Provides theme toggle functionality
+
+2. **Theme Implementation**:
+   - Uses Tailwind's dark mode feature
+   - Applies theme classes to root element
+   - Smooth transitions between themes
+
+## Testing
+
+1. **Theme Tests** (`src/lib/stores/theme.test.ts`):
+   - Theme initialization
+   - Theme persistence
+   - Theme toggle functionality
+
+2. **Layout Tests** (`tests/layout.test.ts`):
+   - Navigation rendering
+   - Theme toggle functionality
+   - Responsive behavior
+
+## Development Guidelines
+
+1. **Component Structure**:
+   - Use semantic HTML elements
+   - Maintain consistent spacing
+   - Implement responsive design
+   - Support dark mode
+
+2. **Styling**:
+   - Use Tailwind utility classes
+   - Follow established color scheme
+   - Maintain consistent spacing
+   - Ensure proper contrast
+
+3. **Accessibility**:
+   - Use semantic HTML
+   - Include proper ARIA labels
+   - Ensure keyboard navigation
+   - Maintain color contrast
+
+4. **Performance**:
+   - Optimize images and assets
+   - Minimize CSS and JavaScript
+   - Use efficient rendering
+   - Implement lazy loading
+
+## Getting Started
+
+1. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+2. Run development server:
+   ```bash
+   npm run dev
+   ```
+
+3. Run tests:
+   ```bash
+   npm run test
+   ```
+
+4. Build for production:
+   ```bash
+   npm run build
+   ```
+
+## Contributing
+
+1. Follow the established project structure
+2. Maintain consistent styling
+3. Write tests for new features
+4. Update documentation
+5. Follow accessibility guidelines

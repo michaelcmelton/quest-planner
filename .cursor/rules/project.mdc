@@ -35,6 +35,7 @@ Also always provide file paths as outlined in @AI.MD like if you say lets update
   - Use Vitest for unit and integration tests
   - Use @testing-library/svelte for all tests where possible.
   - Aim for high test coverage (80% or higher)
+  - Test files should be named without the + prefix (e.g., page.test.ts, not +page.test.ts)
 
 6. Code Quality:
   - Prioritize readability and maintainability

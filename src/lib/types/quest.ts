@@ -1,55 +1,52 @@
-export interface QuestData {
+export interface ExperienceReward {
+  skill: string;
+  amount: number;
+}
+
+export interface Rewards {
+  questPoints: number;
+  experienceRewards: ExperienceReward[];
+  otherRewards: string[];
+}
+
+export interface SkillRequirement {
+  skill: string;
+  level: number;
+  boostable: boolean;
+  required: boolean;
+  link: string;
+}
+
+export interface Requirements {
+  skills: SkillRequirement[];
+  quests: string[];
+  other: string[];
+}
+
+export interface Quest {
+  id: string;
   name: string;
   number: number;
   image: string;
   release: string;
   update: string;
-  members: string;
+  members: boolean;
   series: string;
   developer: string;
-  rewards: {
-    questPoints: number;
-    experienceRewards: Array<{
-      skill: string;
-      amount: number;
-    }>;
-    otherRewards: string[];
-  };
+  rewards: Rewards;
   start: string;
   startmap: string;
   difficulty: string;
   description: string;
   length: string;
-  requirements?: {
-    skills?: Array<{
-      skill: string;
-      level: number;
-      boostable: boolean;
-      required: boolean;
-      link?: string;
-    }>;
-    quests?: string[];
-    other?: string[];
-  };
-  items?: string[];
-  enemies?: Array<{
-    name: string;
-    level: number;
-    quantity: number;
-  }>;
-  recommended?: {
-    skills?: Array<{
-      skill: string;
-      level: number;
-    }>;
-    items?: string[];
-  };
-  walkthrough?: string[];
-  notes?: string[];
-  trivia?: string[];
-  gallery?: Array<{
-    image: string;
-    caption: string;
-  }>;
-  leagueRegion?: string;
+  requirements: Requirements;
+  items: string[];
+  recommended: string[];
+  kills: string[];
+  ironman: string[];
+  leagueRegion: string;
 }
+
+export interface QuestData {
+  [key: string]: Quest;
+} 

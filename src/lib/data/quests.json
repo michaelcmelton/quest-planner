@@ -1,5 +1,6 @@
 {
   "animal_magnetism": {
+    "id": "animal_magnetism",
     "name": "Animal Magnetism",
     "number": 116,
     "image": "Animal Magnetism.png|300px",
@@ -95,6 +96,7 @@
     "leagueRegion": "<poem>{{RE|Asgarnia}} — location requirement{{RE|Morytania}} — location requirementUnlocking {{RE|Fremennik}} {{okay}} will auto-complete the quest</poem>"
   },
   "another_slice_of_ham": {
+    "id": "another_slice_of_ham",
     "name": "Another Slice of H.A.M.",
     "number": 124,
     "image": "Another Slice Of H.A.M.png|300px",
@@ -164,64 +166,8 @@
     "ironman": [],
     "leagueRegion": "<poem>{{RE|Asgarnia}} — location requirement{{RE|Fremennik}} — location requirement</poem>"
   },
-  "the_ascent_of_arceuus": {
-    "name": "The Ascent of Arceuus",
-    "number": 141,
-    "image": "The Ascent of Arceuus.png|300px",
-    "release": "10 January 2019",
-    "update": "The Kebos Lowlands",
-    "members": true,
-    "series": "Great Kourend, #3C",
-    "developer": "Mod Ed",
-    "rewards": {
-      "questPoints": 1,
-      "experienceRewards": [
-        {
-          "skill": "Hunter",
-          "amount": 1500
-        },
-        {
-          "skill": "Runecraft",
-          "amount": 500
-        }
-      ],
-      "otherRewards": [
-        "A page for [[Kharedst's memoirs]], '[[A dark disposition]].' It teleports players to the centre of Arceuus.",
-        "Ability to recolour the [[graceful outfit]] to the colours of [[Arceuus]].",
-        "Ability to receive [[Arceuus signet]]s from [[Tyss]].",
-        "Ability to fight the [[Trapped Soul]] within the [[Nightmare Zone]]."
-      ]
-    },
-    "start": "Speak to [[Mori]] in [[Arceuus]].",
-    "startmap": "1700,3742",
-    "difficulty": "Intermediate",
-    "description": "A long time ago, the citizens of Arceuus house gave up their human bodies and claimed immortality. This event was known as the Ascent of Arceuus and it marked the end of death within Arceuus house. Or so they believed. For the first time in a thousand years, a member of Arceuus house has fallen. You will need to solve the mystery of this death. However, time is of the essence and the fate of Arceuus house lies in your hands.",
-    "length": "Short",
-    "requirements": {
-      "skills": [
-        {
-          "skill": "Hunter",
-          "level": 12,
-          "boostable": false,
-          "required": true,
-          "link": "[[Hunter level|Hunter]]"
-        }
-      ],
-      "quests": [
-        "client_of_kourend"
-      ],
-      "other": []
-    },
-    "items": [],
-    "recommended": [],
-    "kills": [
-      "5 [[Tormented Soul]]s (Level 16)",
-      "[[Trapped Soul]] (Level 30)"
-    ],
-    "ironman": [],
-    "leagueRegion": "<poem>Unlocking {{RE|Kourend}} {{okay}} will auto-complete the quest</poem>"
-  },
   "at_first_light": {
+    "id": "at_first_light",
     "name": "At First Light",
     "number": 162,
     "image": "At First Light.png|300px",
@@ -266,7 +212,10 @@
           "link": "[[Construction level|Construction]]"
         }
       ],
-      "quests": [],
+      "quests": [
+        "children_of_the_sun",
+        "eagles_peak"
+      ],
       "other": []
     },
     "items": [
@@ -281,6 +230,7 @@
     "leagueRegion": "<poem>Unlocking {{RE|Varlamore}} {{okay}} will auto-complete the quest</poem>"
   },
   "below_ice_mountain": {
+    "id": "below_ice_mountain",
     "name": "Below Ice Mountain",
     "number": 148,
     "image": "Below Ice Mountain.png|300px",
@@ -329,6 +279,7 @@
     "leagueRegion": "<poem>Unlocking {{RE|Asgarnia}} {{okay}} will auto-complete the questUnlocking {{RE|Desert}} {{okay}} will auto-complete the quest</poem>"
   },
   "beneath_cursed_sands": {
+    "id": "beneath_cursed_sands",
     "name": "Beneath Cursed Sands",
     "number": 153,
     "image": "Beneath Cursed Sands.png|300px",
@@ -404,6 +355,7 @@
     "leagueRegion": "<poem>{{RE|Desert}} — location requirement</poem>"
   },
   "between_a_rock": {
+    "id": "between_a_rock",
     "name": "Between a Rock...",
     "number": 74,
     "image": "Between a Rock....png|300px",
@@ -463,7 +415,10 @@
           "link": "[[Smithing level|Smithing]]"
         }
       ],
-      "quests": [],
+      "quests": [
+        "dwarf_cannon",
+        "fishing_contest"
+      ],
       "other": [
         "The ability to defeat a level 75-125 enemy ''(depends on how much gold you mine)''"
       ]
@@ -484,6 +439,7 @@
     "leagueRegion": "<poem>{{RE|Asgarnia}} — location requirement{{RE|Fremennik}} — location requirement{{RE|Kandarin}} — location requirement</poem>"
   },
   "big_chompy_bird_hunting": {
+    "id": "big_chompy_bird_hunting",
     "name": "Big Chompy Bird Hunting",
     "number": 52,
     "image": "Big Chompy Bird Hunting.png|300px",
@@ -568,6 +524,7 @@
     "leagueRegion": "<poem>{{RE|Kandarin}} — location requirementUnlocking {{RE|Morytania}} {{okay}} will auto-complete the questUnlocking {{RE|Tirannwn}} {{okay}} will auto-complete the quest</poem>"
   },
   "biohazard": {
+    "id": "biohazard",
     "name": "Biohazard",
     "number": 38,
     "image": "Biohazard.png|300px",
@@ -612,6 +569,7 @@
     "leagueRegion": "<poem>{{RE|Asgarnia}} — location requirement{{RE|Kandarin}} — location requirementUnlocking {{RE|Fremennik}} {{okay}} will auto-complete the questUnlocking {{RE|Tirannwn}} {{okay}} will auto-complete the quest</poem>"
   },
   "black_knights_fortress": {
+    "id": "black_knights_fortress",
     "name": "Black Knights' Fortress",
     "number": 12,
     "image": "Black Knights' Fortress.png|300px",
@@ -654,6 +612,7 @@
     "leagueRegion": "<poem>{{RE|Asgarnia}} — location requirementUnlocking {{RE|Desert}} {{okay}} will auto-complete the questUnlocking {{RE|Fremennik}} {{okay}} will auto-complete the questUnlocking {{RE|Kandarin}} {{okay}} will auto-complete the quest</poem>"
   },
   "bone_voyage": {
+    "id": "bone_voyage",
     "name": "Bone Voyage",
     "number": 132,
     "image": "Bone Voyage.png|300px",
@@ -689,6 +648,7 @@
     "leagueRegion": "<poem>Unlocking {{RE|Misthalin}} {{okay}} will auto-complete the quest</poem>"
   },
   "cabin_fever": {
+    "id": "cabin_fever",
     "name": "Cabin Fever",
     "number": 98,
     "image": "Cabin Fever.png|300px",
@@ -758,7 +718,10 @@
           "link": "[[Ranged level|Ranged]]"
         }
       ],
-      "quests": [],
+      "quests": [
+        "pirates_treasure",
+        "rum_deal"
+      ],
       "other": []
     },
     "items": [],
@@ -770,6 +733,7 @@
     "leagueRegion": "<poem>Unlocking {{RE|Morytania}} {{okay}} will auto-complete the quest</poem>"
   },
   "children_of_the_sun": {
+    "id": "children_of_the_sun",
     "name": "Children of the Sun",
     "number": 159,
     "image": "Children of the Sun.png|300px",
@@ -802,6 +766,7 @@
     "leagueRegion": "<poem>{{RE|Misthalin}} — location requirementUnlocking {{RE|Varlamore}} {{okay}} will auto-complete the quest</poem>"
   },
   "client_of_kourend": {
+    "id": "client_of_kourend",
     "name": "Client of Kourend",
     "number": 130,
     "image": "Client of Kourend.png|300px",
@@ -839,6 +804,7 @@
     "leagueRegion": "<poem>Unlocking {{RE|Kourend}} {{okay}} will auto-complete the questUnlocking {{RE|Fremennik}} {{okay}} will auto-complete the quest</poem>"
   },
   "clock_tower": {
+    "id": "clock_tower",
     "name": "Clock Tower",
     "number": 29,
     "image": "Clock Tower.png|300px",
@@ -873,6 +839,7 @@
     "leagueRegion": "<poem>{{RE|Kandarin}} — location requirement</poem>"
   },
   "cold_war": {
+    "id": "cold_war",
     "name": "Cold War",
     "number": 118,
     "image": "Cold War.png|300px",
@@ -971,6 +938,7 @@
     "leagueRegion": "<poem>Unlocking {{RE|Desert}} {{okay}} will auto-complete the questUnlocking {{RE|Fremennik}} {{okay}} will auto-complete the quest</poem>"
   },
   "contact": {
+    "id": "contact",
     "name": "Contact!",
     "number": 117,
     "image": "Contact!.png|300px",
@@ -1023,6 +991,7 @@
     "leagueRegion": "<poem>{{RE|Desert}} — location requirement</poem>"
   },
   "cooks_assistant": {
+    "id": "cooks_assistant",
     "name": "Cook's Assistant",
     "number": 1,
     "image": "Cook's Assistant.png|300px",
@@ -1058,6 +1027,7 @@
     "leagueRegion": "<poem>{{RE|Misthalin}} — location requirementUnlocking {{RE|Kandarin}} {{okay}} will auto-complete the questUnlocking {{RE|Morytania}} {{okay}} will auto-complete the quest</poem>"
   },
   "the_corsair_curse": {
+    "id": "the_corsair_curse",
     "name": "The Corsair Curse",
     "number": 135,
     "image": "The Corsair Curse.png|300px",
@@ -1095,6 +1065,7 @@
     "leagueRegion": "<poem>{{RE|Asgarnia}} — location requirement{{RE|Kandarin}} — location requirement</poem>"
   },
   "creature_of_fenkenstrain": {
+    "id": "creature_of_fenkenstrain",
     "name": "Creature of Fenkenstrain",
     "number": 69,
     "image": "Creature of Fenkenstrain.png|300px",
@@ -1162,6 +1133,7 @@
     "leagueRegion": "<poem>Unlocking {{RE|Desert}} {{okay}} will auto-complete the questUnlocking {{RE|Fremennik}} {{okay}} will auto-complete the questUnlocking {{RE|Kandarin}} {{okay}} will auto-complete the questUnlocking {{RE|Morytania}} {{okay}} will auto-complete the quest</poem>"
   },
   "darkness_of_hallowvale": {
+    "id": "darkness_of_hallowvale",
     "name": "Darkness of Hallowvale",
     "number": 110,
     "image": "Darkness of Hallowvale.png|300px",
@@ -1267,6 +1239,7 @@
     "leagueRegion": "<poem>Unlocking {{RE|Morytania}} {{okay}} will auto-complete the quest</poem>"
   },
   "death_on_the_isle": {
+    "id": "death_on_the_isle",
     "name": "Death on the Isle",
     "number": 167,
     "image": "Death on the Isle.png|300px",
@@ -1318,6 +1291,7 @@
     "leagueRegion": "<poem>{{RE|Varlamore}} — location requirement</poem>"
   },
   "death_plateau": {
+    "id": "death_plateau",
     "name": "Death Plateau",
     "number": 56,
     "image": "Death Plateau.png|300px",
@@ -1365,6 +1339,7 @@
     "leagueRegion": "<poem>Unlocking {{RE|Asgarnia}} {{okay}} will auto-complete the questUnlocking {{RE|Desert}} {{okay}} will auto-complete the questUnlocking {{RE|Fremennik}} {{okay}} will auto-complete the questUnlocking {{RE|Kandarin}} {{okay}} will auto-complete the quest</poem>"
   },
   "death_to_the_dorgeshuun": {
+    "id": "death_to_the_dorgeshuun",
     "name": "Death to the Dorgeshuun",
     "number": 106,
     "image": "Death to the Dorgeshuun.png|300px",
@@ -1435,6 +1410,7 @@
     "leagueRegion": "<poem>Unlocking {{RE|Misthalin}} {{okay}} will auto-complete the quest</poem>"
   },
   "defender_of_varrock": {
+    "id": "defender_of_varrock",
     "name": "Defender of Varrock",
     "number": 160,
     "image": "Defender of Varrock.png|300px",
@@ -1499,6 +1475,7 @@
     "leagueRegion": "<poem>Unlocking {{RE|Misthalin}} {{okay}} will auto-complete the quest</poem>"
   },
   "demon_slayer": {
+    "id": "demon_slayer",
     "name": "Demon Slayer",
     "number": 2,
     "image": "Demon Slayer.png|300px",
@@ -1536,6 +1513,7 @@
     "leagueRegion": "<poem>{{RE|Misthalin}} — location requirement</poem>"
   },
   "the_depths_of_despair": {
+    "id": "the_depths_of_despair",
     "name": "The Depths of Despair",
     "number": 134,
     "image": "The Depths of Despair.png|300px",
@@ -1586,6 +1564,7 @@
     "leagueRegion": "<poem>Unlocking {{RE|Kourend}} {{okay}} will auto-complete the quest</poem>"
   },
   "desert_treasure_i": {
+    "id": "desert_treasure_i",
     "name": "Desert Treasure I",
     "number": 77,
     "image": "Desert Treasure I.png|300px",
@@ -1644,7 +1623,14 @@
           "link": "[[Slayer level|Slayer]]"
         }
       ],
-      "quests": [],
+      "quests": [
+        "the_dig_site",
+        "temple_of_ikov",
+        "the_tourist_trap",
+        "troll_stronghold",
+        "priest_in_peril",
+        "waterfall_quest"
+      ],
       "other": []
     },
     "items": [
@@ -1683,6 +1669,7 @@
     "leagueRegion": "<poem>Unlocking {{RE|Desert}} {{okay}} will auto-complete the quest</poem>"
   },
   "desert_treasure_ii_the_fallen_empire": {
+    "id": "desert_treasure_ii_the_fallen_empire",
     "name": "Desert Treasure II - The Fallen Empire",
     "number": 157,
     "image": "Desert Treasure II - The Fallen Empire.png|300px",
@@ -1792,6 +1779,7 @@
     "leagueRegion": "<poem>Unlocking {{RE|Desert}} {{okay}} will auto-complete the questAccess to [[The Whisperer]] in {{RE|Asgarnia}}, [[Duke Sucellus]] in {{RE|Fremennik}}, and [[Vardorvis]] in {{RE|Varlamore}} do not require {{RE|Desert}} to be unlocked</poem>"
   },
   "devious_minds": {
+    "id": "devious_minds",
     "name": "Devious Minds",
     "number": 95,
     "image": "Devious Minds.png|300px",
@@ -1869,6 +1857,7 @@
     "leagueRegion": "<poem>{{RE|Asgarnia}} — location requirement{{RE|Morytania}} — location requirement{{RE|Wilderness}} — location requirementOnly possible to manually complete if the [[Wanted!#Random_items|random locations]] in the prerequisite quest [[Wanted!]] are in the 3 required regions of {{RE|Asgarnia}}, {{RE|Morytania}} and {{RE|Wilderness}}Unlocking {{RE|Desert}} {{okay}} will auto-complete the questUnlocking {{RE|Fremennik}} {{okay}} will auto-complete the quest</poem>"
   },
   "the_dig_site": {
+    "id": "the_dig_site",
     "name": "The Dig Site",
     "number": 48,
     "image": "The Dig Site.png|300px",
@@ -1937,6 +1926,7 @@
     "leagueRegion": "<poem>Unlocking {{RE|Misthalin}} {{okay}} will auto-complete the quest</poem>"
   },
   "dorics_quest": {
+    "id": "dorics_quest",
     "name": "Doric's Quest",
     "number": 11,
     "image": "Doric's Quest.png|300px",
@@ -1983,6 +1973,7 @@
     "leagueRegion": "<poem>{{RE|Asgarnia}} — location requirementUnlocking {{RE|Desert}} {{okay}} will auto-complete the questUnlocking {{RE|Fremennik}} {{okay}} will auto-complete the quest</poem>"
   },
   "dragon_slayer_i": {
+    "id": "dragon_slayer_i",
     "name": "Dragon Slayer I",
     "number": 17,
     "image": "Dragon Slayer.png|300px",
@@ -2060,6 +2051,7 @@
     "leagueRegion": "<poem>Unlocking {{RE|Misthalin}} {{okay}} will auto-complete the quest</poem>"
   },
   "dragon_slayer_ii": {
+    "id": "dragon_slayer_ii",
     "name": "Dragon Slayer II",
     "number": 136,
     "image": "Dragon Slayer II.png|300px",
@@ -2233,6 +2225,7 @@
     "leagueRegion": "<poem>Unlocking {{RE|Fremennik}} {{okay}} will auto-complete the quest</poem>"
   },
   "dream_mentor": {
+    "id": "dream_mentor",
     "name": "Dream Mentor",
     "number": 125,
     "image": "Dream Mentor.png|300px",
@@ -2306,6 +2299,7 @@
     "leagueRegion": "<poem>Unlocking {{RE|Fremennik}} {{okay}} will auto-complete the quest</poem>"
   },
   "druidic_ritual": {
+    "id": "druidic_ritual",
     "name": "Druidic Ritual",
     "number": 18,
     "image": "Druidic Ritual.png|300px",
@@ -2343,6 +2337,7 @@
     "leagueRegion": "<poem>Unlocking {{RE|Misthalin}} {{okay}} will auto-complete the quest</poem>"
   },
   "dwarf_cannon": {
+    "id": "dwarf_cannon",
     "name": "Dwarf Cannon",
     "number": 46,
     "image": "Dwarf Cannon.png|300px",
@@ -2379,6 +2374,7 @@
     "leagueRegion": "<poem>Unlocking {{RE|Asgarnia}} {{okay}} will auto-complete the quest</poem>"
   },
   "eadgars_ruse": {
+    "id": "eadgars_ruse",
     "name": "Eadgar's Ruse",
     "number": 60,
     "image": "Eadgar's Ruse.png|300px",
@@ -2417,7 +2413,10 @@
           "link": "[[Herblore level|Herblore]]"
         }
       ],
-      "quests": [],
+      "quests": [
+        "druidic_ritual",
+        "troll_stronghold"
+      ],
       "other": []
     },
     "items": [
@@ -2438,6 +2437,7 @@
     "leagueRegion": "<poem>Unlocking {{RE|Asgarnia}} {{okay}} will auto-complete the questUnlocking {{RE|Desert}} {{okay}} will auto-complete the questUnlocking {{RE|Fremennik}} {{okay}} will auto-complete the quest</poem>"
   },
   "eagles_peak": {
+    "id": "eagles_peak",
     "name": "Eagles' Peak",
     "number": 115,
     "image": "Eagles' Peak.png|300px",
@@ -2492,6 +2492,7 @@
     "leagueRegion": "<poem>{{RE|Kandarin}} — location requirementUnlocking {{RE|Varlamore}} {{okay}} will auto-complete the quest[[Box traps]] do not require the completion of this quest and can be purchased from [[General Store|General Stores]].</poem>"
   },
   "elemental_workshop_i": {
+    "id": "elemental_workshop_i",
     "name": "Elemental Workshop I",
     "number": 53,
     "image": "Elemental Workshop I.png|300px",
@@ -2568,6 +2569,7 @@
     "leagueRegion": "<poem>Auto-completed with starting region {{RE|Misthalin}}</poem>"
   },
   "elemental_workshop_ii": {
+    "id": "elemental_workshop_ii",
     "name": "Elemental Workshop II",
     "number": 112,
     "image": "Elemental Workshop II.png|300px",
@@ -2631,6 +2633,7 @@
     "leagueRegion": "<poem>{{RE|Kandarin}} — location requirement</poem>"
   },
   "enakhras_lament": {
+    "id": "enakhras_lament",
     "name": "Enakhra's Lament",
     "number": 97,
     "image": "Enakhra's Lament.png|300px",
@@ -2730,6 +2733,7 @@
     "leagueRegion": "<poem>Unlocking {{RE|Desert}} {{okay}} will auto-complete the quest</poem>"
   },
   "enlightened_journey": {
+    "id": "enlightened_journey",
     "name": "Enlightened Journey",
     "number": 114,
     "image": "Enlightened Journey.png|300px",
@@ -2827,6 +2831,7 @@
     "leagueRegion": "<poem>{{RE|Asgarnia}} — location requirementUnlocking {{RE|Kandarin}} {{okay}} will auto-complete the quest</poem>"
   },
   "ernest_the_chicken": {
+    "id": "ernest_the_chicken",
     "name": "Ernest the Chicken",
     "number": 7,
     "image": "Ernest the Chicken.png|300px",
@@ -2864,6 +2869,7 @@
     "leagueRegion": "<poem>{{RE|Misthalin}} — location requirementUnlocking {{RE|Fremennik}} {{okay}} will auto-complete the quest</poem>"
   },
   "ethically_acquired_antiquities": {
+    "id": "ethically_acquired_antiquities",
     "name": "Ethically Acquired Antiquities",
     "number": 169,
     "image": "Ethically Acquired Antiquities.png",
@@ -2907,6 +2913,7 @@
     "leagueRegion": "<poem>{{RE|Asgarnia}} — location requirement{{RE|Varlamore}} — location requirement</poem>"
   },
   "the_eyes_of_glouphrie": {
+    "id": "the_eyes_of_glouphrie",
     "name": "The Eyes of Glouphrie",
     "number": 109,
     "image": "The Eyes of Glouphrie.png|300px",
@@ -2983,6 +2990,7 @@
     "leagueRegion": "<poem>Unlocking {{RE|Kandarin}} {{okay}} will auto-complete the quest</poem>"
   },
   "fairytale_i_growing_pains": {
+    "id": "fairytale_i_growing_pains",
     "name": "Fairytale I - Growing Pains",
     "number": 99,
     "image": "Fairytale I - Growing Pains.png|300px",
@@ -3043,6 +3051,7 @@
     "leagueRegion": "<poem>Unlocking {{RE|Misthalin}} {{okay}} will auto-complete the quest</poem>"
   },
   "fairytale_ii_cure_a_queen": {
+    "id": "fairytale_ii_cure_a_queen",
     "name": "Fairytale II - Cure a Queen",
     "number": 107,
     "image": "Fairytale II - Cure a Queen.png|300px",
@@ -3117,6 +3126,7 @@
     "leagueRegion": "<poem>Unlocking {{RE|Misthalin}} {{okay}} will auto-complete the quest</poem>"
   },
   "family_crest": {
+    "id": "family_crest",
     "name": "Family Crest",
     "number": 24,
     "image": "Family Crest.png|300px",
@@ -3201,6 +3211,7 @@
     "leagueRegion": "<poem>Unlocking {{RE|Fremennik}} {{okay}} will auto-complete the questThe quest is otherwise not completable, as it requires visits to {{RE|Asgarnia}}, {{RE|Kandarin}}, {{RE|Desert}} and {{RE|Wilderness}}.</poem>"
   },
   "the_feud": {
+    "id": "the_feud",
     "name": "The Feud",
     "number": 75,
     "image": "The Feud.png|300px",
@@ -3263,6 +3274,7 @@
     "leagueRegion": "<poem>Unlocking {{RE|Asgarnia}} {{okay}} will auto-complete the questUnlocking {{RE|Desert}} {{okay}} will auto-complete the questUnlocking {{RE|Fremennik}} {{okay}} will auto-complete the quest</poem>"
   },
   "fight_arena": {
+    "id": "fight_arena",
     "name": "Fight Arena",
     "number": 32,
     "image": "Fight Arena - Fighting General Khazard.png|300px",
@@ -3314,6 +3326,7 @@
     "leagueRegion": "<poem>{{RE|Kandarin}} — location requirementUnlocking {{RE|Desert}} {{okay}} will auto-complete the questUnlocking {{RE|Fremennik}} {{okay}} will auto-complete the quest</poem>"
   },
   "fishing_contest": {
+    "id": "fishing_contest",
     "name": "Fishing Contest",
     "number": 26,
     "image": "Fishing Contest.png|300px",
@@ -3367,6 +3380,7 @@
     "leagueRegion": "<poem>{{RE|Kandarin}} — location requirement</poem>"
   },
   "forgettable_tale": {
+    "id": "forgettable_tale",
     "name": "Forgettable Tale of a Drunken Dwarf",
     "number": 85,
     "image": "Forgettable Tale....png|300px",
@@ -3437,6 +3451,7 @@
     "leagueRegion": "<poem>{{RE|Asgarnia}} — location requirement{{RE|Fremennik}} — location requirement{{RE|Kandarin}} — location requirementA random unobtainable item may be requested by the [[Rowdy Dwarf]]. Waiting a few minutes and asking for a new item will solve this issue.</poem>"
   },
   "the_forsaken_tower": {
+    "id": "the_forsaken_tower",
     "name": "The Forsaken Tower",
     "number": 140,
     "image": "The Forsaken Tower.png|300px",
@@ -3485,6 +3500,7 @@
     "leagueRegion": "<poem>Unlocking {{RE|Kourend}} {{okay}} will auto-complete the quest</poem>"
   },
   "the_fremennik_exiles": {
+    "id": "the_fremennik_exiles",
     "name": "The Fremennik Exiles",
     "number": 144,
     "image": "The Fremennik Exiles.png|300px",
@@ -3594,6 +3610,7 @@
     "leagueRegion": "<poem>{{RE|Fremennik}} — location requirement</poem>"
   },
   "the_fremennik_isles": {
+    "id": "the_fremennik_isles",
     "name": "The Fremennik Isles",
     "number": 119,
     "image": "The Fremennik Isles.png|300px",
@@ -3675,6 +3692,7 @@
     "leagueRegion": "<poem>Unlocking {{RE|Fremennik}} {{okay}} will auto-complete the quest</poem>"
   },
   "the_fremennik_trials": {
+    "id": "the_fremennik_trials",
     "name": "The Fremennik Trials",
     "number": 62,
     "image": "The Fremennik Trials.png|300px",
@@ -3756,6 +3774,7 @@
     "leagueRegion": "<poem>Unlocking {{RE|Fremennik}} {{okay}} will auto-complete the quest</poem>"
   },
   "the_garden_of_death": {
+    "id": "the_garden_of_death",
     "name": "The Garden of Death",
     "image": "The Garden of Death.png|300px",
     "number": 155,
@@ -3801,6 +3820,7 @@
     "leagueRegion": "<poem>{{RE|Kourend}} — location requirementUnlocking {{RE|Desert}} {{okay}} will auto-complete the quest</poem>"
   },
   "garden_of_tranquillity": {
+    "id": "garden_of_tranquillity",
     "name": "Garden of Tranquillity",
     "number": 86,
     "image": "Garden of Tranquillity.png|300px",
@@ -3868,6 +3888,7 @@
     "leagueRegion": "<poem>Unlocking {{RE|Desert}} {{okay}} will auto-complete the questUnlocking {{RE|Fremennik}} {{okay}} will auto-complete the questUnlocking {{RE|Kandarin}} {{okay}} will auto-complete the questThe quest is otherwise not completable. {{RE|Morytania}} is required to start the quest, but the [[Garden of Tranquillity#Obtaining_the_seeds|seeds]] require {{RE|Kandarin}} to be unlocked.</poem>"
   },
   "gertrudes_cat": {
+    "id": "gertrudes_cat",
     "name": "Gertrude's Cat",
     "number": 49,
     "image": "Gertrude's Cat.png|300px",
@@ -3911,6 +3932,7 @@
     "leagueRegion": "<poem>Unlocking {{RE|Misthalin}} {{okay}} will auto-complete the quest</poem>"
   },
   "getting_ahead": {
+    "id": "getting_ahead",
     "name": "Getting Ahead",
     "image": "Getting Ahead.png|300px",
     "number": 147,
@@ -3982,6 +4004,7 @@
     "leagueRegion": "<poem>{{RE|Kourend}} — location requirement</poem>"
   },
   "ghosts_ahoy": {
+    "id": "ghosts_ahoy",
     "name": "Ghosts Ahoy",
     "number": 71,
     "image": "Ghosts Ahoy.png|300px",
@@ -4052,6 +4075,7 @@
     "leagueRegion": "<poem>Unlocking {{RE|Morytania}} {{okay}} will auto-complete the quest</poem>"
   },
   "the_giant_dwarf": {
+    "id": "the_giant_dwarf",
     "name": "The Giant Dwarf",
     "number": 82,
     "image": "The Giant Dwarf.png|300px",
@@ -4146,6 +4170,7 @@
     "leagueRegion": "<poem>{{RE|Asgarnia}} — location requirement to complete quest, but not to access Keldagrim{{RE|Fremennik}} — location requirement</poem>"
   },
   "goblin_diplomacy": {
+    "id": "goblin_diplomacy",
     "name": "Goblin Diplomacy",
     "number": 15,
     "image": "Goblin Diplomacy.png|300px",
@@ -4182,6 +4207,7 @@
     "leagueRegion": "<poem>Unlocking {{RE|Misthalin}} {{okay}} will auto-complete the quest</poem>"
   },
   "the_golem": {
+    "id": "the_golem",
     "name": "The Golem",
     "number": 76,
     "image": "The Golem.png|300px",
@@ -4246,6 +4272,7 @@
     "leagueRegion": "<poem>{{RE|Desert}} — location requirement</poem>"
   },
   "the_grand_tree": {
+    "id": "the_grand_tree",
     "name": "The Grand Tree",
     "number": 40,
     "image": "The Grand Tree.png|300px",
@@ -4309,6 +4336,7 @@
     "leagueRegion": "<poem>Unlocking {{RE|Kandarin}} {{okay}} will auto-complete the quest</poem>"
   },
   "the_great_brain_robbery": {
+    "id": "the_great_brain_robbery",
     "name": "The Great Brain Robbery",
     "number": 121,
     "image": "The Great Brain Robbery.png|300px",
@@ -4397,6 +4425,7 @@
     "leagueRegion": "<poem>Unlocking {{RE|Morytania}} {{okay}} will auto-complete the quest</poem>"
   },
   "grim_tales": {
+    "id": "grim_tales",
     "name": "Grim Tales",
     "number": 126,
     "image": "Grim Tales.png|300px",
@@ -4502,6 +4531,7 @@
     "leagueRegion": "<poem>{{RE|Asgarnia}} — location requirement</poem>"
   },
   "the_hand_in_the_sand": {
+    "id": "the_hand_in_the_sand",
     "name": "The Hand in the Sand",
     "number": 96,
     "image": "The Hand in the Sand.png|300px",
@@ -4572,6 +4602,7 @@
     "leagueRegion": "<poem>{{RE|Asgarnia}} — location requirement{{RE|Kandarin}} — location requirement</poem>"
   },
   "haunted_mine": {
+    "id": "haunted_mine",
     "name": "Haunted Mine",
     "number": 66,
     "image": "Haunted Mine.png|300px",
@@ -4607,7 +4638,9 @@
     "length": "Short",
     "requirements": {
       "skills": [],
-      "quests": [],
+      "quests": [
+        "priest_in_peril"
+      ],
       "other": [
         "{{SCP|Crafting|35||link=yes}} {{Boostable|yes}} {{Questreqstart|no}}",
         "The ability to defeat a level 95 enemy"
@@ -4625,6 +4658,7 @@
     "leagueRegion": "<poem>{{RE|Morytania}} — location requirement</poem>"
   },
   "hazeel_cult": {
+    "id": "hazeel_cult",
     "name": "Hazeel Cult",
     "number": 33,
     "image": "Hazeel Cult.png|300px",
@@ -4665,6 +4699,7 @@
     "leagueRegion": "<poem>{{RE|Kandarin}} — location requirementUnlocking {{RE|Desert}} {{okay}} will auto-complete the questUnlocking {{RE|Fremennik}} {{okay}} will auto-complete the quest</poem>"
   },
   "the_heart_of_darkness": {
+    "id": "the_heart_of_darkness",
     "name": "The Heart of Darkness",
     "number": 166,
     "image": "The Heart of Darkness.png",
@@ -4755,6 +4790,7 @@
     "leagueRegion": "<poem>Unlocking {{RE|Varlamore}} {{okay}} will auto-complete the quest</poem>"
   },
   "heroes_quest": {
+    "id": "heroes_quest",
     "name": "Heroes' Quest",
     "number": 22,
     "image": "Heroes' Quest.png|300px",
@@ -4865,7 +4901,12 @@
           "link": "[[Mining level|Mining]]"
         }
       ],
-      "quests": [],
+      "quests": [
+        "shield_of_arrav",
+        "lost_city",
+        "merlins_crystal",
+        "dragon_slayer_i"
+      ],
       "other": [
         "A partner"
       ]
@@ -4895,6 +4936,7 @@
     "leagueRegion": "<poem>{{RE|Asgarnia}} — location requirementUnlocking {{RE|Fremennik}} {{okay}} will auto-complete the quest</poem>"
   },
   "holy_grail": {
+    "id": "holy_grail",
     "name": "Holy Grail",
     "number": 30,
     "image": "Holy Grail.png|300px",
@@ -4953,6 +4995,7 @@
     "leagueRegion": "<poem>Unlocking {{RE|Kandarin}} {{okay}} will auto-complete the quest</poem>"
   },
   "horror_from_the_deep": {
+    "id": "horror_from_the_deep",
     "name": "Horror from the Deep",
     "number": 63,
     "image": "Horror from the Deep.png|300px",
@@ -5015,6 +5058,7 @@
     "leagueRegion": "<poem>Unlocking {{RE|Fremennik}} {{okay}} will auto-complete the quest</poem>"
   },
   "icthlarins_little_helper": {
+    "id": "icthlarins_little_helper",
     "name": "Icthlarin's Little Helper",
     "number": 78,
     "image": "Icthlarin's Little Helper.png|300px",
@@ -5079,6 +5123,7 @@
     "leagueRegion": "<poem>Unlocking {{RE|Desert}} {{okay}} will auto-complete the questUnlocking {{RE|Fremennik}} {{okay}} will auto-complete the quest</poem>"
   },
   "imp_catcher": {
+    "id": "imp_catcher",
     "name": "Imp Catcher",
     "number": 9,
     "image": "Imp Catcher.png|300px",
@@ -5124,6 +5169,7 @@
     "leagueRegion": "<poem>{{RE|Misthalin}} — location requirement</poem>"
   },
   "in_aid_of_the_myreque": {
+    "id": "in_aid_of_the_myreque",
     "name": "In Aid of the Myreque",
     "number": 101,
     "image": "In Aid of the Myreque.png|300px",
@@ -5213,6 +5259,7 @@
     "leagueRegion": "<poem>Unlocking {{RE|Morytania}} {{okay}} will auto-complete the quest</poem>"
   },
   "in_search_of_the_myreque": {
+    "id": "in_search_of_the_myreque",
     "name": "In Search of the Myreque",
     "number": 68,
     "image": "In Search of the Myreque.png|300px",
@@ -5268,7 +5315,9 @@
           "link": "[[Agility level|Agility]]"
         }
       ],
-      "quests": [],
+      "quests": [
+        "nature_spirit"
+      ],
       "other": []
     },
     "items": [
@@ -5293,6 +5342,7 @@
     "leagueRegion": "<poem>Unlocking {{RE|Morytania}} {{okay}} will auto-complete the quest</poem>"
   },
   "jungle_potion": {
+    "id": "jungle_potion",
     "name": "Jungle Potion",
     "number": 39,
     "image": "Jungle Potion.png|300px",
@@ -5336,6 +5386,7 @@
     "leagueRegion": "<poem>Unlocking {{RE|Karamja}} {{okay}} will auto-complete the quest</poem>"
   },
   "kings_ransom": {
+    "id": "kings_ransom",
     "name": "King's Ransom",
     "number": 127,
     "image": "King's Ransom.png|300px",
@@ -5399,6 +5450,7 @@
     "leagueRegion": "<poem>Unlocking {{RE|Kandarin}} {{okay}} will auto-complete the quest</poem>"
   },
   "a_kingdom_divided": {
+    "id": "a_kingdom_divided",
     "name": "A Kingdom Divided",
     "number": 150,
     "image": "A Kingdom Divided.png|300px",
@@ -5505,6 +5557,7 @@
     "leagueRegion": "<poem>Unlocking {{RE|Kourend}} {{okay}} will auto-complete the questThe [[book of the dead]] and the two experience lamps can be claimed by speaking with [[Commander Fullore]].* Note: It may be ideal to not claim this too early as the lamps require a skill to be 40+ to be used in. If the book is not needed early on, it may be best in one's interest to hold off until they have a preferred skill or two at 40+, and/or have their preferred Leagues XP multiplier.* If inventory space is an issue, the lamps '''can be''' safely destroyed and claimed again at a later time.</poem>"
   },
   "the_knights_sword": {
+    "id": "the_knights_sword",
     "name": "The Knight's Sword",
     "number": 14,
     "image": "The Knight's Sword.png|300px",
@@ -5555,6 +5608,7 @@
     "leagueRegion": "<poem>{{RE|Asgarnia}} — location requirement</poem>"
   },
   "land_of_the_goblins": {
+    "id": "land_of_the_goblins",
     "name": "Land of the Goblins",
     "number": 151,
     "image": "Land of the Goblins.png|300px",
@@ -5641,6 +5695,7 @@
     "leagueRegion": "<poem>{{RE|Asgarnia}} — location requirement{{RE|Fremennik}} — location requirement{{RE|Kandarin}} — location requirement</poem>"
   },
   "legends_quest": {
+    "id": "legends_quest",
     "name": "Legends' Quest",
     "number": 50,
     "image": "Legends' Quest - Fighting Nezikchened.png|300px",
@@ -5747,7 +5802,13 @@
           "link": "[[Woodcutting level|Woodcutting]]"
         }
       ],
-      "quests": [],
+      "quests": [
+        "family_crest",
+        "heroes_quest",
+        "shilo_village",
+        "underground_pass",
+        "waterfall_quest"
+      ],
       "other": [
         "The ability to defeat a level 187 demon"
       ]
@@ -5783,6 +5844,7 @@
     "leagueRegion": "<poem>Unlocking {{RE|Fremennik}} {{okay}} will auto-complete the questThe quest is otherwise not completable, as the prerequisite quest [[Family Crest]] requires visits to {{RE|Asgarnia}}, {{RE|Kandarin}}, {{RE|Desert}}, and {{RE|Wilderness}}.</poem>"
   },
   "lost_city": {
+    "id": "lost_city",
     "name": "Lost City",
     "number": 19,
     "image": "Lost City.png|300px",
@@ -5844,6 +5906,7 @@
     "leagueRegion": "<poem>Unlocking {{RE|Misthalin}} {{okay}} will auto-complete the quest</poem>"
   },
   "the_lost_tribe": {
+    "id": "the_lost_tribe",
     "name": "The Lost Tribe",
     "number": 81,
     "image": "The Lost Tribe.png|300px",
@@ -5897,7 +5960,10 @@
           "link": "[[Mining level|Mining]]"
         }
       ],
-      "quests": [],
+      "quests": [
+        "goblin_diplomacy",
+        "rune_mysteries"
+      ],
       "other": []
     },
     "items": [
@@ -5910,6 +5976,7 @@
     "leagueRegion": "<poem>Unlocking {{RE|Misthalin}} {{okay}} will auto-complete the quest</poem>"
   },
   "lunar_diplomacy": {
+    "id": "lunar_diplomacy",
     "name": "Lunar Diplomacy",
     "number": 108,
     "image": "Lunar Diplomacy.png|300px",
@@ -5997,7 +6064,12 @@
           "link": "[[Woodcutting level|Woodcutting]]"
         }
       ],
-      "quests": [],
+      "quests": [
+        "the_fremennik_trials",
+        "lost_city",
+        "rune_mysteries",
+        "shilo_village"
+      ],
       "other": [
         "The ability to kill multiple level 111 monsters."
       ]
@@ -6028,6 +6100,7 @@
     "leagueRegion": "<poem>Unlocking {{RE|Fremennik}} {{okay}} will auto-complete the quest</poem>"
   },
   "making_friends_with_my_arm": {
+    "id": "making_friends_with_my_arm",
     "name": "Making Friends with My Arm",
     "number": 139,
     "image": "Making Friends with My Arm.png|300px",
@@ -6128,6 +6201,7 @@
     "leagueRegion": "<poem>Unlocking {{RE|Desert}} {{okay}} will auto-complete the questUnlocking {{RE|Fremennik}} {{okay}} will auto-complete the quest</poem>"
   },
   "making_history": {
+    "id": "making_history",
     "name": "Making History",
     "number": 92,
     "image": "Outpost.png|300px",
@@ -6182,6 +6256,7 @@
     "leagueRegion": "<poem>{{RE|Fremennik}} — location requirement{{RE|Kandarin}} — location requirement{{RE|Morytania}} — location requirementUnlocking {{RE|Tirannwn}} {{okay}} will auto-complete the quest</poem>"
   },
   "meat_and_greet": {
+    "id": "meat_and_greet",
     "name": "Meat and Greet",
     "number": 168,
     "image": "Meat and Greet.png|300px",
@@ -6204,7 +6279,9 @@
     "length": "Short",
     "requirements": {
       "skills": [],
-      "quests": [],
+      "quests": [
+        "children_of_the_sun"
+      ],
       "other": []
     },
     "items": [],
@@ -6217,6 +6294,7 @@
     "leagueRegion": "<poem>{{RE|Varlamore}} — location requirement</poem>"
   },
   "merlins_crystal": {
+    "id": "merlins_crystal",
     "name": "Merlin's Crystal",
     "number": 21,
     "image": "Merlin's Crystal.png|300px",
@@ -6258,6 +6336,7 @@
     "leagueRegion": "<poem>Unlocking {{RE|Asgarnia}} {{okay}} will auto-complete the questUnlocking {{RE|Fremennik}} {{okay}} will auto-complete the questUnlocking {{RE|Kandarin}} {{okay}} will auto-complete the quest</poem>"
   },
   "misthalin_mystery": {
+    "id": "misthalin_mystery",
     "name": "Misthalin Mystery",
     "number": 129,
     "image": "Misthalin Mystery.png|300px",
@@ -6301,6 +6380,7 @@
     "leagueRegion": "<poem>{{RE|Misthalin}} — location requirement</poem>"
   },
   "monks_friend": {
+    "id": "monks_friend",
     "name": "Monk's Friend",
     "number": 27,
     "image": "Monk's Friend.png|300px",
@@ -6337,6 +6417,7 @@
     "leagueRegion": "<poem>{{RE|Kandarin}} — location requirement</poem>"
   },
   "monkey_madness_i": {
+    "id": "monkey_madness_i",
     "name": "Monkey Madness I",
     "number": 65,
     "image": "Monkey Madness I.png|300px",
@@ -6362,7 +6443,10 @@
     "length": "Long",
     "requirements": {
       "skills": [],
-      "quests": [],
+      "quests": [
+        "the_grand_tree",
+        "tree_gnome_village"
+      ],
       "other": []
     },
     "items": [
@@ -6382,6 +6466,7 @@
     "leagueRegion": "<poem>Unlocking {{RE|Kandarin}} {{okay}} will auto-complete the quest</poem>"
   },
   "monkey_madness_ii": {
+    "id": "monkey_madness_ii",
     "name": "Monkey Madness II",
     "number": 128,
     "image": "Monkey Madness II.png|300px",
@@ -6515,6 +6600,7 @@
     "leagueRegion": "<poem>Unlocking {{RE|Kandarin}} {{okay}} will auto-complete the quest</poem>"
   },
   "mountain_daughter": {
+    "id": "mountain_daughter",
     "name": "Mountain Daughter",
     "number": 73,
     "image": "Mountain Daughter.png|300px",
@@ -6577,6 +6663,7 @@
     "leagueRegion": "<poem>Unlocking {{RE|Fremennik}} {{okay}} will auto-complete the quest</poem>"
   },
   "mournings_end_part_i": {
+    "id": "mournings_end_part_i",
     "name": "Mourning's End Part I",
     "number": 84,
     "image": "Mourning's End Part I.png|300px",
@@ -6659,6 +6746,7 @@
     "leagueRegion": "<poem>Unlocking {{RE|Tirannwn}} {{okay}} will auto-complete the quest</poem>"
   },
   "mournings_end_part_ii": {
+    "id": "mournings_end_part_ii",
     "name": "Mourning's End Part II",
     "number": 89,
     "image": "Mourning's End Part II.png|300px",
@@ -6706,6 +6794,7 @@
     "leagueRegion": "<poem>Unlocking {{RE|Tirannwn}} {{okay}} will auto-complete the quest</poem>"
   },
   "murder_mystery": {
+    "id": "murder_mystery",
     "name": "Murder Mystery",
     "number": 47,
     "image": "Murder Mystery.png|300px",
@@ -6745,6 +6834,7 @@
     "leagueRegion": "<poem>Unlocking {{RE|Kandarin}} {{okay}} will auto-complete the quest</poem>"
   },
   "my_arms_big_adventure": {
+    "id": "my_arms_big_adventure",
     "name": "My Arm's Big Adventure",
     "number": 113,
     "image": "My Arm's Big Adventure.png|300px",
@@ -6815,6 +6905,7 @@
     "leagueRegion": "<poem>Unlocking {{RE|Asgarnia}} {{okay}} will auto-complete the questUnlocking {{RE|Desert}} {{okay}} will auto-complete the questUnlocking {{RE|Fremennik}} {{okay}} will auto-complete the quest</poem>"
   },
   "nature_spirit": {
+    "id": "nature_spirit",
     "name": "Nature Spirit",
     "number": 55,
     "image": "Nature Spirit.png|300px",
@@ -6867,6 +6958,7 @@
     "leagueRegion": "<poem>Unlocking {{RE|Misthalin}} {{okay}} will auto-complete the quest</poem>"
   },
   "a_night_at_the_theatre": {
+    "id": "a_night_at_the_theatre",
     "name": "A Night at the Theatre",
     "number": 149,
     "image": "A Night at the Theatre.png|300px",
@@ -6916,6 +7008,7 @@
     "leagueRegion": "<poem>{{RE|Morytania}} — location requirement</poem>"
   },
   "observatory_quest": {
+    "id": "observatory_quest",
     "name": "Observatory Quest",
     "number": 43,
     "image": "Observatory Quest.png|300px",
@@ -6966,6 +7059,7 @@
     "leagueRegion": "<poem>{{RE|Kandarin}} — location requirement</poem>"
   },
   "olafs_quest": {
+    "id": "olafs_quest",
     "name": "Olaf's Quest",
     "number": 123,
     "image": "Olaf's Quest.png|300px",
@@ -7031,6 +7125,7 @@
     "leagueRegion": "<poem>Unlocking {{RE|Fremennik}} {{okay}} will auto-complete the quest</poem>"
   },
   "one_small_favour": {
+    "id": "one_small_favour",
     "name": "One Small Favour",
     "number": 72,
     "image": "One Small Favour.png|300px",
@@ -7088,7 +7183,10 @@
           "link": "[[Smithing level|Smithing]]"
         }
       ],
-      "quests": [],
+      "quests": [
+        "rune_mysteries",
+        "shilo_village"
+      ],
       "other": []
     },
     "items": [
@@ -7112,6 +7210,7 @@
     "leagueRegion": "<poem>Unlocking {{RE|Fremennik}} {{okay}} will auto-complete the questUnlocking {{RE|Kandarin}} {{okay}} will auto-complete the questUnlocking {{RE|Desert}} {{okay}} will auto-complete the quest'''The quest is otherwise not completable.'''</poem>"
   },
   "the_path_of_glouphrie": {
+    "id": "the_path_of_glouphrie",
     "name": "The Path of Glouphrie",
     "number": 158,
     "image": "The Path of Glouphrie.png",
@@ -7173,7 +7272,11 @@
           "link": "[[Agility level|Agility]]"
         }
       ],
-      "quests": [],
+      "quests": [
+        "the_eyes_of_glouphrie",
+        "waterfall_quest",
+        "tree_gnome_village"
+      ],
       "other": []
     },
     "items": [
@@ -7197,6 +7300,7 @@
     "leagueRegion": "<poem>{{RE|Kandarin}} — location requirement</poem>"
   },
   "perilous_moons": {
+    "id": "perilous_moons",
     "name": "Perilous Moons",
     "number": 163,
     "image": "Perilous Moons.png|300px",
@@ -7256,7 +7360,9 @@
           "link": "[[Construction level|Construction]]"
         }
       ],
-      "quests": [],
+      "quests": [
+        "twilights_promise"
+      ],
       "other": []
     },
     "items": [
@@ -7277,6 +7383,7 @@
     "leagueRegion": "<poem>{{RE|Varlamore}} — location requirement</poem>"
   },
   "pirates_treasure": {
+    "id": "pirates_treasure",
     "name": "Pirate's Treasure",
     "number": 16,
     "image": "Pirate's Treasure.png|300px",
@@ -7316,6 +7423,7 @@
     "leagueRegion": "<poem>{{RE|Asgarnia}} — location requirementUnlocking {{RE|Morytania}} {{okay}} will auto-complete the quest</poem>"
   },
   "plague_city": {
+    "id": "plague_city",
     "name": "Plague City",
     "number": 35,
     "image": "Plague City.png|300px",
@@ -7356,6 +7464,7 @@
     "leagueRegion": "<poem>{{RE|Kandarin}} — location requirementUnlocking {{RE|Fremennik}} {{okay}} will auto-complete the questUnlocking {{RE|Tirannwn}} {{okay}} will auto-complete the quest</poem>"
   },
   "a_porcine_of_interest": {
+    "id": "a_porcine_of_interest",
     "name": "A Porcine of Interest",
     "number": 146,
     "image": "A Porcine of Interest.png|300px",
@@ -7400,6 +7509,7 @@
     "leagueRegion": "<poem>{{RE|Asgarnia}} — location requirement</poem>"
   },
   "priest_in_peril": {
+    "id": "priest_in_peril",
     "name": "Priest in Peril",
     "number": 54,
     "image": "Priest in Peril.png|300px",
@@ -7440,6 +7550,7 @@
     "leagueRegion": "<poem>Unlocking {{RE|Misthalin}} {{okay}} will auto-complete the quest</poem>"
   },
   "prince_ali_rescue": {
+    "id": "prince_ali_rescue",
     "name": "Prince Ali Rescue",
     "number": 10,
     "image": "Prince Ali Rescue.png|300px",
@@ -7488,6 +7599,7 @@
     "leagueRegion": "<poem>Unlocking {{RE|Desert}} {{okay}} will auto-complete the quest</poem>"
   },
   "the_queen_of_thieves": {
+    "id": "the_queen_of_thieves",
     "name": "The Queen of Thieves",
     "number": 133,
     "image": "The Queen of Thieves.png|300px",
@@ -7539,6 +7651,7 @@
     "leagueRegion": "<poem>Unlocking {{RE|Kourend}} {{okay}} will auto-complete the quest</poem>"
   },
   "rag_and_bone_man_i": {
+    "id": "rag_and_bone_man_i",
     "name": "Rag and Bone Man I",
     "number": 103,
     "image": "Rag and Bone Man.png|300px",
@@ -7580,6 +7693,7 @@
     "leagueRegion": "<poem>{{RE|Misthalin}} — location requirement{{RE|Karamja}} — location requirement</poem>"
   },
   "rag_and_bone_man_ii": {
+    "id": "rag_and_bone_man_ii",
     "name": "Rag and Bone Man II",
     "number": 131,
     "image": "Rag and Bone Man.png|300px",
@@ -7648,6 +7762,7 @@
     "leagueRegion": "<poem>Impossible to complete, as it requires visits to {{RE|Asgarnia}}, {{RE|Kandarin}}, {{RE|Desert}}, {{RE|Fremennik}}, and {{RE|Morytania}}. As such, players are advised not to start the quest, so that the quest-specific bones do not pollute the ground. If the player has started the quest, the pollution can be avoided by keeping the bone in the inventory or bank.</poem>"
   },
   "ratcatchers": {
+    "id": "ratcatchers",
     "name": "Ratcatchers",
     "number": 93,
     "image": "Ratcatchers.png|300px",
@@ -7705,6 +7820,7 @@
     "leagueRegion": "<poem>Impossible to complete, as it requires visits to {{RE|Asgarnia}}, {{RE|Desert}}, {{RE|Kandarin}}, and {{RE|Fremennik}}</poem>"
   },
   "recipe_for_disaster": {
+    "id": "recipe_for_disaster",
     "name": "Recipe for Disaster",
     "number": 100,
     "image": "Recipe for Disaster.png|300px",
@@ -7942,6 +8058,7 @@
     "leagueRegion": "<poem>Partially completable — Requires {{RE|Varlamore}} or {{RE|Fremennik}} for [[Greenman's ale]] to complete [[Another Cook's Quest]]. (A [[Fruit blast]] can be obtained in {{RE|Misthalin}} by talking to an [[Examiner]] for [[Level 3 certificate]], handing it over to [[Curator Haig Halen]] and asking for a drink.)Alternately, unlocking {{RE|Kandarin}} or {{RE|Morytania}} will auto-complete [[Another Cook's Quest]].</poem>}}</onlyinclude>===Another Cook's Quest==={{Main|Recipe for Disaster/Another Cook's Quest}}[[File:Cook (Lumbridge) chathead.png|left]]The cook is preparing for a party in [[Lumbridge]]. He tells the player that a hundred years ago, a very important meeting was held in Lumbridge. Supposedly his ancestor, [[Franizzard Van Lumbcook]], cooked such an amazing banquet for the occasion that he was offered a job as head cook, along with all his descendants, for life.This big, important meeting is held in Lumbridge every ten years and today is the 10th meeting. As he cannot think of a brilliant dish himself, he intends to use his ancestor's recipe for the feast. However, he needs help gathering the ingredients, again. Gather the ingredients and complete the subquest to receive an invitation to The Feast. All but the [[rotten tomato]] can be obtained from the Grand Exchange. You can buy one from [[Pelters' Veg Stall]] behind the [[Varrock General Store]], or head to the bank chest at the Emir's Arena in [[Al Kharid]] to obtain one from the barrel.Items required: [[eye of newt]], [[Greenman's ale|glass of greenman's ale]], [[rotten tomato]] and [[Dirty blast|dirty blast ( fruit blast + ashes )]].===The Feast==={{Listen"
   },
   "recruitment_drive": {
+    "id": "recruitment_drive",
     "name": "Recruitment Drive",
     "number": 83,
     "image": "Recruitment Drive.png|300px",
@@ -7982,6 +8099,7 @@
     "leagueRegion": "<poem>{{RE|Asgarnia}} — location requirementUnlocking {{RE|Desert}} {{okay}} will auto-complete the questUnlocking {{RE|Fremennik}} {{okay}} will auto-complete the quest</poem>"
   },
   "regicide": {
+    "id": "regicide",
     "name": "Regicide",
     "number": 59,
     "image": "Regicide.png|300px",
@@ -8028,7 +8146,9 @@
           "link": "[[Agility level|Agility]]"
         }
       ],
-      "quests": [],
+      "quests": [
+        "underground_pass"
+      ],
       "other": []
     },
     "items": [
@@ -8052,6 +8172,7 @@
     "leagueRegion": "<poem>Unlocking {{RE|Tirannwn}} {{okay}} will auto-complete the quest</poem>"
   },
   "the_restless_ghost": {
+    "id": "the_restless_ghost",
     "name": "The Restless Ghost",
     "number": 3,
     "image": "The Restless Ghost.png|300px",
@@ -8089,6 +8210,7 @@
     "leagueRegion": "<poem>Unlocking {{RE|Misthalin}} {{okay}} will auto-complete the quest</poem>"
   },
   "the_ribbiting_tale_of_a_lily_pad_labour_dispute": {
+    "id": "the_ribbiting_tale_of_a_lily_pad_labour_dispute",
     "name": "The Ribbiting Tale of a Lily Pad Labour Dispute",
     "number": 164,
     "image": "The Ribbiting Tale of a Lily Pad Labour Dispute.png|300px",
@@ -8124,7 +8246,9 @@
           "link": "[[Woodcutting level|Woodcutting]]"
         }
       ],
-      "quests": [],
+      "quests": [
+        "children_of_the_sun"
+      ],
       "other": []
     },
     "items": [
@@ -8138,6 +8262,7 @@
     "leagueRegion": "<poem>{{RE|Varlamore}} — location requirement</poem>"
   },
   "romeo_juliet": {
+    "id": "romeo_juliet",
     "name": "Romeo & Juliet",
     "number": 4,
     "image": "Romeo & Juliet.png|300px",
@@ -8170,6 +8295,7 @@
     "leagueRegion": "<poem>Unlocking {{RE|Misthalin}} {{okay}} will auto-complete the quest</poem>"
   },
   "roving_elves": {
+    "id": "roving_elves",
     "name": "Roving Elves",
     "number": 70,
     "image": "Roving Elves.png|300px",
@@ -8207,7 +8333,10 @@
           "link": "[[Agility level|Agility]]"
         }
       ],
-      "quests": [],
+      "quests": [
+        "regicide",
+        "waterfall_quest"
+      ],
       "other": []
     },
     "items": [
@@ -8226,6 +8355,7 @@
     "leagueRegion": "<poem>Unlocking {{RE|Tirannwn}} {{okay}} will auto-complete the quest</poem>"
   },
   "royal_trouble": {
+    "id": "royal_trouble",
     "name": "Royal Trouble",
     "number": 105,
     "image": "Royal Trouble.png",
@@ -8274,7 +8404,9 @@
           "link": "[[Slayer level|Slayer]]"
         }
       ],
-      "quests": [],
+      "quests": [
+        "throne_of_miscellania"
+      ],
       "other": []
     },
     "items": [
@@ -8288,6 +8420,7 @@
     "leagueRegion": "<poem>{{RE|Fremennik}} — location requirement</poem>"
   },
   "rum_deal": {
+    "id": "rum_deal",
     "name": "Rum Deal",
     "number": 90,
     "image": "Rum Deal.png|300px",
@@ -8381,6 +8514,7 @@
     "leagueRegion": "<poem>Unlocking {{RE|Morytania}} {{okay}} will auto-complete the quest</poem>"
   },
   "rune_mysteries": {
+    "id": "rune_mysteries",
     "name": "Rune Mysteries",
     "number": 51,
     "image": "Rune Mysteries.png|300px",
@@ -8416,6 +8550,7 @@
     "leagueRegion": "<poem>Unlocking {{RE|Misthalin}} {{okay}} will auto-complete the questUnlocking {{RE|Desert}} {{okay}} will auto-complete the questUnlocking {{RE|Fremennik}} {{okay}} will auto-complete the questUnlocking {{RE|Kandarin}} {{okay}} will auto-complete the questUnlocking {{RE|Wilderness}} {{okay}} will auto-complete the quest</poem>"
   },
   "scorpion_catcher": {
+    "id": "scorpion_catcher",
     "name": "Scorpion Catcher",
     "number": 23,
     "image": "Scorpion Catcher.png|300px",
@@ -8465,6 +8600,7 @@
     "leagueRegion": "<poem>{{RE|Asgarnia}} — location requirement{{RE|Kandarin}} — location requirementUnlocking {{RE|Fremennik}} {{okay}} will auto-complete the quest</poem>"
   },
   "sea_slug": {
+    "id": "sea_slug",
     "name": "Sea Slug",
     "number": 36,
     "image": "Sea Slug.png|300px",
@@ -8513,6 +8649,7 @@
     "leagueRegion": "<poem>{{RE|Kandarin}} — location requirement</poem>"
   },
   "secrets_of_the_north": {
+    "id": "secrets_of_the_north",
     "name": "Secrets of the North",
     "number": 156,
     "image": "Secrets of the North.png|300px",
@@ -8594,6 +8731,7 @@
     "leagueRegion": "<poem>Unlocking {{RE|Desert}} {{okay}} will auto-complete the questUnlocking {{RE|Fremennik}} {{okay}} will auto-complete the quest '''but will not auto-complete''' [[Desert Treasure I]]</poem>"
   },
   "shades_of_mortton": {
+    "id": "shades_of_mortton",
     "name": "Shades of Mort'ton",
     "number": 61,
     "image": "Shades of Mor'ton.png|300px",
@@ -8649,7 +8787,9 @@
           "link": "[[Firemaking level|Firemaking]]"
         }
       ],
-      "quests": [],
+      "quests": [
+        "priest_in_peril"
+      ],
       "other": [
         "Must be able to survive an onslaught when rebuilding the Temple (Being surrounded by many players makes this much easier)."
       ]
@@ -8670,6 +8810,7 @@
     "leagueRegion": "<poem>{{RE|Morytania}} — location requirement</poem>"
   },
   "shadow_of_the_storm": {
+    "id": "shadow_of_the_storm",
     "name": "Shadow of the Storm",
     "number": 91,
     "image": "Shadow of the Storm.png|300px",
@@ -8725,6 +8866,7 @@
     "leagueRegion": "<poem>{{RE|Desert}} — location requirement</poem>"
   },
   "sheep_herder": {
+    "id": "sheep_herder",
     "name": "Sheep Herder",
     "number": 34,
     "image": "Sheep Herder.png|300px",
@@ -8760,6 +8902,7 @@
     "leagueRegion": "<poem>{{RE|Kandarin}} — location requirementUnlocking {{RE|Tirannwn}} {{okay}} will auto-complete the quest</poem>"
   },
   "sheep_shearer": {
+    "id": "sheep_shearer",
     "name": "Sheep Shearer",
     "number": 5,
     "image": "Sheep Shearer.png|300px",
@@ -8800,6 +8943,7 @@
     "leagueRegion": "<poem>{{RE|Misthalin}} — location requirement</poem>"
   },
   "shield_of_arrav": {
+    "id": "shield_of_arrav",
     "name": "Shield of Arrav",
     "number": 6,
     "image": "Shield of Arrav.png|300px",
@@ -8841,6 +8985,7 @@
     "leagueRegion": "<poem>{{RE|Misthalin}} — location requirementUnlocking {{RE|Fremennik}} {{okay}} will auto-complete the quest</poem>"
   },
   "shilo_village": {
+    "id": "shilo_village",
     "name": "Shilo Village",
     "number": 41,
     "image": "Shilo Village.png|300px",
@@ -8887,7 +9032,9 @@
           "link": "[[Agility level|Agility]]"
         }
       ],
-      "quests": [],
+      "quests": [
+        "jungle_potion"
+      ],
       "other": []
     },
     "items": [
@@ -8909,6 +9056,7 @@
     "leagueRegion": "<poem>Unlocking {{RE|Karamja}} {{okay}} will auto-complete the quest</poem>"
   },
   "sins_of_the_father": {
+    "id": "sins_of_the_father",
     "name": "Sins of the Father",
     "number": 145,
     "image": "Sins of the Father.png",
@@ -9021,6 +9169,7 @@
     "leagueRegion": "<poem>{{RE|Morytania}} — location requirement</poem>Players attempting to start the quest may find that [[Veliaf Hurtz]] is not present in [[Slepe]]. If this happens, he must first be interacted with in the [[Burgh de Rott]] basement, he will then appear in Slepe."
   },
   "sleeping_giants": {
+    "id": "sleeping_giants",
     "name": "Sleeping Giants",
     "number": 154,
     "image": "Sleeping Giants.png|300px",
@@ -9070,6 +9219,7 @@
     "leagueRegion": "<poem>{{RE|Desert}} — location requirement</poem>"
   },
   "the_slug_menace": {
+    "id": "the_slug_menace",
     "name": "The Slug Menace",
     "number": 111,
     "image": "Witchaven.png|300px",
@@ -9159,6 +9309,7 @@
     "leagueRegion": "<poem>{{RE|Asgarnia}} - location requirement{{RE|Kandarin}} - location requirement{{RE|Desert}} - location requirement</poem>"
   },
   "song_of_the_elves": {
+    "id": "song_of_the_elves",
     "name": "Song of the Elves",
     "number": 143,
     "image": "Song of the Elves.png",
@@ -9333,6 +9484,7 @@
     "leagueRegion": "<poem>Unlocking {{RE|Tirannwn}} {{okay}} will auto-complete the quest</poem>"
   },
   "a_souls_bane": {
+    "id": "a_souls_bane",
     "name": "A Soul's Bane",
     "number": 102,
     "image": "A Soul's Bane.png|300px",
@@ -9377,6 +9529,7 @@
     "leagueRegion": "<poem>Unlocking {{RE|Misthalin}} {{okay}} will auto-complete the quest</poem>"
   },
   "spirits_of_the_elid": {
+    "id": "spirits_of_the_elid",
     "name": "Spirits of the Elid",
     "number": 94,
     "image": "Spirits of the Elid.png|300px",
@@ -9454,6 +9607,7 @@
     "leagueRegion": "<poem>{{RE|Desert}} — location requirement</poem>"
   },
   "swan_song": {
+    "id": "swan_song",
     "name": "Swan Song",
     "number": 104,
     "image": "Swan Song.png|300px",
@@ -9576,6 +9730,7 @@
     "leagueRegion": "<poem>Unlocking {{RE|Desert}} {{okay}} will auto-complete the questUnlocking {{RE|Fremennik}} {{okay}} will auto-complete the questUnlocking {{RE|Kandarin}} {{okay}} will auto-complete the quest</poem>"
   },
   "tai_bwo_wannai_trio": {
+    "id": "tai_bwo_wannai_trio",
     "name": "Tai Bwo Wannai Trio",
     "number": 58,
     "image": "Tai Bwo Wannai Trio.png|300px",
@@ -9639,7 +9794,9 @@
           "link": "[[Fishing level|Fishing]]"
         }
       ],
-      "quests": [],
+      "quests": [
+        "jungle_potion"
+      ],
       "other": []
     },
     "items": [
@@ -9669,6 +9826,7 @@
     "leagueRegion": "<poem>{{RE|Karamja}} — location requirement</poem>"
   },
   "a_tail_of_two_cats": {
+    "id": "a_tail_of_two_cats",
     "name": "A Tail of Two Cats",
     "number": 87,
     "image": "A Tail of Two Cats.png|300px",
@@ -9719,6 +9877,7 @@
     "leagueRegion": "<poem>{{RE|Asgarnia}} — location requirement{{RE|Desert}} — location requirementUnlocking {{RE|Fremennik}} {{okay}} will auto-complete the quest</poem>"
   },
   "tale_of_the_righteous": {
+    "id": "tale_of_the_righteous",
     "name": "Tale of the Righteous",
     "number": 137,
     "image": "Tale of the Righteous.png|300px",
@@ -9778,6 +9937,7 @@
     "leagueRegion": "<poem>Unlocking {{RE|Kourend}} {{okay}} will auto-complete the quest</poem>"
   },
   "a_taste_of_hope": {
+    "id": "a_taste_of_hope",
     "name": "A Taste of Hope",
     "number": 138,
     "image": "A Taste of Hope.png|300px",
@@ -9863,6 +10023,7 @@
     "leagueRegion": "<poem>Unlocking {{RE|Morytania}} {{okay}} will auto-complete the quest</poem>"
   },
   "tears_of_guthix": {
+    "id": "tears_of_guthix",
     "name": "Tears of Guthix",
     "number": 79,
     "image": "Tears of Guthix.png|300px",
@@ -9943,6 +10104,7 @@
     "leagueRegion": "<poem>Unlocking {{RE|Misthalin}} {{okay}} will auto-complete the quest</poem>"
   },
   "temple_of_ikov": {
+    "id": "temple_of_ikov",
     "name": "Temple of Ikov",
     "number": 28,
     "image": "Temple of Ikov.png|300px",
@@ -10018,6 +10180,7 @@
     "leagueRegion": "<poem>Currently not completable due to known bug with [[Lucien]]'s location{{RE|Kandarin}} — location requirementUnlocking {{RE|Desert}} {{okay}} will auto-complete the quest</poem>"
   },
   "temple_of_the_eye": {
+    "id": "temple_of_the_eye",
     "name": "Temple of the Eye",
     "number": 152,
     "image": "Temple of the Eye.png|300px",
@@ -10065,6 +10228,7 @@
     "leagueRegion": "<poem>Unlocking {{RE|Desert}} {{okay}} will auto-complete the quest</poem>"
   },
   "the_curse_of_arrav": {
+    "id": "the_curse_of_arrav",
     "name": "The Curse of Arrav",
     "number": 170,
     "image": "The Curse of Arrav.png|300px",
@@ -10088,7 +10252,10 @@
     "length": "Medium",
     "requirements": {
       "skills": [],
-      "quests": [],
+      "quests": [
+        "defender_of_varrock",
+        "troll_romance"
+      ],
       "other": [
         "{{SCP|Mining|64|linkyes}}{{Boostable|no}}{{Questreqstart|}}",
         "{{SCP|Ranged|62|link=yes}}{{Boostable|no}}{{Questreqstart|}}",
@@ -10115,6 +10282,7 @@
     "leagueRegion": "<poem>{{RE|Desert}} — location requirement{{RE|Asgarnia}} — location requirement{{RE|Kandarin}} — required for the [[Troll Romance]] quest pre-requisite</poem>"
   },
   "throne_of_miscellania": {
+    "id": "throne_of_miscellania",
     "name": "Throne of Miscellania",
     "number": 64,
     "image": "Throne of Miscellania.png|300px",
@@ -10138,7 +10306,10 @@
     "length": "Medium",
     "requirements": {
       "skills": [],
-      "quests": [],
+      "quests": [
+        "heroes_quest",
+        "the_fremennik_trials"
+      ],
       "other": []
     },
     "items": [
@@ -10153,6 +10324,7 @@
     "leagueRegion": "<poem>{{RE|Fremennik}} — location requirement</poem>"
   },
   "the_tourist_trap": {
+    "id": "the_tourist_trap",
     "name": "The Tourist Trap",
     "number": 44,
     "image": "The Tourist Trap.png|300px",
@@ -10215,6 +10387,7 @@
     "leagueRegion": "<poem>Unlocking {{RE|Desert}} {{okay}} will auto-complete the quest</poem>"
   },
   "tower_of_life": {
+    "id": "tower_of_life",
     "name": "Tower of Life",
     "number": 120,
     "image": "Tower of Life.png|300px",
@@ -10273,6 +10446,7 @@
     "leagueRegion": "<poem>{{RE|Kandarin}} — location requirement</poem>"
   },
   "tree_gnome_village": {
+    "id": "tree_gnome_village",
     "name": "Tree Gnome Village",
     "number": 31,
     "image": "Tree Gnome Village.png|300px",
@@ -10319,6 +10493,7 @@
     "leagueRegion": "<poem>Unlocking {{RE|Kandarin}} {{okay}} will auto-complete the questUnlocking the {{plink|Fairy's Flight}} relic will auto-complete the quest</poem>"
   },
   "tribal_totem": {
+    "id": "tribal_totem",
     "name": "Tribal Totem",
     "number": 25,
     "image": "Tribal Totem.png|300px",
@@ -10364,6 +10539,7 @@
     "leagueRegion": "<poem>{{RE|Kandarin}} — location requirement</poem>"
   },
   "troll_romance": {
+    "id": "troll_romance",
     "name": "Troll Romance",
     "number": 67,
     "image": "Troll Romance.png|300px",
@@ -10407,7 +10583,9 @@
           "link": "[[Agility level|Agility]]"
         }
       ],
-      "quests": [],
+      "quests": [
+        "troll_stronghold"
+      ],
       "other": []
     },
     "items": [
@@ -10433,6 +10611,7 @@
     "leagueRegion": "<poem>{{RE|Asgarnia}} — location requirement{{RE|Kandarin}} — location requirement (for a [[bucket of wax]])</poem>"
   },
   "troll_stronghold": {
+    "id": "troll_stronghold",
     "name": "Troll Stronghold",
     "number": 57,
     "image": "Troll Stronghold.png|300px",
@@ -10484,6 +10663,7 @@
     "leagueRegion": "<poem>Unlocking {{RE|Asgarnia}} {{okay}} will auto-complete the questUnlocking {{RE|Desert}} {{okay}} will auto-complete the questUnlocking {{RE|Fremennik}} {{okay}} will auto-complete the questUnlocking {{RE|Kandarin}} {{okay}} will auto-complete the quest</poem>"
   },
   "twilights_promise": {
+    "id": "twilights_promise",
     "name": "Twilight's Promise",
     "number": 161,
     "image": "Twilight's Promise.png|300px",
@@ -10507,7 +10687,9 @@
     "length": "Short",
     "requirements": {
       "skills": [],
-      "quests": [],
+      "quests": [
+        "children_of_the_sun"
+      ],
       "other": []
     },
     "items": [
@@ -10522,6 +10704,7 @@
     "leagueRegion": "<poem>Unlocking {{RE|Varlamore}} {{okay}} will auto-complete the quest</poem>"
   },
   "underground_pass": {
+    "id": "underground_pass",
     "name": "Underground Pass",
     "number": 42,
     "image": "Underground Pass.png|300px",
@@ -10562,7 +10745,9 @@
           "link": "[[Ranged level|Ranged]]"
         }
       ],
-      "quests": [],
+      "quests": [
+        "biohazard"
+      ],
       "other": []
     },
     "items": [
@@ -10584,6 +10769,7 @@
     "leagueRegion": "<poem>Unlocking {{RE|Fremennik}} {{okay}} will auto-complete the questUnlocking {{RE|Tirannwn}} {{okay}} will auto-complete the questThe quest is otherwise not completable. {{RE|Kandarin}} is required to start the quest, but the [[Underground Pass (dungeon)|Underground Pass]] itself requires {{RE|Tirannwn}} to be unlocked.</poem>"
   },
   "vampyre_slayer": {
+    "id": "vampyre_slayer",
     "name": "Vampyre Slayer",
     "number": 8,
     "image": "Vampyre Slayer.png|300px",
@@ -10627,6 +10813,7 @@
     "leagueRegion": "<poem>{{RE|Misthalin}} — location requirement</poem>"
   },
   "wanted": {
+    "id": "wanted",
     "name": "Wanted!",
     "number": 88,
     "image": "Wanted!.png|300px",
@@ -10686,6 +10873,7 @@
     "leagueRegion": "<poem>{{RE|Asgarnia}} — location requirement{{RE|Morytania}} — location requirement{{RE|Wilderness}} — location requirementOnly possible to manually complete if the [[Wanted!#Random_items|random locations]] are in the 3 required regions of {{RE|Asgarnia}}, {{RE|Morytania}} and {{RE|Wilderness}}Unlocking {{RE|Desert}} {{okay}} will auto-complete the questUnlocking {{RE|Fremennik}} {{okay}} will auto-complete the quest</poem>"
   },
   "watchtower": {
+    "id": "watchtower",
     "name": "Watchtower",
     "number": 45,
     "image": "Watchtower.png|300px",
@@ -10779,6 +10967,7 @@
     "leagueRegion": "<poem>Unlocking {{RE|Kandarin}} {{okay}} will auto-complete the quest</poem>"
   },
   "waterfall_quest": {
+    "id": "waterfall_quest",
     "name": "Waterfall Quest",
     "number": 37,
     "image": "Waterfall Quest.png|300px",
@@ -10825,6 +11014,7 @@
     "leagueRegion": "<poem>{{RE|Kandarin}} — location requirementUnlocking {{RE|Desert}} {{okay}} will auto-complete the questUnlocking {{RE|Fremennik}} {{okay}} will auto-complete the questUnlocking {{RE|Tirannwn}} {{okay}} will auto-complete the quest</poem>"
   },
   "what_lies_below": {
+    "id": "what_lies_below",
     "name": "What Lies Below",
     "number": 122,
     "image": "What Lies Below.png|300px",
@@ -10888,6 +11078,7 @@
     "leagueRegion": "<poem>{{RE|Wilderness}} — location requirement (if entering the [[Chaos Altar]] through the [[Tunnel of Chaos]], the [[Abyss]], or simply walking there)OR{{RE|Desert}} — location requirement (if entering the Chaos Altar via [[What Lies Below#Option 4|Guardians of the Rift]])</poem>"
   },
   "while_guthix_sleeps": {
+    "id": "while_guthix_sleeps",
     "name": "While Guthix Sleeps",
     "number": 165,
     "image": "While Guthix Sleeps.png",
@@ -11020,6 +11211,7 @@
     "leagueRegion": "<poem>Impossible to complete. [[Tormented Demons]] will be accessible without needing to start or complete the quest, meaning the only requirement is a [[Sapphire Lantern]].</poem>"
   },
   "witchs_house": {
+    "id": "witchs_house",
     "name": "Witch's House",
     "number": 20,
     "image": "Witch's House.png|300px",
@@ -11060,6 +11252,7 @@
     "leagueRegion": "<poem>{{RE|Asgarnia}} — location requirement</poem>"
   },
   "witchs_potion": {
+    "id": "witchs_potion",
     "name": "Witch's Potion",
     "number": 13,
     "image": "Witch's Potion.png|300px",
@@ -11095,6 +11288,7 @@
     "leagueRegion": "<poem>{{RE|Asgarnia}} — location requirement</poem>"
   },
   "x_marks_the_spot": {
+    "id": "x_marks_the_spot",
     "name": "X Marks the Spot",
     "number": 142,
     "image": "X Marks the Spot.png|300px",
@@ -11130,6 +11324,7 @@
     "leagueRegion": "<poem>{{RE|Asgarnia}} — location requirementUnlocking {{RE|Kourend}} {{okay}} will auto-complete the quest</poem>"
   },
   "zogre_flesh_eaters": {
+    "id": "zogre_flesh_eaters",
     "name": "Zogre Flesh Eaters",
     "number": 80,
     "image": "Zogre Flesh Eaters.png|300px",
@@ -11192,7 +11387,10 @@
           "link": "[[Ranged level|Ranged]]"
         }
       ],
-      "quests": [],
+      "quests": [
+        "big_chompy_bird_hunting",
+        "jungle_potion"
+      ],
       "other": [
         "You must be able to defeat a level 111 enemy."
       ]

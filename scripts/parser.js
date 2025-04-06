@@ -185,10 +185,10 @@ function parseQuestRequirements(requirementLines) {
 
     // Check for top-level quest requirements (lines starting with ** followed by [[Quest Name]])
     // Only match lines with single ** to get top-level requirements
-    const questMatch = reqLine.match(/^\*\*\[\[(.*?)\]\]/);
+    const questMatch = reqLine.match(/^\*\*(\s+)?\[\[(.*?)\]\]/);
     if (questMatch && !reqLine.includes('***')) {
       // Convert quest name to snake_case id and remove special characters
-      const questId = normalizeQuestName(questMatch[1]);
+      const questId = normalizeQuestName(questMatch[2]);
       requirements.quests.push(questId);
       continue;
     }

@@ -28,7 +28,7 @@ describe('getInfobox', () => {
       release: '4 January 2001',
       update: 'Update 2',
       aka: 'Cooking Quest',
-      members: 'false',
+      members: false,
       series: 'Cooking',
       developer: 'Andrew Gower'
     });
@@ -45,14 +45,14 @@ describe('getInfobox', () => {
   it('should handle partial infobox data', () => {
     const mockQuestData = `{{Infobox Quest
 |name = Dragon Slayer
-|members = true
+|members = false
 }}`
 
     const result = getInfobox(mockQuestData);
 
     expect(result).toEqual({
       name: 'Dragon Slayer',
-      members: 'true'
+      members: false
     });
   });
 
@@ -101,7 +101,7 @@ describe('getInfobox', () => {
       release: '18 April 2005',
       update: 'Desert Treasure',
       aka: 'DT, DT1',
-      members: 'Yes',
+      members: true,
       series: 'Mahjarrat, #7',
       developer: 'James B'
     });

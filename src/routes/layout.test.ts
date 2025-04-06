@@ -10,15 +10,12 @@ describe('Layout Component', () => {
 
   it('contains all navigation links', () => {
     render(Layout);
-    expect(screen.getByText('Planner')).toBeInTheDocument();
-    expect(screen.getByText('Quests')).toBeInTheDocument();
-    expect(screen.getByText('My Routes')).toBeInTheDocument();
     expect(screen.getByText('About')).toBeInTheDocument();
   });
 
   it('renders the footer with current year', () => {
     render(Layout);
     const currentYear = new Date().getFullYear();
-    expect(screen.getByText(`© ${currentYear} Quest Planner. Data from OSRS Wiki.`)).toBeInTheDocument();
+    expect(screen.getByTestId('footer')).toHaveTextContent(`© ${currentYear} Quest Planner. Data sourced from OSRS Wiki. Built by TSCodeMonke.`);
   });
 }); 

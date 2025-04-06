@@ -16,7 +16,7 @@ async function main() {
       const questRewards = getQuestRewards(unparsedQuestData);
       const questDetails = getQuestDetails(unparsedQuestData);
       const singleQuestData = {
-        name: questName,
+        id: questName,
         ...infobox,
         rewards: questRewards,
         ...questDetails,

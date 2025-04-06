@@ -15,6 +15,7 @@
 		"test:unit": "vitest",
 		"test:watch": "vitest --watch",
 		"test": "npm run test:unit -- --run",
+		"test:coverage": "vitest --coverage",
 		"fetch-quests": "node scripts/fetch-quests.js",
 		"fetch-skill-icons": "node scripts/download-skill-icons.js",
 		"generate-quest-data": "node scripts/generate-quest-data.js"
@@ -29,6 +30,7 @@
 		"@tailwindcss/vite": "^4.0.16",
 		"@testing-library/jest-dom": "^6.6.3",
 		"@testing-library/svelte": "^5.2.7",
+		"@vitest/coverage-v8": "^3.0.9",
 		"autoprefixer": "^10.4.19",
 		"eslint": "^9.18.0",
 		"eslint-config-prettier": "^10.0.1",

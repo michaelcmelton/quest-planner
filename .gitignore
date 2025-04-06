@@ -27,3 +27,6 @@ vite.config.ts.timestamp-*
 node_modules/
 .npm
 .pnpm-store/
+
+# Coverage
+coverage/

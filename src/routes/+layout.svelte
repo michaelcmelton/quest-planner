@@ -1,12 +1,9 @@
-
 <script lang="ts">
 	import '../app.css';
 	import { theme } from '$lib/stores/theme';
 	import { page } from '$app/stores';
 	import { onMount } from 'svelte';
-	
-	export const prerender = true;
-	
+
 	function toggleTheme() {
 		const newTheme = $theme === 'dark' ? 'light' : 'dark';
 		theme.set(newTheme);

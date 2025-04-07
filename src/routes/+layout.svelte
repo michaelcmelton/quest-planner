@@ -25,16 +25,16 @@
 	<header class="bg-white dark:bg-gray-800 shadow-sm border-b border-gray-200 dark:border-gray-700">
 		<nav class="container mx-auto px-4 py-4">
 			<div class="flex justify-between items-center">
-				<a href="/" class="text-xl font-bold text-gray-800 dark:text-white">Quest Planner</a>
+				<a href="{base}" class="text-xl font-bold text-gray-800 dark:text-white">Quest Planner</a>
 				<div class="flex items-center space-x-4">
 					<a
-					href="/{base}/about"
+					href="{base}/about"
 					class="text-gray-600 dark:text-gray-300 hover:text-gray-800 dark:hover:text-white transition-colors {$page.url.pathname === '/about' ? 'font-semibold' : ''}"
 					>
 					About
 					</a>
 					<a
-					href="/{base}/quest-list"
+					href="{base}/quest-list"
 					class="text-gray-600 dark:text-gray-300 hover:text-gray-800 dark:hover:text-white transition-colors {$page.url.pathname === '/quest-list' ? 'font-semibold' : ''}"
 					>
 					Quest List

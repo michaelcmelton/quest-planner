@@ -17,7 +17,7 @@ const config = {
 	},
 	paths: {
 		assets: 'static',
-		base: 'quest-planner'
+		base: process.env.NODE_ENV === 'production' ? 'quest-planner' : ''
 	}
 };
 

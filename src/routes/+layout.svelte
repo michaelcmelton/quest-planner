@@ -3,7 +3,7 @@
 	import { theme } from '$lib/stores/theme';
 	import { page } from '$app/stores';
 	import { onMount } from 'svelte';
-
+	import { base } from '$app/paths';
 	function toggleTheme() {
 		const newTheme = $theme === 'dark' ? 'light' : 'dark';
 		theme.set(newTheme);
@@ -28,13 +28,13 @@
 				<a href="/" class="text-xl font-bold text-gray-800 dark:text-white">Quest Planner</a>
 				<div class="flex items-center space-x-4">
 					<a
-					href="/about"
+					href="/{base}/about"
 					class="text-gray-600 dark:text-gray-300 hover:text-gray-800 dark:hover:text-white transition-colors {$page.url.pathname === '/about' ? 'font-semibold' : ''}"
 					>
 					About
 					</a>
 					<a
-					href="/quest-list"
+					href="/{base}/quest-list"
 					class="text-gray-600 dark:text-gray-300 hover:text-gray-800 dark:hover:text-white transition-colors {$page.url.pathname === '/quest-list' ? 'font-semibold' : ''}"
 					>
 					Quest List

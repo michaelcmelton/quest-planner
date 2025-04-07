@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { base } from '$app/paths';
+
 	export let skill: {
 		skill: string;
 		level: number;
@@ -8,31 +10,31 @@
 
 	// Map skill names to icon paths
 	const skillIcons: Record<string, string> = {
-		'Agility': '/icons/skills/agility-icon.png',
-		'Attack': '/icons/skills/attack-icon.png',
-		'Construction': '/icons/skills/construction-icon.png',
-		'Cooking': '/icons/skills/cooking-icon.png',
-		'Crafting': '/icons/skills/crafting-icon.png',
-		'Defence': '/icons/skills/defence-icon.png',
-		'Farming': '/icons/skills/farming-icon.png',
-		'Firemaking': '/icons/skills/firemaking-icon.png',
-		'Fishing': '/icons/skills/fishing-icon.png',
-		'Fletching': '/icons/skills/fletching-icon.png',
-		'Herblore': '/icons/skills/herblore-icon.png',
-		'Hitpoints': '/icons/skills/hitpoints-icon.png',
-		'Hunter': '/icons/skills/hunter-icon.png',
-		'Magic': '/icons/skills/magic-icon.png',
-		'Mining': '/icons/skills/mining-icon.png',
-		'Prayer': '/icons/skills/prayer-icon.png',
-		'Ranged': '/icons/skills/ranged-icon.png',
-		'Runecraft': '/icons/skills/runecraft-icon.png',
-		'Slayer': '/icons/skills/slayer-icon.png',
-		'Smithing': '/icons/skills/smithing-icon.png',
-		'Strength': '/icons/skills/strength-icon.png',
-		'Thieving': '/icons/skills/thieving-icon.png',
-		'Woodcutting': '/icons/skills/woodcutting-icon.png',
-		'Quest': '/icons/skills/quests-icon.png',
-    'Combat': '/icons/skills/multicombat-icon.png'
+		'Agility': `${base}/icons/skills/agility-icon.png`,
+		'Attack': `${base}/icons/skills/attack-icon.png`,
+		'Construction': `${base}/icons/skills/construction-icon.png`,
+		'Cooking': `${base}/icons/skills/cooking-icon.png`,
+		'Crafting': `${base}/icons/skills/crafting-icon.png`,
+		'Defence': `${base}/icons/skills/defence-icon.png`,
+		'Farming': `${base}/icons/skills/farming-icon.png`,
+		'Firemaking': `${base}/icons/skills/firemaking-icon.png`,
+		'Fishing': `${base}/icons/skills/fishing-icon.png`,
+		'Fletching': `${base}/icons/skills/fletching-icon.png`,
+		'Herblore': `${base}/icons/skills/herblore-icon.png`,
+		'Hitpoints': `${base}/icons/skills/hitpoints-icon.png`,
+		'Hunter': `${base}/icons/skills/hunter-icon.png`,
+		'Magic': `${base}/icons/skills/magic-icon.png`,
+		'Mining': `${base}/icons/skills/mining-icon.png`,
+		'Prayer': `${base}/icons/skills/prayer-icon.png`,
+		'Ranged': `${base}/icons/skills/ranged-icon.png`,
+		'Runecraft': `${base}/icons/skills/runecraft-icon.png`,
+		'Slayer': `${base}/icons/skills/slayer-icon.png`,
+		'Smithing': `${base}/icons/skills/smithing-icon.png`,
+		'Strength': `${base}/icons/skills/strength-icon.png`,
+		'Thieving': `${base}/icons/skills/thieving-icon.png`,
+		'Woodcutting': `${base}/icons/skills/woodcutting-icon.png`,
+		'Quest': `${base}/icons/skills/quests-icon.png`,
+    'Combat': `${base}/icons/skills/multicombat-icon.png`
 	};
 
 	$: iconPath = skillIcons[skill.skill] || '';

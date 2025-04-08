@@ -1,0 +1,257 @@
+<script lang="ts">
+	import { getRoutes } from '$lib/stores/routes.svelte';
+	import type { SavedRoute } from '$lib/stores/routes.svelte';
+  import { QuestGraph } from '$lib/graph/graph';
+	import type { Quest } from '$lib/types/quest';
+	import questsData from '$lib/data/quests.json';
+	import { goto } from '$app/navigation';
+
+	const routes = getRoutes();
+
+	// Get all quests
+	const quests: Quest[] = Object.values(questsData);
+	const questsById: Record<string, Quest> = Object.fromEntries(
+		Object.entries(questsData).map(([id, quest]) => [id, quest as Quest])
+	);
+
+	// State for the route builder
+	let selectedQuests: string[] = $state([]);
+	let routeName = $state('');
+  let questValidationErrors: { questId: string; missingRequirements: string[] }[] = $state([]);
+
+	function addQuest(questId: string) {
+		if (!selectedQuests.includes(questId)) {
+			selectedQuests = [...selectedQuests, questId];
+		}
+	}
+
+	function removeQuest(questId: string) {
+		selectedQuests = selectedQuests.filter(id => id !== questId);
+	}
+
+	function moveQuest(index: number, direction: 'up' | 'down') {
+		if (
+			(direction === 'up' && index > 0) ||
+			(direction === 'down' && index < selectedQuests.length - 1)
+		) {
+			const newIndex = direction === 'up' ? index - 1 : index + 1;
+			const newQuests = [...selectedQuests];
+			[newQuests[index], newQuests[newIndex]] = [newQuests[newIndex], newQuests[index]];
+			selectedQuests = newQuests;
+		}
+	}
+
+	function saveRoute() {
+		if (routeName.trim() && selectedQuests.length > 0) {
+			const newRoute: SavedRoute = {
+				id: crypto.randomUUID(),
+				name: routeName,
+				quests: selectedQuests,
+				createdAt: new Date().toISOString()
+			};
+      const graph = new QuestGraph(selectedQuests.map(id => questsById[id]));
+      const { isValid, invalidQuests } = graph.validateRouteWithDetails(selectedQuests.map(id => questsById[id]));
+      if (!isValid) {
+        questValidationErrors = invalidQuests;
+        return;
+      }
+			routes.addRoute(newRoute);
+			goto('/routes');
+		}
+	}
+
+	function cancelRoute() {
+		goto('/routes');
+	}
+
+	function addMissingQuests() {
+		const graph = new QuestGraph(selectedQuests.map(id => questsById[id]));
+		
+		// Function to recursively get all requirements for a quest
+		function getAllRequirements(questId: string, visited = new Set<string>()): string[] {
+			if (visited.has(questId)) return [];
+			visited.add(questId);
+			
+			const quest = questsById[questId];
+			if (!quest || !quest.requirements || !quest.requirements.quests) return [];
+			
+			const requirements = quest.requirements.quests;
+			const allRequirements: string[] = [];
+			
+			// Recursively get requirements of requirements
+			requirements.forEach(req => {
+				allRequirements.push(...getAllRequirements(req, visited));
+			});
+			
+			// Add current requirements after their dependencies
+			allRequirements.push(...requirements);
+			
+			return allRequirements;
+		}
+		
+		// Get all missing requirements for all quests
+		const allMissingRequirements = new Set<string>();
+		selectedQuests.forEach(questId => {
+			const requirements = getAllRequirements(questId);
+			requirements.forEach(req => {
+				if (!selectedQuests.includes(req)) {
+					allMissingRequirements.add(req);
+				}
+			});
+		});
+		
+		// Add all missing requirements to the beginning of the route
+		selectedQuests = [...Array.from(allMissingRequirements), ...selectedQuests];
+
+    const { isValid, invalidQuests } = graph.validateRouteWithDetails(selectedQuests.map(id => questsById[id]));
+    if (!isValid) {
+      questValidationErrors = invalidQuests;
+    } else {
+      questValidationErrors = [];
+    }
+	}
+</script>
+
+<div class="container mx-auto px-4 py-8">
+	<div class="flex justify-between items-center mb-6">
+		<h1 class="text-3xl font-bold text-gray-800 dark:text-white">Create Quest Route</h1>
+		<div class="flex space-x-4">
+			<button
+				onclick={cancelRoute}
+				class="px-4 py-2 text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200"
+			>
+			Cancel
+		</button>
+    <button
+			onclick={saveRoute}
+			class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 disabled:opacity-50"
+				disabled={!routeName.trim() || selectedQuests.length === 0}
+			>
+				Save Route
+			</button>
+		</div>
+	</div>
+
+	<!-- Route Name Input -->
+	<div class="mb-6">
+		<label for="routeName" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+			Route Name <span class="text-red-500">*</span>
+		</label>
+		<input
+			type="text"
+			id="routeName"
+			bind:value={routeName}
+			placeholder="Enter a name for your route"
+			class="w-full md:w-96 px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-800 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+		/>
+	</div>
+
+  {#if questValidationErrors.length > 0}
+    <div class="mb-6 border-l-4 border-red-500 bg-red-50 dark:bg-red-900/20 p-4 rounded-lg">
+      <div class="flex items-center mb-4">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-red-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+        </svg>
+        <h3 class="text-lg font-semibold text-red-800 dark:text-red-200">Invalid Quest Order</h3>
+      </div>
+      <p class="text-red-700 dark:text-red-300 mb-4">The following quests cannot be completed in the current order due to missing requirements:</p>
+      {#each questValidationErrors as invalidQuest}
+        <div class="p-4 bg-white dark:bg-gray-800 rounded-lg mb-2 border border-red-200 dark:border-red-800">
+          <div class="font-medium text-red-900 dark:text-red-200 mb-2">
+            {questsById[invalidQuest.questId].name} requires the following quests to be completed first:
+          </div>
+          <ul class="list-disc list-inside text-red-700 dark:text-red-300">
+            {#each invalidQuest.missingRequirements as req}
+              <li>{questsById[req].name}</li>
+            {/each}
+          </ul>
+        </div>
+      {/each}
+      <button
+        onclick={addMissingQuests}
+        class="mt-4 px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500"
+      >
+        Add Missing Requirements
+      </button>
+    </div>
+  {/if}
+
+	<!-- Selected Quests -->
+	<div class="mb-6">
+		<h3 class="text-lg font-medium text-gray-800 dark:text-white mb-4">Selected Quests</h3>
+		{#if selectedQuests.length === 0}
+			<p class="text-gray-600 dark:text-gray-400">No quests selected yet. Add quests from the list below.</p>
+		{:else}
+			<div class="space-y-2">
+				{#each selectedQuests as questId, i}
+					{#if questsById[questId]}
+						<div class="flex items-center justify-between p-4 bg-gray-50 dark:bg-gray-700 rounded-lg">
+							<div class="flex items-center space-x-4">
+								<span class="text-gray-600 dark:text-gray-400">{i + 1}.</span>
+								<span class="font-medium text-gray-900 dark:text-white">{questsById[questId].name}</span>
+							</div>
+							<div class="flex items-center space-x-2">
+								<button
+									onclick={() => moveQuest(i, 'up')}
+									class="p-2 text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white"
+									disabled={i === 0}
+								>
+									↑
+								</button>
+								<button
+									onclick={() => moveQuest(i, 'down')}
+									class="p-2 text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white"
+									disabled={i === selectedQuests.length - 1}
+								>
+									↓
+								</button>
+								<button
+									onclick={() => removeQuest(questId)}
+									class="p-2 text-red-600 hover:text-red-900 dark:text-red-400 dark:hover:text-red-300"
+								>
+									×
+								</button>
+							</div>
+						</div>
+					{/if}
+				{/each}
+			</div>
+		{/if}
+	</div>
+
+	<!-- Available Quests -->
+	<div class="mb-6">
+		<h3 class="text-lg font-medium text-gray-800 dark:text-white mb-4">Available Quests</h3>
+		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+			{#each quests as quest}
+				<button
+					onclick={() => addQuest(quest.id)}
+					class="p-4 bg-gray-50 dark:bg-gray-700 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-600 text-left"
+					disabled={selectedQuests.includes(quest.id)}
+				>
+					<h4 class="font-medium text-gray-900 dark:text-white">{quest.name}</h4>
+					<p class="text-sm text-gray-600 dark:text-gray-400 mt-1">
+						{quest.difficulty} • {quest.length}
+					</p>
+				</button>
+			{/each}
+		</div>
+	</div>
+
+	<!-- Action Buttons -->
+	<div class="flex justify-end space-x-4">
+		<button
+			onclick={cancelRoute}
+			class="px-4 py-2 text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200"
+		>
+			Cancel
+		</button>
+		<button
+			onclick={saveRoute}
+			class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 disabled:opacity-50"
+			disabled={!routeName.trim() || selectedQuests.length === 0}
+		>
+			Save Route
+		</button>
+	</div>
+</div>

@@ -1,7 +1,7 @@
 <script lang="ts">
 	import '../app.css';
 	import { theme } from '$lib/stores/theme';
-	import { page } from '$app/stores';
+	import { page } from '$app/state';
 	import { onMount } from 'svelte';
 	import { base } from '$app/paths';
 	function toggleTheme() {
@@ -29,15 +29,21 @@
 				<div class="flex items-center space-x-4">
 					<a
 					href="{base}/about"
-					class="text-gray-600 dark:text-gray-300 hover:text-gray-800 dark:hover:text-white transition-colors {$page.url.pathname === '/about' ? 'font-semibold' : ''}"
+					class="text-gray-600 dark:text-gray-300 hover:text-gray-800 dark:hover:text-white transition-colors {page.url.pathname === '/about' ? 'font-semibold' : ''}"
 					>
 					About
 					</a>
 					<a
 					href="{base}/quest-list"
-					class="text-gray-600 dark:text-gray-300 hover:text-gray-800 dark:hover:text-white transition-colors {$page.url.pathname === '/quest-list' ? 'font-semibold' : ''}"
+					class="text-gray-600 dark:text-gray-300 hover:text-gray-800 dark:hover:text-white transition-colors {page.url.pathname === '/quest-list' ? 'font-semibold' : ''}"
 					>
 					Quest List
+					</a>
+					<a
+					href="{base}/routes"
+					class="text-gray-600 dark:text-gray-300 hover:text-gray-800 dark:hover:text-white transition-colors {page.url.pathname === '/routes' ? 'font-semibold' : ''}"
+					>
+					Routes
 					</a>
 					<button
 						on:click={toggleTheme}

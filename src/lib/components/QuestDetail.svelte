@@ -1,43 +1,16 @@
 <script lang="ts">
-	import { createEventDispatcher } from 'svelte';
 	import SkillTag from './SkillTag.svelte';
 	import QuestReward from './QuestReward.svelte';
 	import { formatWikitext } from '$lib/utils/wikitext';
+	import type { Quest } from '$lib/types/quest';
 
-	export let quest: {
-		name: string;
-		difficulty: string;
-		length: string;
-		questPoints: number;
-		start: string;
-		description: string;
-		requirements: {
-			skills: Array<{
-				skill: string;
-				level: number;
-				boostable: boolean;
-				required: boolean;
-			}>;
-			quests: string[];
-			other: string[];
-		};
-		rewards: {
-			questPoints: number;
-			experienceRewards: Array<{
-				skill: string;
-				amount: number;
-			}>;
-			otherRewards: string[];
-		};
+	type QuestDetailProps = {
+		quest: Quest;
+		questNameMap: Record<string, string>;
+		onClose: () => void;
 	};
 
-	export let questNameMap: Record<string, string>;
-
-	const dispatch = createEventDispatcher();
-
-	function closeModal() {
-		dispatch('close');
-	}
+	const { quest, questNameMap, onClose }: QuestDetailProps = $props();
 </script>
 
 <div class="fixed inset-0 bg-black/70 flex items-center justify-center z-50">
@@ -46,7 +19,8 @@
 			<div class="flex justify-between items-start mb-6">
 				<h2 class="text-2xl font-bold text-gray-900 dark:text-white">{quest.name}</h2>
 				<button
-					on:click={closeModal}
+					aria-label="Close Modal"
+					onclick={onClose}
 					class="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200"
 				>
 					<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -77,7 +51,7 @@
 							</div>
 							<div>
 								<p class="text-sm text-gray-600 dark:text-gray-400">Quest Points</p>
-								<p class="text-gray-900 dark:text-white">{quest.questPoints}</p>
+								<p class="text-gray-900 dark:text-white">{quest.rewards.questPoints}</p>
 							</div>
 							<div>
 								<p class="text-sm text-gray-600 dark:text-gray-400">Start Point</p>

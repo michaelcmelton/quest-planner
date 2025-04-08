@@ -1,12 +1,8 @@
 <script lang="ts">
 	import { base } from '$app/paths';
+	import type { SkillRequirement } from '$lib/types/quest';
 
-	export let skill: {
-		skill: string;
-		level: number;
-		boostable: boolean;
-		required: boolean;
-	};
+	export let skill: SkillRequirement;
 
 	// Map skill names to icon paths
 	const skillIcons: Record<string, string> = {

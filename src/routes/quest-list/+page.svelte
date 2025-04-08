@@ -1,49 +1,11 @@
 <script lang="ts">
-	import { theme } from '$lib/stores/theme';
-	import { onMount } from 'svelte';
 	import questsData from '$lib/data/quests.json';
 	import SkillTag from '$lib/components/SkillTag.svelte';
 	import QuestReward from '$lib/components/QuestReward.svelte';
 	import QuestDetail from '$lib/components/QuestDetail.svelte';
+	import type { Quest } from '$lib/types/quest';
 
-	type Quest = {
-		id: string;
-		name: string;
-		difficulty: string;
-		length: string;
-		questPoints: number;
-		requirements: {
-			skills: Array<{
-				skill: string;
-				level: number;
-				boostable: boolean;
-				required: boolean;
-			}>;
-			quests: string[];
-			other: string[];
-		};
-		rewards: {
-			questPoints: number;
-			experienceRewards: Array<{
-				skill: string;
-				amount: number;
-			}>;
-			otherRewards: string[];
-		};
-	};
-
-	type QuestTableData = {
-		name: string;
-		difficulty: string;
-		length: string;
-		questPoints: number;
-		start: string;
-		description: string;
-		requirements: Quest['requirements'];
-		rewards: Quest['rewards'];
-	};
-
-	type SortableField = keyof Omit<QuestTableData, 'requirements' | 'rewards'>;
+	type SortableField = keyof Quest | 'questPoints';
 
 	// Create a mapping of quest IDs to names
 	const questNameMap = Object.entries(questsData).reduce((acc, [id, quest]) => {
@@ -52,30 +14,21 @@
 	}, {} as Record<string, string>);
 
 	// Transform the quest data for the table
-	const quests: QuestTableData[] = Object.values(questsData).map(quest => ({
-		name: quest.name,
-		difficulty: quest.difficulty,
-		length: quest.length,
-		questPoints: quest.rewards.questPoints,
-		start: quest.start,
-		description: quest.description,
-		requirements: quest.requirements,
-		rewards: quest.rewards
-	}));
+	const quests: Quest[] = Object.values(questsData)
 
 	let sortBy: SortableField = 'name';
 	let sortDirection = 'asc';
 	let searchTerm = '';
 	let filteredQuests = quests;
-	let selectedQuest: QuestTableData | null = null;
+	let selectedQuest: Quest | null = null;
 
 	$: {
 		filteredQuests = quests.filter(quest => 
 			quest.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
 			quest.difficulty.toLowerCase().includes(searchTerm.toLowerCase())
 		).sort((a, b) => {
-			const aValue = a[sortBy];
-			const bValue = b[sortBy];
+			const aValue = sortBy === 'questPoints' ? a.rewards.questPoints : a[sortBy];
+			const bValue = sortBy === 'questPoints' ? b.rewards.questPoints : b[sortBy];
 			const modifier = sortDirection === 'asc' ? 1 : -1;
 			return aValue > bValue ? modifier : -modifier;
 		});
@@ -90,7 +43,7 @@
 		}
 	}
 
-	function handleQuestClick(quest: QuestTableData) {
+	function handleQuestClick(quest: Quest) {
 		selectedQuest = quest;
 	}
 
@@ -190,7 +143,7 @@
 							{quest.length}
 						</td>
 						<td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 dark:text-gray-300">
-							{quest.questPoints}
+							{quest.rewards.questPoints}
 						</td>
 						<td class="px-6 py-4 text-sm text-gray-800 dark:text-gray-300">
 							<div class="space-y-2">
@@ -237,7 +190,7 @@
 		<QuestDetail
 			quest={selectedQuest}
 			questNameMap={questNameMap}
-			on:close={handleCloseDetail}
+			onClose={handleCloseDetail}
 		/>
 	{/if}
 </div>

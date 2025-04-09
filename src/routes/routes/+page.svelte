@@ -39,12 +39,20 @@
 									Created {new Date(route.createdAt).toLocaleDateString()}
 								</p>
 							</div>
-							<button
-								on:click={() => routes.deleteRoute(route.id)}
-								class="text-red-600 hover:text-red-900 dark:text-red-400 dark:hover:text-red-300"
-							>
-								Delete
-							</button>
+							<div class="flex space-x-2">
+								<a
+									href={`${base}/planner?routeId=${route.id}`}
+									class="text-blue-600 hover:text-blue-900 dark:text-blue-400 dark:hover:text-blue-300"
+								>
+									Edit
+								</a>
+								<button
+									on:click={() => routes.deleteRoute(route.id)}
+									class="text-red-600 hover:text-red-900 dark:text-red-400 dark:hover:text-red-300"
+								>
+									Delete
+								</button>
+							</div>
 						</div>
 						<div class="mt-2">
 							<p class="text-sm text-gray-600 dark:text-gray-400">

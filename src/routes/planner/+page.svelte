@@ -6,6 +6,7 @@
 	import questsData from '$lib/data/quests.json';
 	import { goto } from '$app/navigation';
 	import QuestDetail from '$lib/components/QuestDetail.svelte';
+	import { page } from '$app/stores';
 
 	const routes = getRoutes();
 
@@ -24,9 +25,25 @@
 	// State for the route builder
 	let selectedQuests: string[] = $state([]);
 	let routeName = $state('');
-  let questValidationErrors: { questId: string; missingRequirements: string[] }[] = $state([]);
+	let questValidationErrors: { questId: string; missingRequirements: string[] }[] = $state([]);
 	let searchTerm = $state('');
 	let selectedQuest: Quest | null = $state(null);
+	let isEditing = $state(false);
+	let currentRouteId = $state('');
+
+	// Load existing route if routeId is present
+	$effect(() => {
+		const routeId = $page.url.searchParams.get('routeId');
+		if (routeId && !isEditing) {
+			const existingRoute = routes.routes.find(route => route.id === routeId);
+			if (existingRoute) {
+				selectedQuests = existingRoute.quests;
+				routeName = existingRoute.name;
+				isEditing = true;
+				currentRouteId = routeId;
+			}
+		}
+	});
 
 	// Filter available quests to exclude those already in the route and match search term
 	const availableQuests = $derived(
@@ -69,22 +86,28 @@
 	}
 
 	function saveRoute() {
-		if (routeName.trim() && selectedQuests.length > 0) {
-			const newRoute: SavedRoute = {
-				id: crypto.randomUUID(),
-				name: routeName,
-				quests: selectedQuests,
-				createdAt: new Date().toISOString()
-			};
-      const graph = new QuestGraph(selectedQuests.map(id => questsById[id]));
-      const { isValid, invalidQuests } = graph.validateRouteWithDetails(selectedQuests.map(id => questsById[id]));
-      if (!isValid) {
-        questValidationErrors = invalidQuests;
-        return;
-      }
-			routes.addRoute(newRoute);
-			goto('/routes');
+		if (!routeName.trim() || selectedQuests.length === 0) return;
+
+		const graph = new QuestGraph(selectedQuests.map(id => questsById[id]));
+		const { isValid, invalidQuests } = graph.validateRouteWithDetails(selectedQuests.map(id => questsById[id]));
+		if (!isValid) {
+			questValidationErrors = invalidQuests;
+			return;
 		}
+
+		const newRoute: SavedRoute = {
+			id: isEditing ? currentRouteId : crypto.randomUUID(),
+			name: routeName.trim(),
+			quests: selectedQuests,
+			createdAt: isEditing ? routes.routes.find(r => r.id === currentRouteId)?.createdAt || new Date().toISOString() : new Date().toISOString()
+		};
+
+		if (isEditing) {
+			routes.updateRoute(newRoute);
+		} else {
+			routes.addRoute(newRoute);
+		}
+		goto('/routes');
 	}
 
 	function cancelRoute() {
@@ -187,7 +210,7 @@
 	<!-- Main Content -->
 	<div class="flex-1 p-4 overflow-y-auto">
 		<div class="flex justify-between items-center mb-6">
-			<h1 class="text-3xl font-bold text-gray-800 dark:text-white">Quest Route</h1>
+			<h1 class="text-3xl font-bold text-gray-800 dark:text-white">{isEditing ? 'Edit Quest Route' : 'Create Quest Route'}</h1>
 			<div class="flex space-x-4">
 				<button
 					onclick={cancelRoute}
@@ -200,7 +223,7 @@
 					class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 disabled:opacity-50"
 					disabled={!routeName.trim() || selectedQuests.length === 0}
 				>
-					Save Route
+					{isEditing ? 'Update Route' : 'Save Route'}
 				</button>
 			</div>
 		</div>

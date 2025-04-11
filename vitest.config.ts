@@ -6,7 +6,7 @@ export default defineConfig(({ mode }) => ({
     test: {
         coverage: {
             reporter: ['text', 'json', 'html'],
-            exclude: ['node_modules', 'scripts', '.svelte-kit', 'public', '*.config.{ts,js}', 'src/lib/types', '*.d.ts'],
+            exclude: ['node_modules', 'scripts', '.svelte-kit', 'build', 'coverage', 'public', '*.config.{ts,js}', 'src/lib/types', '*.d.ts'],
         },
         include: ['**/**/*.{test,spec}.{js,ts}'],
         environment: 'jsdom',

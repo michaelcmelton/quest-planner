@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { getRoutes } from '$lib/stores/routes.svelte';
 	import type { SavedRoute } from '$lib/stores/routes.svelte';
-  import { QuestGraph } from '$lib/graph/graph';
+    import { QuestGraph } from '$lib/graph/graph';
 	import type { Quest } from '$lib/types/quest';
 	import questsData from '$lib/data/quests.json';
 	import { goto } from '$app/navigation';

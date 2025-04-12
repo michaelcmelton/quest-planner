@@ -4,31 +4,32 @@ export class ThemeStore {
   private _theme: Theme = 'light';
 
   constructor() {
-    try {
-      // Check if user has a theme preference in localStorage
-      const storedTheme = typeof localStorage !== 'undefined' ? localStorage.getItem('theme') : null;
+    if (typeof window !== 'undefined') {
+      try {
+        // Check if user has a theme preference in localStorage
+        const storedTheme = localStorage.getItem('theme');
 
-      // Check if user has a system preference for dark mode
-      const prefersDark = typeof window !== 'undefined' ? 
-        window.matchMedia('(prefers-color-scheme: dark)').matches : false;
+        // Check if user has a system preference for dark mode
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
 
-      // Initialize theme based on stored preference or system preference
-      const initialTheme = storedTheme || (prefersDark ? 'dark' : 'light');
-      this._theme = initialTheme as Theme;
-    } catch (error) {
-      console.error('Failed to initialize theme from storage:', error);
-      // Keep default light theme
+        // Initialize theme based on stored preference or system preference
+        const initialTheme = storedTheme || (prefersDark ? 'dark' : 'light');
+        this._theme = initialTheme as Theme;
+
+        // Set up localStorage and DOM updates
+        this.updateDOMAndStorage(this._theme);
+      } catch (error) {
+        console.error('Failed to initialize theme from storage:', error);
+        // Keep default light theme
+      }
     }
-
-    // Set up localStorage and DOM updates
-    this.updateDOMAndStorage(this._theme);
   }
 
   private updateDOMAndStorage(theme: Theme) {
+    if (typeof window === 'undefined') return;
+
     try {
-      if (typeof localStorage !== 'undefined') {
-        localStorage.setItem('theme', theme);
-      }
+      localStorage.setItem('theme', theme);
     } catch (error) {
       console.error('Failed to save theme to storage:', error);
     }
@@ -66,7 +67,7 @@ let theme: ThemeStore | null = null;
 // Create singleton instance
 export const getTheme = () => {
   if (theme === null) {
-      theme = new ThemeStore();
+    theme = new ThemeStore();
   }
 
   return theme;

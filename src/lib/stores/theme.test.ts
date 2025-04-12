@@ -1,20 +1,42 @@
 // src/lib/stores/theme.test.ts
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
-import { createThemeStore } from './theme';
+import { getTheme, ThemeStore, type Theme } from './theme.svelte';
 
 describe('theme store', () => {
   let matchMediaMock: (query: string) => MediaQueryList;
-  let theme: ReturnType<typeof createThemeStore>;
+  let themeStore: ThemeStore | null;
+  let mockStorage: { [key: string]: string };
+
+  // Create a mock localStorage
+  const localStorageMock = {
+    getItem: vi.fn((key: string) => mockStorage[key] ?? null),
+    setItem: vi.fn((key: string, value: string) => {
+      mockStorage[key] = value;
+    }),
+    clear: vi.fn(() => {
+      mockStorage = {};
+    }),
+    removeItem: vi.fn((key: string) => {
+      delete mockStorage[key];
+    }),
+    length: 0,
+    key: vi.fn(),
+  };
 
   beforeEach(() => {
-    // Reset localStorage and document class
-    localStorage.clear();
+    // Reset storage mock
+    mockStorage = {};
+    vi.clearAllMocks();
+    
+    // Setup localStorage mock
+    Object.defineProperty(window, 'localStorage', {
+      value: localStorageMock,
+      writable: true
+    });
+
+    // Reset document class
     document.documentElement.classList.remove('dark');
     
-    // Mock localStorage
-    vi.spyOn(Storage.prototype, 'getItem');
-    vi.spyOn(Storage.prototype, 'setItem');
-
     // Mock matchMedia with light theme preference by default
     matchMediaMock = vi.fn().mockImplementation(query => ({
       matches: false,
@@ -29,29 +51,30 @@ describe('theme store', () => {
     window.matchMedia = matchMediaMock;
 
     // Create a new instance of the store for each test
-    theme = createThemeStore();
+    themeStore = getTheme();
   });
 
   afterEach(() => {
     vi.clearAllMocks();
-    theme.set('light'); // Reset theme to default
+    mockStorage = {};
   });
 
   it('should initialize with light theme when no preference is stored', () => {
-    expect(localStorage.getItem).toHaveBeenCalledWith('theme');
+    expect(localStorageMock.getItem).toHaveBeenCalledWith('theme');
     expect(document.documentElement.classList.contains('dark')).toBe(false);
+    expect(themeStore?.theme).toBe('light');
   });
 
   it('should initialize with dark theme when stored preference is dark', () => {
-    localStorage.setItem('theme', 'dark');
-    theme = createThemeStore(); // Recreate store with dark preference
+    localStorageMock.setItem('theme', 'dark');
+    themeStore = new ThemeStore();
     expect(document.documentElement.classList.contains('dark')).toBe(true);
+    expect(themeStore.theme).toBe('dark');
   });
 
   it('should respect system preference when no stored preference exists', () => {
     // Reset store and localStorage
-    theme.set('light');
-    localStorage.clear();
+    localStorageMock.clear();
     document.documentElement.classList.remove('dark');
 
     // Mock system preference to dark
@@ -67,43 +90,42 @@ describe('theme store', () => {
     }));
 
     // Create new store with dark system preference
-    theme = createThemeStore();
+    themeStore = new ThemeStore();
     expect(document.documentElement.classList.contains('dark')).toBe(true);
+    expect(themeStore.theme).toBe('dark');
   });
 
   it('should update localStorage when theme changes', () => {
-    theme.set('dark');
-    expect(localStorage.setItem).toHaveBeenCalledWith('theme', 'dark');
+    themeStore!.theme = 'dark';
+    expect(localStorageMock.setItem).toHaveBeenCalledWith('theme', 'dark');
     expect(document.documentElement.classList.contains('dark')).toBe(true);
+    expect(themeStore!.theme).toBe('dark');
 
-    theme.set('light');
-    expect(localStorage.setItem).toHaveBeenCalledWith('theme', 'light');
+    themeStore!.theme = 'light';
+    expect(localStorageMock.setItem).toHaveBeenCalledWith('theme', 'light');
     expect(document.documentElement.classList.contains('dark')).toBe(false);
-  });
-
-  it('should persist theme preference across page reloads', () => {
-    theme.set('dark');
-    expect(localStorage.getItem('theme')).toBe('dark');
-
-    // Simulate page reload
-    theme = createThemeStore();
-    expect(document.documentElement.classList.contains('dark')).toBe(true);
-  });
-
-  it('should toggle between light and dark themes', () => {
-    theme.set('light');
-    expect(document.documentElement.classList.contains('dark')).toBe(false);
-    
-    theme.set('dark');
-    expect(document.documentElement.classList.contains('dark')).toBe(true);
-    
-    theme.set('light');
-    expect(document.documentElement.classList.contains('dark')).toBe(false);
+    expect(themeStore!.theme).toBe('light');
   });
 
   it('should handle invalid theme values gracefully', () => {
-    theme.set('invalid');
+    themeStore!.theme = 'invalid' as Theme;
     expect(document.documentElement.classList.contains('dark')).toBe(false);
-    expect(localStorage.getItem('theme')).toBe('light');
+    expect(themeStore!.theme).toBe('light');
+    expect(localStorageMock.setItem).toHaveBeenCalledWith('theme', 'light');
+  });
+
+  it('should handle localStorage errors gracefully', () => {
+    const errorMock = vi.fn().mockImplementation(() => {
+      throw new Error('Storage quota exceeded');
+    });
+    
+    localStorageMock.setItem.mockImplementationOnce(errorMock);
+
+    // Should not throw when setting theme
+    expect(() => {
+      themeStore!.theme = 'dark';
+    }).not.toThrow();
+    expect(document.documentElement.classList.contains('dark')).toBe(true);
+    expect(themeStore!.theme).toBe('dark');
   });
 }); 

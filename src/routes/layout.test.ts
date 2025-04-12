@@ -1,7 +1,7 @@
-import { render, screen } from '@testing-library/svelte';
+import { getByLabelText, render, screen } from '@testing-library/svelte';
 import { describe, it, expect, beforeEach, vi } from 'vitest';
 import Layout from './+layout.svelte';
-import { theme } from '$lib/stores/theme';
+import { getTheme, ThemeStore } from '$lib/stores/theme.svelte';
 import { fireEvent } from '@testing-library/svelte';
 
 interface PageData {
@@ -20,9 +20,10 @@ vi.mock('$app/stores', () => ({
 }));
 
 describe('Layout Component', () => {
+  let theme: ThemeStore
   beforeEach(() => {
     // Reset theme to light mode before each test
-    theme.set('light');
+    theme = getTheme();
     document.documentElement.classList.remove('dark');
   });
 
@@ -48,21 +49,21 @@ describe('Layout Component', () => {
   });
 
   it('shows sun icon in dark mode', () => {
-    theme.set('dark');
+    theme.theme = 'dark';
     const { getByLabelText } = render(Layout);
     const button = getByLabelText('Toggle theme');
     expect(button.querySelector('svg')).toHaveClass('text-yellow-400');
   });
 
   it('shows moon icon in light mode', () => {
-    theme.set('light');
+    theme.theme = 'light';
     const { getByLabelText } = render(Layout);
     const button = getByLabelText('Toggle theme');
     expect(button.querySelector('svg')).toHaveClass('text-gray-600');
   });
 
   it('toggles theme when button is clicked', async () => {
-    theme.set('light');
+    theme.theme = 'light';
     const { getByLabelText } = render(Layout);
     const button = getByLabelText('Toggle theme');
     

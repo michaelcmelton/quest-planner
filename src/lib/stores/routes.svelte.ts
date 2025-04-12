@@ -20,7 +20,13 @@ export class Routes {
 
   constructor() {
     if (browser) {
-      this._routes = JSON.parse(localStorage.getItem('routes') || '[]');
+      try {
+        const storedRoutes = localStorage.getItem('routes');
+        this._routes = storedRoutes ? JSON.parse(storedRoutes) : [];
+      } catch (error) {
+        console.error('Failed to parse routes from localStorage:', error);
+        this._routes = [];
+      }
     }
   }
 

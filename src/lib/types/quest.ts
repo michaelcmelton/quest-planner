@@ -50,3 +50,5 @@ export interface Quest {
 export interface QuestData {
   [key: string]: Quest;
 } 
+
+export type QuestKey = keyof QuestData & string;

@@ -16,8 +16,7 @@ export default defineConfig(({ mode }) => ({
                  '*.config.{ts,js}',
                  'src/lib/types',
                  'src/*.d.ts',
-                 'src/routes/+layout.ts',
-                 'src/lib/utils/static-paths.ts',
+                 'src/routes/+layout.ts'
                 ],
         },
         include: ['**/**/*.{test,spec}.{js,ts}'],

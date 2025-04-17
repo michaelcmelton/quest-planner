@@ -1,0 +1,183 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+## 1. Product Overview
+### 1.1 Purpose
+The Quest Route Planner helps OSRS players plan efficient quest completion paths by:
+- Validating quest requirements and dependencies
+- Optimizing quest order based on rewards
+- Supporting different account types and playstyles
+- Minimizing redundant skill training
+
+### 1.2 Target Users
+- New OSRS players planning efficient account progression
+- Speedrunners optimizing quest completion routes
+- Specialized account builds (e.g., pures, skillers, ironmen)
+- Returning players planning account goals
+
+### 1.3 Success Metrics
+- Route validation accuracy: 100% accuracy in requirement checking
+  - Quest point requirement validation.
+  - Quest pre-requisite validation.
+- Number of routes created and shared
+
+## 2. Feature Requirements
+### 2.1 Core Features
+1. Route Creation and Validation
+   - Add/remove quests from route
+   - Automatic validation of requirements
+   - Real-time feedback on requirement violations
+   - Support for parallel quest paths. Paths should be considered parallel if they can be completed concurrently, in any manner applicable keeping in mind skill requirements should be as similar as possible.
+
+2. Requirement Tracking
+   - Track quest prerequisites
+
+3. Route Optimization
+   - Suggest optimal quest order
+   - Minimize skill training requirements
+   - Account for quest rewards
+   - Support different optimization goals:
+      - fastest path to specific skill levels, taking training outside of questing into account.
+      - accounting for certain skill restrictions or account restrictions with regard to quest XP.
+      - We should have the user prioritize from a list of known optimizations we support which they would like to best optimize for.
+
+4. Account Types Support
+   - Regular accounts
+   - Ironman accounts
+   - Pure builds
+   - Specialized restrictions, such as:
+      - Skill restrictions
+      - Quest restrictions
+    
+
+### 2.2 Secondary Features
+- Route sharing
+- Route comparison
+- Progress tracking
+- Skill Requirement Tracking
+- XP waste calculation
+- Quest reward optimization
+
+### 2.3 Future Considerations
+- Achievement diary integration
+- Combat level optimization
+- Wise Old Man API Integration for Player Lookup
+- Move to persistant storage away from Local Storage API.
+- Equipment optimization
+- Multi-account support
+- Additional validations for:
+  - Skill requirements
+  - Item requirements
+
+## 3. Technical Requirements
+### 3.1 Performance
+- Route validation: < 100ms
+- Route suggestions: < 500ms
+- UI updates: < 16ms
+- Support routes with up to Maximum amount of quests.
+- When exceeded, caching results and progressive loading is acceptable.
+
+### 3.2 Platform Support
+- Modern browsers (Chrome, Firefox, Safari)
+- Mobile-responsive design
+- Offline capability
+  - All features should be reachable when offline.
+- PWA support
+
+### 3.3 Integration Requirements
+- OSRS Wiki API compatibility
+- Local storage for saved routes
+- Export/import functionality
+
+## 4. User Scenarios
+### 4.1 Primary User Flows
+1. Create New Route
+   ```
+   1. Select target quest(s)
+   2. System suggests optimal path
+   3. User modifies route
+   4. User may or may not introduce custom nodes for notes, such as: "Train X Skill to level X."
+   5. System validates changes
+   6. User saves route after entering a name for the route.
+   ```
+
+2. Modify Existing Route
+   ```
+   1. Load saved route
+   2. Add/remove/reorder quests
+   3. Real-time validation
+   4. Update route
+   ```
+
+3. Browse Quest List
+   ```
+   1. Views entire list of quest with rewards, pre-reqs, etc.
+   2. Clicking a quest opens a detail modal with the ability to link to the quest walk through on the wiki.
+   ```
+
+4. View Saved Routes
+   ```
+   1. View entire list of saved routes.
+   2. Can either edit or delete the route.
+   3. Can create new route.
+   ```
+
+### 4.2 Edge Cases
+- Circular quest dependencies
+- Impossible skill requirements
+- Missing quest data
+- Partial route completion
+
+### 4.3 Error Scenarios
+- Invalid route modifications:
+   - Prevent invalid modifications
+   - Show clear error messsages
+   - Suggest valid alternatives
+   - Disallow forcing an override.
+- Impossible requirements
+- Data loading failures
+- Storage errors
+
+## 5. Data Requirements
+### 5.1 Data Models
+1. Quest Data
+   - Requirements (skills, quests, items)
+   - Rewards (XP, items, access)
+   - Metadata (difficulty, length, combat)
+
+2. Route Data
+   - Quest sequence
+   - Validation state
+   - Optimization metadata
+   - User notes
+
+### 5.2 Data Validation
+- Quest prerequisite validation
+- Item requirement validation
+- Account type restriction validation
+
+### 5.3 Data Storage
+- Local storage for routes
+- Cached quest data
+- User preferences
+- Route sharing format
+
+## 6. Non-functional Requirements
+### 6.1 Security
+- Safe route sharing
+  - The format for route sharing should include enough information to full reconstruct the route and quests not included in the route.
+- Data privacy
+- Input sanitization
+
+### 6.2 Accessibility
+- Keyboard navigation
+- Screen reader support
+- Color blind friendly
+- Mobile-friendly interface
+
+### 6.3 Internationalization
+- English support (initial)
+- Extensible for other languages
+- Region-agnostic quest names

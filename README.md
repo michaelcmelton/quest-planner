@@ -1,139 +1,86 @@
 # Quest Planner
 
-A web application for planning and optimizing quest routes in Old School RuneScape. Built with SvelteKit and Tailwind CSS.
+A web application for planning and optimizing quest routes in Old School RuneScape (OSRS). Built with SvelteKit and modern web technologies.
 
 ## Features
 
-- 🎯 Interactive quest planning interface
-- 📊 Quest requirements tracking
-- 🗺️ Route optimization
-- 🌓 Dark mode support
-- 📱 Responsive design
-- 🔄 Real-time validation
+- Browse all OSRS quests and their requirements
+- Create and optimize quest completion routes
+- Track quest requirements and progress
+- Modern, responsive design with dark mode support
+- Data sourced from the OSRS Wiki
 
 ## Tech Stack
 
-- **Frontend**: SvelteKit
-- **Styling**: Tailwind CSS
-- **Testing**: Vitest
+- **Frontend Framework**: SvelteKit 2.x
+- **Styling**: SCSS Modules
+- **Testing**: Vitest + Testing Library
 - **Type Safety**: TypeScript
-
-## Project Structure
-
-```
-quest-planner/
-├── src/
-│   ├── lib/
-│   │   ├── stores/
-│   │   │   ├── theme.ts           # Theme management store
-│   │   │   └── theme.test.ts      # Theme store tests
-│   │   └── components/
-│   │       └── QuestList.svelte   # Quest list component
-│   ├── routes/
-│   │   ├── +layout.svelte        # Root layout with navigation and theme toggle
-│   │   ├── +page.svelte          # Home page with feature tiles
-│   │   ├── +error.svelte         # Custom 404 error page
-│   │   ├── about/
-│   │   │   └── +page.svelte      # About page
-│   │   ├── quests/
-│   │   │   └── +page.svelte      # Quest list page
-│   │   └── planner/
-│   │       └── +page.svelte      # Quest planner page
-│   └── app.d.ts                  # TypeScript declarations
-├── static/
-│   └── icons/                   # Icons from the wiki
-├── tests/                      # Test files
-├── package.json                # Project dependencies
-├── tailwind.config.js          # Tailwind CSS configuration
-├── vite.config.ts             # Vite configuration
-└── tsconfig.json              # TypeScript configuration
-```
+- **Code Quality**: ESLint, Prettier
 
 ## Getting Started
 
+### Prerequisites
+
+- Node.js (version specified in `.nvmrc`)
+- npm (comes with Node.js)
+
+### Installation
+
 1. Clone the repository:
-   ```bash
-   git clone https://github.com/yourusername/quest-planner.git
-   cd quest-planner
-   ```
+```bash
+git clone https://github.com/yourusername/quest-planner.git
+cd quest-planner
+```
 
 2. Install dependencies:
-   ```bash
-   npm install
-   ```
+```bash
+npm install
+```
 
 3. Start the development server:
-   ```bash
-   npm run dev
-   ```
-
-4. Open [http://localhost:5173](http://localhost:5173) in your browser.
-
-## Development
-
-### Running Tests
-
 ```bash
-npm run test
+npm run dev
 ```
 
-### Building for Production
+The application will be available at `http://localhost:5173`
 
+### Available Scripts
+
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run preview` - Preview production build
+- `npm run test` - Run tests
+- `npm run test:coverage` - Run tests with coverage report
+- `npm run lint` - Run linting
+- `npm run format` - Format code with Prettier
+
+### Data Updates
+
+The application includes scripts to fetch and update quest data:
+
+- `npm run fetch-quests` - Fetch latest quest data from OSRS Wiki
+- `npm run fetch-skill-icons` - Download skill icons
+- `npm run generate-quest-data` - Generate processed quest data
+
+## Testing
+
+The project uses Vitest and Testing Library for testing. Tests are located next to the components they test.
+
+To run tests:
 ```bash
-npm run build
+npm run test        # Run all tests
+npm run test:watch  # Run tests in watch mode
 ```
-
-## Design System
-
-### Layout
-
-- Centered content with proper spacing
-- Responsive design for all screen sizes
-- Consistent padding and margins
-- Dark mode support
-
-### Color Scheme
-
-#### Light Mode
-- Background: Light gray (`bg-gray-100`)
-- Content: White (`bg-white` or `bg-gray-50`)
-- Text: Dark gray (`text-gray-900` for headings, `text-gray-600` for body)
-- Borders: Light gray (`border-gray-300`)
-
-#### Dark Mode
-- Background: Dark gray (`bg-gray-900`)
-- Content: Slightly lighter gray (`bg-gray-800`)
-- Text: White (`text-white` for headings, `text-gray-300` for body)
-- Borders: Dark gray (`border-gray-700`)
-
-### Components
-
-#### Cards
-- Rounded corners (`rounded-xl`)
-- Subtle shadow (`shadow-lg`)
-- Border definition (`border`)
-- Hover effects for interactivity
-
-#### Buttons
-- Primary: Blue with hover state
-- Secondary: Gray with hover state
-- Consistent padding and rounded corners
-- Icon support
 
 ## Contributing
 
 1. Fork the repository
-2. Create a feature branch
-3. Commit your changes
-4. Push to the branch
-5. Create a Pull Request
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Acknowledgments
-
-- OSRS Wiki for quest data
-- SvelteKit team for the amazing framework
-- Tailwind CSS for the utility-first CSS framework
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details. 

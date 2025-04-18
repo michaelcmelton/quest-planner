@@ -59,7 +59,7 @@ Quest Planner is a web application for planning and optimizing quest routes in O
 
 ### Frontend
 - SvelteKit for routing and SSR
-- Tailwind CSS for styling
+- CSS Modules with SCSS for styling
 - TypeScript for type safety
 - Vitest for testing
 
@@ -198,38 +198,83 @@ The application uses a consistent layout structure across all pages:
 
 ## Styling Guidelines
 
-1. **Color Scheme**:
-   - Light Mode:
-     - Background: `bg-gray-100`
-     - Content: `bg-white` or `bg-gray-50`
-     - Text: `text-gray-900` (headings), `text-gray-600` (body)
-     - Borders: `border-gray-300`
-   - Dark Mode:
-     - Background: `bg-gray-900`
-     - Content: `bg-gray-800`
-     - Text: `text-white` (headings), `text-gray-300` (body)
-     - Borders: `border-gray-700`
+1. **CSS Architecture**:
+   - Use SCSS directly in Svelte components
+   - BEM methodology for class naming
+   - CSS custom properties for theming
+   - Component-scoped styles by default
 
-2. **Spacing**:
-   - Container padding: `px-4 py-8`
-   - Section margins: `mb-12`
-   - Grid gaps: `gap-6`
-   - Button padding: `px-6 py-3`
+2. **Component Structure**:
+   ```
+   src/
+   └── components/
+       └── ComponentName.svelte
+   ```
 
-3. **Components**:
-   - Cards: `rounded-xl shadow-lg border`
-   - Buttons: 
-     - Primary: `bg-blue-600 hover:bg-blue-700`
-     - Secondary: `bg-gray-200 dark:bg-gray-700`
-   - Icons: `w-6 h-6` with background containers
+3. **Naming Conventions**:
+   - Component files: PascalCase (e.g., `QuestList.svelte`)
+   - BEM classes: `block__element--modifier`
+   - Variables: kebab-case (e.g., `$primary-color`)
 
-4. **Responsive Design**:
+4. **Theme Management**:
+   - CSS custom properties for theme values
+   - Dark mode support through CSS variables
+   - Smooth transitions between themes
+   - Consistent spacing and typography
+
+5. **Responsive Design**:
    - Mobile-first approach
    - Breakpoints:
      - sm: 640px
      - md: 768px
      - lg: 1024px
-   - Flexible grids and flex layouts
+   - Flexible grids using CSS Grid and Flexbox
+   - Media queries in component styles
+
+6. **Component Styling**:
+   - Use `<style lang="scss">` in Svelte components
+   - Shared variables in a global SCSS file
+   - Consistent spacing using variables
+   - Accessible color contrast
+   - Proper focus states
+
+Example component structure:
+```svelte
+<script lang="ts">
+  // Component logic
+</script>
+
+<div class="quest-list">
+  <div class="quest-list__header">
+    <h2 class="quest-list__title">Quests</h2>
+  </div>
+  <div class="quest-list__content">
+    <!-- Content -->
+  </div>
+</div>
+
+<style lang="scss">
+  $spacing-unit: 1rem;
+  $primary-color: var(--color-primary);
+  
+  .quest-list {
+    padding: $spacing-unit;
+    
+    &__header {
+      margin-bottom: $spacing-unit;
+    }
+    
+    &__title {
+      color: $primary-color;
+    }
+    
+    &__content {
+      display: grid;
+      gap: $spacing-unit;
+    }
+  }
+</style>
+```
 
 ## Theme Management
 

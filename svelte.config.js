@@ -5,7 +5,18 @@ import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 const config = {
 	// Consult https://svelte.dev/docs/kit/integrations
 	// for more information about preprocessors
-	preprocess: vitePreprocess(),
+	preprocess: vitePreprocess({
+		scss: {
+			prependData: `@use 'src/lib/styles/global.scss' as *;`,
+			renderOptions: {
+				stylelint: {
+					rules: {
+						'no-unused-selectors': false
+					}
+				}
+			}
+		}
+	}),
 
 	kit: {
 		// adapter-auto only supports some environments, see https://svelte.dev/docs/kit/adapter-auto for a list.

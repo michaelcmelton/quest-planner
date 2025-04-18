@@ -1,67 +1,142 @@
 <script lang="ts">
-	import '../app.css';
-	import { base } from '$app/paths';
-	import MoonIcon from '$lib/components/icons/MoonIcon.svelte';
-	import { page } from '$app/state';
-	import SunIcon from '$lib/components/icons/SunIcon.svelte';
-
+    import '$lib/styles/global.scss';
+    import { base } from '$app/paths';
+    import { page } from '$app/state';
 </script>
 
-<div class="min-h-screen flex flex-col bg-gray-100 dark:bg-gray-900">
-	<!-- Navigation Header -->
-	<header class="bg-white dark:bg-gray-800 shadow-sm border-b border-gray-200 dark:border-gray-700">
-		<nav class="container mx-auto px-4 py-4">
-			<div class="flex justify-between items-center">
-				<a href="{base}" class="text-xl font-bold text-gray-800 dark:text-white">Quest Planner</a>
-				<div class="flex items-center space-x-4">
-					<a
-					href="{base}/about"
-					class="text-gray-600 dark:text-gray-300 hover:text-gray-800 dark:hover:text-white transition-colors {page.url.pathname === '/about' ? 'font-semibold' : ''}"
-					>
-					About
-					</a>
-					<a
-					href="{base}/quest-list"
-					class="text-gray-600 dark:text-gray-300 hover:text-gray-800 dark:hover:text-white transition-colors {page.url.pathname === '/quest-list' ? 'font-semibold' : ''}"
-					>
-					Quest List
-					</a>
-					<a
-					href="{base}/routes"
-					class="text-gray-600 dark:text-gray-300 hover:text-gray-800 dark:hover:text-white transition-colors {page.url.pathname === '/routes' ? 'font-semibold' : ''}"
-					>
-					Routes
-					</a>
-						<button
-							class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
-							aria-label="Toggle theme"
-						>
-							<MoonIcon />
-					
-							<SunIcon />
-						</button>
-				</div>
-			</div>
-		</nav>
-	</header>
+<div class="layout">
+    <header class="layout__header">
+        <nav class="container">
+            <div class="layout__nav-content">
+                <a href="{base}" class="layout__brand">Quest Planner</a>
+                <div class="layout__nav-links">
+                    <a
+                        href="{base}/about"
+                        class="layout__nav-link {page.url.pathname === '/about' ? 'layout__nav-link--active' : ''}"
+                    >
+                        About
+                    </a>
+                    <a
+                        href="{base}/quest-list"
+                        class="layout__nav-link {page.url.pathname === '/quest-list' ? 'layout__nav-link--active' : ''}"
+                    >
+                        Quest List
+                    </a>
+                    <a
+                        href="{base}/routes"
+                        class="layout__nav-link {page.url.pathname === '/routes' ? 'layout__nav-link--active' : ''}"
+                    >
+                        Routes
+                    </a>
+                    <button
+                        class="layout__theme-toggle"
+                        aria-label="Toggle theme"
+                        on:click={() => {
+                            document.documentElement.setAttribute(
+                                'data-theme',
+                                document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark'
+                            );
+                        }}
+                    >
+                        Toggle Theme
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
 
-	<main class="flex-grow bg-white dark:bg-gray-900 border-x border-gray-200 dark:border-gray-700">
-		<slot />
-	</main>
+    <main class="layout__main">
+        <slot />
+    </main>
 
-	<!-- Footer -->
-	<footer data-testid="footer" class="bg-white dark:bg-gray-800 shadow-inner mt-auto border-t border-gray-200 dark:border-gray-700">
-		<div class="container mx-auto px-4 py-4 text-center text-gray-500 dark:text-gray-400">
-			© {new Date().getFullYear()} Quest Planner. Data sourced from OSRS Wiki. Built by <a href="https://github.com/michaelcmelton" class="text-blue-500 hover:text-blue-600">TSCodeMonke</a>.
-		</div>
-	</footer>
+    <footer class="layout__footer">
+        <div class="container">
+            © {new Date().getFullYear()} Quest Planner. Data sourced from OSRS Wiki.
+        </div>
+    </footer>
 </div>
 
-<style lang="postcss">
-	:global(html) {
-		@apply h-full;
-	}
-	:global(body) {
-		@apply h-full;
-	}
-</style>
+<style lang="scss">
+    .layout {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        background-color: var(--color-background);
+
+        &__header {
+            background-color: var(--color-surface);
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        &__nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: var(--spacing-md) 0;
+        }
+
+        &__brand {
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: var(--color-text);
+            text-decoration: none;
+        }
+
+        &__nav-links {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-md);
+        }
+
+        &__nav-link {
+            color: var(--color-text-secondary);
+            text-decoration: none;
+            transition: color 0.2s ease;
+
+            &:hover {
+                color: var(--color-text);
+            }
+
+            &--active {
+                color: var(--color-text);
+                font-weight: 600;
+            }
+        }
+
+        &__theme-toggle {
+            padding: var(--spacing-sm);
+            border-radius: 0.5rem;
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: var(--color-text-secondary);
+            transition: background-color 0.2s ease;
+
+            &:hover {
+                background-color: var(--color-border);
+            }
+
+            &:focus {
+                @extend .focus-ring !optional;
+            }
+        }
+
+        &__main {
+            flex-grow: 1;
+            background-color: var(--color-background);
+            border-left: 1px solid var(--color-border);
+            border-right: 1px solid var(--color-border);
+        }
+
+        &__footer {
+            background-color: var(--color-surface);
+            box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+            margin-top: auto;
+            border-top: 1px solid var(--color-border);
+            padding: var(--spacing-md) 0;
+            text-align: center;
+            color: var(--color-text-secondary);
+        }
+    }
+</style> 

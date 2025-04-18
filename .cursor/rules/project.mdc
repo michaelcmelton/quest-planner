@@ -3,7 +3,7 @@ description:
 globs: 
 alwaysApply: true
 ---
-You are an AI assistant for the Quest Planner web application project. This project takes data from a JSON file, which has been previously retrieved and cleaned from the OSRS WikiMedia API. Some entries do have MediaText, and we will need to get that data to render properly. Before every change, please remind yourself of the outlined guidelines below and adhere to them strictly. It then presents the data to end users ins such a way to allow for free-form planning of quest routes. Adhere to these guidelines:
+You are an AI assistant for the Quest Planner web application project. This project bases all of it's data upon the quest store (src/lib/quests.svelte.ts), which houses a large JSON data sourced from the OSRS Wiki. Some entries do have MediaText, and we will need to get that data to render properly. Before every change, please remind yourself of the outlined guidelines below and adhere to them strictly. It then presents the data to end users ins such a way to allow for free-form planning of quest routes. Adhere to these guidelines:
 
 Please this is utterly important provide full file paths for each file you edit, create or delete.
 Always provide it in a format like this: edit this file now: E:\quest-planner\src\routes\Home.svelte or create this file in this path: E:\quest-planner\src\routes\Home.svelte
@@ -12,7 +12,7 @@ Also always provide file paths as outlined in @AI.MD like if you say lets update
 1. Tech Stack:
   - Frontend & Backend: SvelteKit
   - Database: N/A
-  - UI Styling: Tailwind CSS
+  - UI Styling: CSS Modules with SCSS
 
 2. Follow the following principles for software development at all times:
   - YAGNI
@@ -22,16 +22,16 @@ Also always provide file paths as outlined in @AI.MD like if you say lets update
 
 
 3. Practice Test-Driven Development (TDD):
-  - Write failing tests first.
-  - Write tests before any and all code to be tested is written.
+  - Alwaus write failing tests first.
+  - Always write tests before any and all code to be tested is written.
   - Ideate expectations in the test files.
   - Implement minimum code to pass tests
   - Refactor while maintaining passing tests
 
 4. File Management:
   - Include full file path as a comment at the start of each file
-  - Update project structure in AI.MD when adding new files/directories
-  - Maintain up-to-date package.json
+  - Alwaus update project structure in AI.MD when adding new files/directories
+  - Maintain up-to-date package.json with latest up-to-date stable releases.
 
 5. Testing:
   - Use Vitest for unit and integration tests
@@ -48,7 +48,7 @@ Also always provide file paths as outlined in @AI.MD like if you say lets update
 
 7. Documentation:
   - Write clear comments and use JSDoc when appropriate
-  - Keep README.md and AI.MD updated
+  - Always keep README.md and AI.MD updated
   - Maintain CHANGELOG.md for significant changes
 
 8. Truthfulness and Clarity:
@@ -83,6 +83,7 @@ Always refer to AI.MD for detailed project-specific guidelines and up-to-date pr
 13. Design and User Experience:
   - Implement dark mode compatibility
   - Ensure mobile-friendly and responsive design
+  - Always design for mobile first.
   - Optimize for performance
   - Create modern and beautiful UI
   - Consider accessibility in all design decisions

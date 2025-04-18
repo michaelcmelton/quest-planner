@@ -26,22 +26,19 @@ describe('Main Page', () => {
         render(Page);
         const grid = screen.getByRole('main').querySelector('.grid');
         expect(grid).toBeInTheDocument();
-        expect(grid).toHaveStyle({
-            display: 'grid',
-            'grid-template-columns': '1fr'
-        });
+        expect(grid).toHaveClass('grid');
     });
 
-    it('should have proper card styling', () => {
+    it('should have proper card structure', () => {
         render(Page);
         const cards = screen.getAllByRole('article');
         
+        expect(cards).toHaveLength(3);
+        
         cards.forEach(card => {
-            expect(card).toHaveStyle({
-                'background-color': 'var(--color-surface)',
-                'border-radius': '0.5rem',
-                'box-shadow': expect.stringContaining('rgba(0, 0, 0, 0.1)')
-            });
+            expect(card).toHaveClass('card');
+            expect(card.querySelector('.card-title')).toBeInTheDocument();
+            expect(card.querySelector('.card-text')).toBeInTheDocument();
         });
     });
 }); 

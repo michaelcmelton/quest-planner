@@ -39,6 +39,8 @@ describe('Layout Component', () => {
     it('should render the footer with current year', () => {
         render(Layout);
         const currentYear = new Date().getFullYear();
-        expect(screen.getByText(`© ${currentYear} Quest Planner`)).toBeInTheDocument();
+        const footerText = screen.getByText(/© \d{4} Quest Planner/);
+        expect(footerText).toBeInTheDocument();
+        expect(footerText.textContent).toContain(currentYear.toString());
     });
 }); 

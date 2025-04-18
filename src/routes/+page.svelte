@@ -5,15 +5,15 @@
 <main class="container">
     <h1 class="page-title">Quest Planner</h1>
     <div class="grid">
-        <div class="card">
+        <div class="card" role="article">
             <h2 class="card-title">Quest List</h2>
             <p class="card-text">Browse all available quests and their requirements.</p>
         </div>
-        <div class="card">
+        <div class="card" role="article">
             <h2 class="card-title">Route Planner</h2>
             <p class="card-text">Create and optimize your quest routes.</p>
         </div>
-        <div class="card">
+        <div class="card" role="article">
             <h2 class="card-title">Requirements</h2>
             <p class="card-text">Track your quest requirements and progress.</p>
         </div>

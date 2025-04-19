@@ -46,6 +46,7 @@
                         aria-label="Toggle theme"
                         title="Toggle Theme"
                         on:click={toggleTheme}
+                        data-testid="theme-toggle"
                     >
                         {#if !isDark}
                             <svg class="icon icon--moon" viewBox="0 0 24 24" width="24" height="24" fill="#60a5fa">

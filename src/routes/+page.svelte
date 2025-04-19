@@ -1,8 +1,9 @@
 <script lang="ts">
     import '$lib/styles/global.scss';
+    import FeatureCard from '$lib/components/FeatureCard.svelte';
 </script>
 
-<main class="container">
+<main class="container" data-testid="main">
     <div class="content">
         <section class="hero">
             <h1 class="hero__title">Plan Your OSRS Quest Journey</h1>
@@ -14,18 +15,18 @@
         </section>
 
         <section class="features">
-            <div class="feature-card">
-                <h2 class="feature-card__title">Quest Requirements</h2>
-                <p class="feature-card__text">View detailed requirements for each quest, including skill levels, quest prerequisites, and items needed.</p>
-            </div>
-            <div class="feature-card">
-                <h2 class="feature-card__title">Route Optimization</h2>
-                <p class="feature-card__text">Create efficient quest routes that minimize backtracking and optimize your progression through the game.</p>
-            </div>
-            <div class="feature-card">
-                <h2 class="feature-card__title">Progress Tracking</h2>
-                <p class="feature-card__text">Track your quest completion progress and see what's next in your optimized quest route.</p>
-            </div>
+            <FeatureCard
+                title="Quest Requirements"
+                description="View detailed requirements for each quest, including skill levels, quest prerequisites, and items needed."
+            />
+            <FeatureCard
+                title="Route Optimization"
+                description="Create efficient quest routes that minimize backtracking and optimize your progression through the game."
+            />
+            <FeatureCard
+                title="Progress Tracking"
+                description="Track your quest completion progress and see what's next in your optimized quest route."
+            />
         </section>
     </div>
 </main>
@@ -76,31 +77,6 @@
         display: grid;
         gap: var(--spacing-xl);
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    }
-
-    .feature-card {
-        background-color: var(--color-surface);
-        padding: var(--spacing-xl);
-        border-radius: var(--border-radius);
-        box-shadow: var(--shadow-sm);
-        transition: transform 0.2s ease, box-shadow 0.2s ease;
-
-        &:hover {
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-md);
-        }
-
-        &__title {
-            font-size: 1.5rem;
-            font-weight: 600;
-            margin-bottom: var(--spacing-md);
-            color: var(--color-text);
-        }
-
-        &__text {
-            color: var(--color-text-secondary);
-            line-height: 1.6;
-        }
     }
 
     .button {

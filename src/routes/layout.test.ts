@@ -17,12 +17,12 @@ describe('Layout Component', () => {
 
     it('should render the theme toggle button', () => {
         render(Layout);
-        expect(screen.getByText('Toggle Theme')).toBeInTheDocument();
+        expect(screen.getByTestId('theme-toggle')).toBeInTheDocument();
     });
 
     it('should toggle theme when theme button is clicked', () => {
         render(Layout);
-        const themeToggle = screen.getByText('Toggle Theme');
+        const themeToggle = screen.getByTestId('theme-toggle');
         
         // Mock document.documentElement.setAttribute
         const setAttributeSpy = vi.spyOn(document.documentElement, 'setAttribute');

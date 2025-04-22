@@ -5,6 +5,10 @@ Quest Planner is a SvelteKit-based web application for OSRS quest route planning
 
 ## Tech Stack
 - Frontend & Backend: SvelteKit 2.x
+- Database & Authentication: Firebase
+  - Firestore: NoSQL database
+  - Authentication: User management
+  - Storage: File storage
 - Styling: SCSS Modules
 - Testing: Vitest + Testing Library
 - Type Safety: TypeScript
@@ -18,7 +22,8 @@ src/
 │   ├── types/     # TypeScript type definitions
 │   ├── stores/    # Svelte stores
 │   ├── utils/     # Utility functions
-│   └── data/      # Data management
+│   ├── data/      # Data management
+│   └── firebase/  # Firebase configuration and services
 ├── routes/        # SvelteKit routes and pages
 └── app.html       # App template
 ```
@@ -69,12 +74,17 @@ src/
 - Handle loading and error states
 - Cache data appropriately
 - Keep data structures immutable
+- Use Firestore for persistent storage
+- Implement proper Firebase security rules
+- Follow Firebase best practices for data modeling
 
 ### 8. Error Handling
 - Implement proper error boundaries
 - Log errors appropriately
 - Show user-friendly error messages
 - Handle edge cases gracefully
+- Implement Firebase error handling patterns
+- Monitor Firebase performance and errors
 
 ### 9. Documentation
 - Document complex logic
@@ -119,6 +129,9 @@ src/
 3. Implement proper CORS policies
 4. Follow security best practices
 5. Keep dependencies updated
+6. Implement Firebase security rules
+7. Follow Firebase authentication best practices
+8. Secure sensitive Firebase configuration
 
 ## Performance Considerations
 1. Optimize bundle size
@@ -126,6 +139,9 @@ src/
 3. Use lazy loading
 4. Optimize images and assets
 5. Monitor performance metrics
+6. Implement Firebase performance monitoring
+7. Optimize Firestore queries and indexes
+8. Use Firebase caching strategies
 
 ## Deployment
 1. Build for production
@@ -134,6 +150,8 @@ src/
 4. Verify accessibility
 5. Test in multiple browsers
 6. Monitor performance
-7. Deploy to static hosting
+7. Deploy to Firebase Hosting
+8. Configure Firebase environment variables
+9. Set up Firebase CI/CD pipeline
 
 Remember to update this document as the project evolves and new patterns or requirements emerge. 

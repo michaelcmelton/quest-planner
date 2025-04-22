@@ -1,4 +1,6 @@
 import type { Route, QuestNode, CustomNode } from '../types/routes';
+import { RouteValidator } from '../routes/routeValidation';
+import type { Quest } from '../types/quest';
 
 // Initialize store from localStorage if available
 const loadFromStorage = (): Map<string, Route> => {
@@ -46,6 +48,9 @@ const routesMap = $state(loadFromStorage());
 // Derived state for all routes
 const allRoutes = $derived(Array.from(routesMap.values()));
 
+// Initialize route validator with quest data
+let routeValidator: RouteValidator | null = null;
+
 export const routes = {
     get routes() {
         return routesMap;
@@ -53,6 +58,10 @@ export const routes = {
 
     get all() {
         return allRoutes;
+    },
+
+    initializeValidator(quests: Quest[]) {
+        routeValidator = new RouteValidator(quests);
     },
 
     create(name: string, description?: string): Route {
@@ -95,7 +104,14 @@ export const routes = {
             updatedAt: new Date()
         };
 
-        routesMap.set(id, updatedRoute);
+        // Validate the route if the validator is initialized
+        if (routeValidator && updates.nodes) {
+            const validatedRoute = routeValidator.updateRouteValidation(updatedRoute);
+            routesMap.set(id, validatedRoute);
+        } else {
+            routesMap.set(id, updatedRoute);
+        }
+
         saveToStorage(routesMap);
         return updatedRoute;
     },
@@ -132,7 +148,14 @@ export const routes = {
             updatedAt: new Date()
         };
 
-        routesMap.set(routeId, updatedRoute);
+        // Validate the route if the validator is initialized
+        if (routeValidator) {
+            const validatedRoute = routeValidator.updateRouteValidation(updatedRoute);
+            routesMap.set(routeId, validatedRoute);
+        } else {
+            routesMap.set(routeId, updatedRoute);
+        }
+
         saveToStorage(routesMap);
         return newNode;
     },
@@ -153,7 +176,14 @@ export const routes = {
             updatedAt: new Date()
         };
 
-        routesMap.set(routeId, updatedRoute);
+        // Validate the route if the validator is initialized
+        if (routeValidator) {
+            const validatedRoute = routeValidator.updateRouteValidation(updatedRoute);
+            routesMap.set(routeId, validatedRoute);
+        } else {
+            routesMap.set(routeId, updatedRoute);
+        }
+
         saveToStorage(routesMap);
         return newNode;
     },
@@ -171,7 +201,14 @@ export const routes = {
             updatedAt: new Date()
         };
 
-        routesMap.set(routeId, updatedRoute);
+        // Validate the route if the validator is initialized
+        if (routeValidator) {
+            const validatedRoute = routeValidator.updateRouteValidation(updatedRoute);
+            routesMap.set(routeId, validatedRoute);
+        } else {
+            routesMap.set(routeId, updatedRoute);
+        }
+
         saveToStorage(routesMap);
         return true;
     },
@@ -196,7 +233,14 @@ export const routes = {
             updatedAt: new Date()
         };
 
-        routesMap.set(routeId, updatedRoute);
+        // Validate the route if the validator is initialized
+        if (routeValidator) {
+            const validatedRoute = routeValidator.updateRouteValidation(updatedRoute);
+            routesMap.set(routeId, validatedRoute);
+        } else {
+            routesMap.set(routeId, updatedRoute);
+        }
+
         saveToStorage(routesMap);
         return true;
     },

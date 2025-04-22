@@ -1,5 +1,6 @@
 import { describe, it, expect, beforeEach, vi } from 'vitest';
 import { routes } from './routes.svelte';
+import type { Quest } from '../types/quest';
 
 // Mock localStorage
 const mockLocalStorage = {
@@ -256,6 +257,120 @@ describe('routes store', () => {
                 const node = routes.getNode(route.id, 'non-existent-id');
                 expect(node).toBeUndefined();
             });
+        });
+    });
+
+    describe('validation', () => {
+        const createTestQuest = (id: string, prerequisites: string[] = []): Quest => ({
+            id,
+            name: `Quest ${id}`,
+            number: parseInt(id),
+            image: '',
+            release: '',
+            update: '',
+            members: true,
+            series: 'Test Series',
+            developer: 'Test Developer',
+            rewards: {
+                questPoints: 1,
+                experienceRewards: [],
+                otherRewards: []
+            },
+            start: '',
+            startmap: '',
+            difficulty: 'Novice',
+            description: `Description for Quest ${id}`,
+            length: 'Short',
+            requirements: {
+                skills: [],
+                quests: prerequisites,
+                other: []
+            },
+            items: [],
+            recommended: [],
+            kills: [],
+            ironman: [],
+            leagueRegion: ''
+        });
+
+        it('should validate routes when validator is initialized', () => {
+            const quests = [
+                createTestQuest('1'),
+                createTestQuest('2', ['1'])
+            ];
+
+            routes.initializeValidator(quests);
+            const route = routes.create('Test Route');
+            
+            // Add quests in valid order
+            routes.addQuestNode(route.id, '1', 'Quest 1');
+            routes.addQuestNode(route.id, '2', 'Quest 2');
+
+            const updatedRoute = routes.get(route.id);
+            expect(updatedRoute?.validationState.isValid).toBe(true);
+        });
+
+        it('should detect invalid quest sequences', () => {
+            const quests = [
+                createTestQuest('1'),
+                createTestQuest('2', ['1'])
+            ];
+
+            routes.initializeValidator(quests);
+            const route = routes.create('Test Route');
+            
+            // Add quests in invalid order
+            routes.addQuestNode(route.id, '2', 'Quest 2');
+            routes.addQuestNode(route.id, '1', 'Quest 1');
+
+            const updatedRoute = routes.get(route.id);
+            expect(updatedRoute?.validationState.isValid).toBe(false);
+            expect(updatedRoute?.validationState.errors).toBeDefined();
+            expect(updatedRoute?.validationState.errors?.[0]).toContain('Missing prerequisites');
+        });
+
+        it('should validate routes when nodes are reordered', () => {
+            const quests = [
+                createTestQuest('1'),
+                createTestQuest('2', ['1'])
+            ];
+
+            routes.initializeValidator(quests);
+            const route = routes.create('Test Route');
+            
+            // Add quests in valid order
+            const node1 = routes.addQuestNode(route.id, '1', 'Quest 1');
+            const node2 = routes.addQuestNode(route.id, '2', 'Quest 2');
+
+            if (node1 && node2) {
+                // Reorder to make invalid
+                routes.moveNode(route.id, node2.id, 0);
+
+                const updatedRoute = routes.get(route.id);
+                expect(updatedRoute?.validationState.isValid).toBe(false);
+            }
+        });
+
+        it('should validate routes when nodes are removed', () => {
+            const quests = [
+                createTestQuest('1'),
+                createTestQuest('2', ['1'])
+            ];
+
+            routes.initializeValidator(quests);
+            const route = routes.create('Test Route');
+            
+            // Add quests in valid order
+            const node1 = routes.addQuestNode(route.id, '1', 'Quest 1');
+            routes.addQuestNode(route.id, '2', 'Quest 2');
+
+            if (node1) {
+                // Remove prerequisite
+                routes.removeNode(route.id, node1.id);
+
+                const updatedRoute = routes.get(route.id);
+                expect(updatedRoute?.validationState.isValid).toBe(false);
+            }
         });
     });
 }); 

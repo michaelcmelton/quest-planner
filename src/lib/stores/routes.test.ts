@@ -136,4 +136,126 @@ describe('routes store', () => {
             expect(success).toBe(false);
         });
     });
+
+    describe('node management', () => {
+        let route: ReturnType<typeof routes.create>;
+
+        beforeEach(() => {
+            route = routes.create('Test Route');
+        });
+
+        describe('adding nodes', () => {
+            it('should add a quest node', () => {
+                const questNode = routes.addQuestNode(route.id, 'cooks-assistant', 'Cook\'s Assistant');
+                
+                expect(questNode).toBeDefined();
+                if (questNode) {
+                    expect(questNode.type).toBe('quest');
+                    expect(questNode.questId).toBe('cooks-assistant');
+                    expect(questNode.content).toBe('Cook\'s Assistant');
+                    expect(questNode.completed).toBe(false);
+                }
+                
+                const updatedRoute = routes.get(route.id);
+                expect(updatedRoute?.nodes).toHaveLength(1);
+                expect(updatedRoute?.nodes[0]).toEqual(questNode);
+            });
+
+            it('should add a custom node', () => {
+                const customNode = routes.addCustomNode(route.id, 'Train Attack to 20');
+                
+                expect(customNode).toBeDefined();
+                if (customNode) {
+                    expect(customNode.type).toBe('custom');
+                    expect(customNode.content).toBe('Train Attack to 20');
+                }
+                
+                const updatedRoute = routes.get(route.id);
+                expect(updatedRoute?.nodes).toHaveLength(1);
+                expect(updatedRoute?.nodes[0]).toEqual(customNode);
+            });
+
+            it('should add nodes in sequence', () => {
+                const questNode = routes.addQuestNode(route.id, 'cooks-assistant', 'Cook\'s Assistant');
+                const customNode = routes.addCustomNode(route.id, 'Train Attack to 20');
+                
+                const updatedRoute = routes.get(route.id);
+                expect(updatedRoute?.nodes).toHaveLength(2);
+                expect(updatedRoute?.nodes[0]).toEqual(questNode);
+                expect(updatedRoute?.nodes[1]).toEqual(customNode);
+            });
+        });
+
+        describe('removing nodes', () => {
+            it('should remove a node by id', () => {
+                const node = routes.addQuestNode(route.id, 'cooks-assistant', 'Cook\'s Assistant');
+                if (node) {
+                    const success = routes.removeNode(route.id, node.id);
+                    
+                    expect(success).toBe(true);
+                    const updatedRoute = routes.get(route.id);
+                    expect(updatedRoute?.nodes).toHaveLength(0);
+                }
+            });
+
+            it('should return false when removing non-existent node', () => {
+                const success = routes.removeNode(route.id, 'non-existent-id');
+                expect(success).toBe(false);
+            });
+        });
+
+        describe('reordering nodes', () => {
+            it('should move a node to a new position', () => {
+                const node1 = routes.addQuestNode(route.id, 'cooks-assistant', 'Cook\'s Assistant');
+                const node2 = routes.addCustomNode(route.id, 'Train Attack to 20');
+                const node3 = routes.addQuestNode(route.id, 'dragon-slayer', 'Dragon Slayer');
+                
+                if (node2) {
+                    const success = routes.moveNode(route.id, node2.id, 0);
+                    expect(success).toBe(true);
+                    
+                    const updatedRoute = routes.get(route.id);
+                    expect(updatedRoute?.nodes).toHaveLength(3);
+                    expect(updatedRoute?.nodes[0]).toEqual(node2);
+                    expect(updatedRoute?.nodes[1]).toEqual(node1);
+                    expect(updatedRoute?.nodes[2]).toEqual(node3);
+                }
+            });
+
+            it('should return false when moving non-existent node', () => {
+                const success = routes.moveNode(route.id, 'non-existent-id', 0);
+                expect(success).toBe(false);
+            });
+
+            it('should handle moving to invalid positions', () => {
+                const node = routes.addQuestNode(route.id, 'cooks-assistant', 'Cook\'s Assistant');
+                
+                // Moving beyond array bounds should clamp to valid positions
+                if (node) {
+                    const success = routes.moveNode(route.id, node.id, 999);
+                    expect(success).toBe(true);
+                    
+                    const updatedRoute = routes.get(route.id);
+                    expect(updatedRoute?.nodes).toHaveLength(1);
+                    expect(updatedRoute?.nodes[0]).toEqual(node);
+                }
+            });
+        });
+
+        describe('getting nodes', () => {
+            it('should get a node by id', () => {
+                const node = routes.addQuestNode(route.id, 'cooks-assistant', 'Cook\'s Assistant');
+                if (node) {
+                    const foundNode = routes.getNode(route.id, node.id);
+                    
+                    expect(foundNode).toEqual(node);
+                }
+            });
+
+            it('should return undefined for non-existent node', () => {
+                const node = routes.getNode(route.id, 'non-existent-id');
+                expect(node).toBeUndefined();
+            });
+        });
+    });
 }); 

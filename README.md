@@ -1,28 +1,38 @@
-# OSRS Quest Planner
+# sv
 
-A tool to help plan and track quests in Old School RuneScape.
+Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
 
-## Description
+## Creating a project
 
-This project aims to provide a comprehensive quest planning and tracking tool for Old School RuneScape players. It will help players organize their quest progression, track requirements, and optimize their questing path.
+If you're seeing this, you've probably already done this step. Congrats!
 
-## Features (Planned)
+```bash
+# create a new project in the current directory
+npx sv create
 
-- Quest requirement tracking
-- Quest path optimization
-- Skill requirement tracking
-- Item requirement tracking
-- Quest completion tracking
-- Progress visualization
+# create a new project in my-app
+npx sv create my-app
+```
 
-## Getting Started
+## Developing
 
-*Instructions for setting up and running the project will be added here.*
+Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
 
-## Contributing
+```bash
+npm run dev
 
-*Guidelines for contributing to the project will be added here.*
+# or start the server and open the app in a new browser tab
+npm run dev -- --open
+```
 
-## License
+## Building
 
-*License information will be added here.* 
+To create a production version of your app:
+
+```bash
+npm run build
+```
+
+You can preview the production build with `npm run preview`.
+
+> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.

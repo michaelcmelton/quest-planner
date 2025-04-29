@@ -54,10 +54,13 @@ Custom nodes:
 ### 📂 9. Tabluar display of Quests *(MVP)* 
 A tabluar display of all OSRS quests in which a user can browse quest data at a high level, and can optionally click on a quest to open a modal to view more detail about the quest including a link to the quest walkthrough from the OSRS Wiki.
 
-### 🌳 10. Quest Prerequisite Tree Viewer *(Future Enhancement)*
+### 10. About Page *(MVP)*
+An about page detailing the need for the tool, the inspiration behind it -- and a link for donation if desired.
+
+### 🌳 11. Quest Prerequisite Tree Viewer *(Future Enhancement)*
 A visual, collapsible quest dependency tree that shows the full chain of required quests leading up to a selected goal. This feature enhances clarity and provides high-level insight into the planning structure.
 
-### 📊 10. Skill Level Tracking / Integration *(Future Enhancement)*
+### 📊 12. Skill Level Tracking / Integration *(Future Enhancement)*
 Allows users to input their current skill levels and view only the quests that are currently completable. Potential integration with external tracking services like Wise Old Man to auto-fetch player progress.
 
 ## User Experience

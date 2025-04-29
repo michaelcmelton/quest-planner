@@ -11,6 +11,20 @@ export interface QuestRequirement {
     link: string;
 }
 
+export interface QuestRouteNode {
+    id: string;
+    questId: string;
+    customNote?: string;
+    type: 'quest' | 'custom';
+    name: string;
+    number: number;
+}
+
+export interface QuestRouteState {
+    nodes: QuestRouteNode[];
+    validationErrors: string[];
+}
+
 export interface Quest {
     id: string;
     name: string;

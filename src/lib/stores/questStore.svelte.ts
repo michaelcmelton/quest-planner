@@ -1,34 +1,18 @@
-import type { QuestsData } from '../types/quests';
-import questsData from '../data/quests.json';
+import type { Quest, QuestsData } from '../types/quests';
 
-// Create state with the quest data
-const quests = $state<QuestsData>(questsData);
+let quests = $state<QuestsData>({});
+let questList = $state<Quest[]>([]);
 
-// Create derived values for common operations
-const questList = $derived(
-    Object.values(quests).sort((a, b) => a.number - b.number)
-);
-
-// Export the store interface
 export const questStore = {
-    subscribe: (callback: (state: { quests: QuestsData, questList: typeof questList }) => void) => {
-        // Initial call
-        callback({
-            quests,
-            questList
-        });
-
-        // Setup effect for reactivity
-        $effect(() => {
-            callback({
-                quests,
-                questList
-            });
-        });
-
-        // Return unsubscribe function
+    subscribe(callback: (state: { quests: QuestsData; questList: Quest[] }) => void) {
+        callback({ quests, questList });
         return () => {};
     },
-
-    getQuestById: (id: string) => quests[id]
+    setQuests(data: QuestsData) {
+        quests = data;
+        questList = Object.values(data).sort((a, b) => a.number - b.number);
+    },
+    getQuestById(id: string): Quest | undefined {
+        return quests[id];
+    }
 };

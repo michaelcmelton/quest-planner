@@ -14,7 +14,11 @@
 		"lint": "prettier --check . && eslint .",
 		"test:unit": "vitest",
 		"test": "npm run test:unit -- --run && npm run test:e2e",
-		"test:e2e": "playwright test"
+		"test:e2e": "playwright test",
+		"quests:fetch": "node scripts/fetch-quests.js",
+		"quests:generate": "node scripts/generate-quest-data.js",
+		"quests:icons": "node scripts/download-skill-icons.js",
+		"quests:update": "npm run quests:fetch && npm run quests:generate && npm run quests:icons"
 	},
 	"devDependencies": {
 		"@eslint/compat": "^1.2.5",

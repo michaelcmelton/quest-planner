@@ -66,6 +66,10 @@ npm run preview
 ## Project Structure
 
 - `src/` - Main source code
+  - `lib/` - Shared code and utilities
+    - `stores/` - Svelte stores for state management
+    - `types/` - TypeScript type definitions
+    - `data/` - Static data files
 - `e2e/` - End-to-end tests
 - `static/` - Static assets
 - `vite.config.ts` - Vite configuration

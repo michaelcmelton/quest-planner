@@ -52,6 +52,9 @@
 ## File Organization
 - One component per file
 - Group related files in directories
+- Keep stores in `src/lib/stores`
+- Keep types in `src/lib/types`
+- Keep static data in `src/lib/data`
 - Keep imports organized and grouped
 - Export only what's necessary
 - Use index files for cleaner imports

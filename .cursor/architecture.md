@@ -18,11 +18,13 @@
 
 ## State Management
 - Use Svelte stores for shared state
-- Keep state as close to where it's needed as possible
+- Keep stores in `src/lib/stores` directory
+- Keep types in `src/lib/types` directory
 - Use writable stores for mutable state
-- Use readable stores for derived state
+- Use derived stores for computed values
 - Use custom stores for complex state logic
 - Implement proper state persistence when needed
+- Export stores through `index.ts` files for cleaner imports
 
 ## Data Flow
 - Use SvelteKit's load functions for data fetching

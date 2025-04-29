@@ -37,6 +37,7 @@ alwaysApply: true
 - Use UPPER_SNAKE_CASE for constants
 - Prefix boolean variables with 'is', 'has', 'should', etc.
 - Use kebab-case for file names
+- For test files of SvelteKit reserved files (e.g., `+page.svelte`), remove the `+` prefix in the test filename (e.g., `page.svelte.test.ts`)
 
 ## Formatting
 - Use 2 spaces for indentation

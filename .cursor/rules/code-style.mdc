@@ -6,95 +6,69 @@ alwaysApply: true
 # Code Style Guidelines
 
 ## General Principles
-- pattern: "**/*.{ts,js,svelte}"
-  rules:
-    - name: "Clean Code"
-      message: "Write clean, readable, and maintainable code"
-      severity: warning
-    - name: "TypeScript Usage"
-      message: "Use TypeScript for type safety and better developer experience"
-      severity: error
+- Write clean, readable, and maintainable code
+- Follow the principle of least surprise
+- Document complex logic and non-obvious decisions
+- Keep functions and components focused and single-purpose
+- Use TypeScript for type safety and better developer experience
 
 ## Svelte Component Guidelines
-- pattern: "**/*.svelte"
-  rules:
-    - name: "TypeScript in Svelte"
-      pattern: "<script>"
-      message: "Use TypeScript in Svelte components with <script lang=\"ts\">"
-      severity: error
-    - name: "Svelte Runes"
-      pattern: "let\\s+\\w+\\s*="
-      message: "Use Svelte 5 runes ($state, $derived, $effect) instead of let declarations"
-      severity: warning
-    - name: "Props Typing"
-      pattern: "export\\s+let\\s+\\w+"
-      message: "Use $props() with TypeScript types instead of export let"
-      severity: error
+- Use `.svelte` extension for Svelte components
+- Keep components small and focused
+- Use TypeScript in Svelte components with `<script lang="ts">`
+- Use Svelte 5 runes for state management (no imports required, globally available):
+  - `$state()` for mutable state
+  - `$derived()` for computed values
+  - `$effect()` for side effects
+  - `$props()` for component props (replaces `export let` from Svelte 4)
+    - Always type props using TypeScript interfaces or types
+    - Example: `const { name, age } = $props<{ name: string; age: number }>()`
+    - Use destructuring for cleaner prop access
+    - Optional props should be marked with `?` in the type definition
+- Use stores only for shared state between components
+- Follow Svelte's naming conventions for lifecycle methods
+- Use the new `{#snippet}` syntax for reusable template blocks
+- Prefer the new `bind:this` syntax for component references
 
 ## Naming Conventions
-- pattern: "**/*.{ts,js,svelte}"
-  rules:
-    - name: "CamelCase Variables"
-      pattern: "let\\s+[a-z]+_[a-z]+"
-      message: "Use camelCase for variable names"
-      severity: error
-    - name: "PascalCase Components"
-      pattern: "class\\s+[a-z]"
-      message: "Use PascalCase for component names"
-      severity: error
-    - name: "Boolean Prefixes"
-      pattern: "let\\s+(?!is|has|should)[a-zA-Z]+"
-      message: "Prefix boolean variables with 'is', 'has', or 'should'"
-      severity: warning
+- Use descriptive names that indicate purpose or functionality
+- Follow camelCase for variables and functions
+- Use PascalCase for component names
+- Use UPPER_SNAKE_CASE for constants
+- Prefix boolean variables with 'is', 'has', 'should', etc.
+- Use kebab-case for file names
 
 ## Formatting
-- pattern: "**/*.{ts,js,svelte}"
-  rules:
-    - name: "Indentation"
-      pattern: "^\\s{3,}"
-      message: "Use 2 spaces for indentation"
-      severity: error
-    - name: "String Quotes"
-      pattern: "\"([^\"]*)\""
-      message: "Use single quotes for strings unless double quotes are required"
-      severity: warning
-    - name: "Semicolons"
-      pattern: "^[^;]+$"
-      message: "Always use semicolons to terminate statements"
-      severity: error
+- Use 2 spaces for indentation
+- Maximum line length: 100 characters
+- Use single quotes for strings unless double quotes are required
+- Always use semicolons to terminate statements
+- Use trailing commas in multi-line object and array definitions
+- Follow Prettier configuration for consistent formatting
 
 ## Comments
-- pattern: "**/*.{ts,js,svelte}"
-  rules:
-    - name: "JSDoc Comments"
-      pattern: "function\\s+\\w+\\s*\\([^)]*\\)\\s*\\{"
-      message: "Use JSDoc-style comments for functions"
-      severity: warning
-    - name: "Commented Code"
-      pattern: "^\\s*//\\s*[^/]"
-      message: "Remove commented-out code before committing"
-      severity: warning
+- Use JSDoc-style comments for functions and classes
+- Keep comments up-to-date with code changes
+- Explain why, not what (the code should be self-documenting)
+- Remove commented-out code before committing
+- Document complex Svelte component logic
+- Document rune usage and state management patterns
 
 ## File Organization
-- pattern: "src/**/*"
-  rules:
-    - name: "Store Location"
-      pattern: "src/(?!lib/stores).*/store\\.ts"
-      message: "Keep stores in src/lib/stores"
-      severity: error
-    - name: "Type Location"
-      pattern: "src/(?!lib/types).*/types\\.ts"
-      message: "Keep types in src/lib/types"
-      severity: error
+- One component per file
+- Group related files in directories
+- Keep stores in `src/lib/stores`
+- Keep types in `src/lib/types`
+- Keep static data in `src/lib/data`
+- Keep imports organized and grouped
+- Export only what's necessary
+- Use index files for cleaner imports
+- Follow SvelteKit's routing conventions
 
 ## Error Handling
-- pattern: "**/*.{ts,js,svelte}"
-  rules:
-    - name: "Try-Catch Blocks"
-      pattern: "throw\\s+new\\s+Error"
-      message: "Use try-catch blocks for expected errors"
-      severity: warning
-    - name: "Error Messages"
-      pattern: "throw\\s+new\\s+Error\\(\"\"\\)"
-      message: "Provide meaningful error messages"
-      severity: error
+- Use try-catch blocks for expected errors
+- Provide meaningful error messages
+- Log errors appropriately
+- Handle edge cases explicitly
+- Use Svelte's error boundaries where appropriate
+- Use the new `$error()` rune for error handling (no import required) 

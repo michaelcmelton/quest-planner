@@ -6,113 +6,59 @@ alwaysApply: true
 # Architecture Guidelines
 
 ## Project Structure
-- pattern: "src/**/*"
-  rules:
-    - name: "SvelteKit Routing"
-      pattern: "src/routes/(?!\\+layout\\.svelte|api/).*\\.svelte"
-      message: "Follow SvelteKit's file-based routing conventions"
-      severity: error
-    - name: "Shared Components"
-      pattern: "src/(?!lib/).*/components/.*\\.svelte"
-      message: "Keep shared components in src/lib directory"
-      severity: error
-    - name: "TypeScript Usage"
-      pattern: "\\.js$"
-      message: "Use TypeScript for type safety"
-      severity: error
+- Follow SvelteKit's file-based routing
+- Use the `src/lib` directory for shared components and utilities
+- Keep page components in `src/routes`
+- Use `src/routes/+layout.svelte` for shared layouts
+- Organize API routes in `src/routes/api`
+- Use TypeScript for type safety
 
 ## Component Design
-- pattern: "**/*.svelte"
-  rules:
-    - name: "Component Size"
-      pattern: "^.{500,}$"
-      message: "Keep components small and focused (under 500 lines)"
-      severity: warning
-    - name: "Props Usage"
-      pattern: "let\\s+\\w+\\s*=\\s*\\w+"
-      message: "Use props for configuration instead of hardcoded values"
-      severity: warning
-    - name: "Slot Usage"
-      pattern: "<div>.*</div>"
-      message: "Consider using slots for component composition"
-      severity: warning
+- Design components to be reusable and composable
+- Follow the single responsibility principle
+- Keep components small and focused
+- Use props for configuration
+- Implement proper state management with Svelte stores
+- Use slots for component composition
 
 ## State Management
-- pattern: "src/lib/stores/**/*"
-  rules:
-    - name: "Store Location"
-      pattern: "src/(?!lib/stores).*/store\\.ts"
-      message: "Keep stores in src/lib/stores directory"
-      severity: error
-    - name: "Store Types"
-      pattern: "writable\\([^)]*\\)"
-      message: "Define proper types for store values"
-      severity: error
-    - name: "Store Exports"
-      pattern: "export\\s+const\\s+\\w+\\s*="
-      message: "Export stores through index.ts files for cleaner imports"
-      severity: warning
+- Use Svelte stores for shared state
+- Keep stores in `src/lib/stores` directory
+- Keep types in `src/lib/types` directory
+- Use writable stores for mutable state
+- Use derived stores for computed values
+- Use custom stores for complex state logic
+- Implement proper state persistence when needed
+- Export stores through `index.ts` files for cleaner imports
 
 ## Data Flow
-- pattern: "src/routes/**/*"
-  rules:
-    - name: "Load Function"
-      pattern: "export\\s+async\\s+function\\s+load"
-      message: "Use SvelteKit's load functions for data fetching"
-      severity: warning
-    - name: "Data Validation"
-      pattern: "data\\s*=\\s*\\w+"
-      message: "Implement proper data validation"
-      severity: warning
-    - name: "Error Handling"
-      pattern: "throw\\s+new\\s+Error"
-      message: "Handle loading and error states properly"
-      severity: error
+- Use SvelteKit's load functions for data fetching
+- Implement proper data validation
+- Handle loading and error states
+- Cache data appropriately
+- Use SvelteKit's form actions for form handling
+- Implement proper data synchronization
 
 ## API Design
-- pattern: "src/routes/api/**/*"
-  rules:
-    - name: "API Versioning"
-      pattern: "src/routes/api/(?!v\\d+/).*"
-      message: "Version APIs appropriately (e.g., /api/v1/...)"
-      severity: warning
-    - name: "Error Handling"
-      pattern: "throw\\s+new\\s+Error"
-      message: "Handle API errors consistently"
-      severity: error
-    - name: "Response Format"
-      pattern: "return\\s+new\\s+Response\\([^)]*\\)"
-      message: "Use consistent response formats"
-      severity: warning
+- Use SvelteKit's API routes
+- Follow RESTful principles
+- Use consistent naming conventions
+- Version APIs appropriately
+- Document API endpoints
+- Handle errors consistently
 
 ## Performance
-- pattern: "**/*.{ts,js,svelte}"
-  rules:
-    - name: "Code Splitting"
-      pattern: "import\\s+.*\\s+from\\s+'.*'"
-      message: "Consider using dynamic imports for code splitting"
-      severity: warning
-    - name: "Asset Optimization"
-      pattern: "src=\".*\\.(jpg|png|gif)\""
-      message: "Optimize images and other assets"
-      severity: warning
-    - name: "SSR Usage"
-      pattern: "export\\s+const\\s+ssr\\s*=\\s*false"
-      message: "Use SvelteKit's server-side rendering capabilities"
-      severity: warning
+- Use SvelteKit's built-in optimizations
+- Implement proper code splitting
+- Use lazy loading where appropriate
+- Optimize assets and resources
+- Monitor and measure performance
+- Use SvelteKit's server-side rendering capabilities
 
 ## Testing
-- pattern: "**/*.{test,spec}.{ts,js}"
-  rules:
-    - name: "Test Coverage"
-      pattern: "describe\\('.*',\\s*\\(\\)\\s*=>\\s*\\{\\s*\\}\\)"
-      message: "Maintain high test coverage"
-      severity: warning
-    - name: "Error Testing"
-      pattern: "expect\\(.*\\)\\.toThrow"
-      message: "Test error cases and edge conditions"
-      severity: warning
-    - name: "Test Organization"
-      pattern: "test\\('.*',\\s*\\(\\)\\s*=>\\s*\\{\\s*\\}\\)"
-      message: "Organize tests properly with describe blocks"
-      severity: warning
+- Write unit tests with Vitest
+- Write component tests with @testing-library/svelte
+- Write end-to-end tests with Playwright
+- Test both client and server-side code
+- Maintain high test coverage
+- Test error cases and edge conditions 

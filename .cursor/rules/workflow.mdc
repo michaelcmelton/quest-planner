@@ -6,81 +6,36 @@ alwaysApply: true
 # Development Workflow Guidelines
 
 ## Git Workflow
-- pattern: ".git/**/*"
-  rules:
-    - name: "Feature Branches"
-      pattern: "ref: refs/heads/main"
-      message: "Use feature branches for new features"
-      severity: error
-    - name: "Commit Messages"
-      pattern: "commit\\s+[a-f0-9]{40}\\s+.*"
-      message: "Write descriptive commit messages"
-      severity: error
-    - name: "Pull Requests"
-      pattern: "merge\\s+.*\\s+into\\s+.*"
-      message: "Use pull requests for collaboration"
-      severity: error
+- Use feature branches for new features
+- Keep commits small and focused
+- Write descriptive commit messages
+- Review code before merging
+- Use pull requests for collaboration
 
 ## Branch Naming
-- pattern: ".git/refs/heads/**/*"
-  rules:
-    - name: "Branch Prefix"
-      pattern: "^(?!feature/|bugfix/|hotfix/).*"
-      message: "Prefix branches with feature/, bugfix/, or hotfix/"
-      severity: error
-    - name: "Branch Format"
-      pattern: "[A-Z]"
-      message: "Use kebab-case for branch names"
-      severity: error
-    - name: "Branch Length"
-      pattern: "^.{50,}$"
-      message: "Keep branch names concise"
-      severity: warning
+- Use descriptive branch names
+- Prefix with feature/, bugfix/, or hotfix/
+- Include ticket number if applicable
+- Use kebab-case for branch names
+- Keep branch names concise
 
 ## Code Review
-- pattern: "**/*.{ts,js,svelte}"
-  rules:
-    - name: "Test Coverage"
-      pattern: "describe\\('.*',\\s*\\(\\)\\s*=>\\s*\\{\\s*\\}\\)"
-      message: "Verify test coverage during code review"
-      severity: error
-    - name: "Code Style"
-      pattern: "\\s{3,}"
-      message: "Check for code style compliance"
-      severity: warning
-    - name: "Security"
-      pattern: "eval\\(|new\\s+Function"
-      message: "Check for security issues"
-      severity: error
+- Review code for functionality
+- Check for code style compliance
+- Verify test coverage
+- Check for security issues
+- Provide constructive feedback
 
 ## Continuous Integration
-- pattern: ".github/workflows/**/*"
-  rules:
-    - name: "Test Automation"
-      pattern: "run:\\s*npm\\s+test"
-      message: "Run tests on every push"
-      severity: error
-    - name: "Code Style"
-      pattern: "run:\\s*npm\\s+run\\s+lint"
-      message: "Check code style automatically"
-      severity: error
-    - name: "Build Status"
-      pattern: "status:"
-      message: "Monitor build status"
-      severity: warning
+- Run tests on every push
+- Check code style automatically
+- Build and deploy on successful tests
+- Monitor build status
+- Fix broken builds immediately
 
 ## Release Process
-- pattern: "package.json"
-  rules:
-    - name: "Version Format"
-      pattern: "\"version\":\\s*\"\\d+\\.\\d+\\.\\d+\""
-      message: "Follow semantic versioning"
-      severity: error
-    - name: "Release Notes"
-      pattern: "CHANGELOG\\.md"
-      message: "Create release notes"
-      severity: warning
-    - name: "Breaking Changes"
-      pattern: "##\\s+Breaking Changes"
-      message: "Document breaking changes"
-      severity: error
+- Version releases appropriately
+- Create release notes
+- Test releases thoroughly
+- Document breaking changes
+- Follow semantic versioning 

@@ -1,0 +1,102 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+# Testing Guidelines
+
+## General Principles
+- pattern: "**/*.{test,spec}.{ts,js}"
+  rules:
+    - name: "Test Coverage"
+      pattern: "describe\\('.*',\\s*\\(\\)\\s*=>\\s*\\{\\s*\\}\\)"
+      message: "Write tests for all new features and maintain high test coverage"
+      severity: error
+    - name: "Test Independence"
+      pattern: "beforeEach\\(\\s*\\(\\)\\s*=>\\s*\\{"
+      message: "Tests should be independent and isolated"
+      severity: error
+    - name: "Test Determinism"
+      pattern: "Math\\.random\\(\\)"
+      message: "Tests should be deterministic"
+      severity: error
+
+## Unit Testing (Vitest)
+- pattern: "**/*.test.ts"
+  rules:
+    - name: "Test Isolation"
+      pattern: "import\\s+.*\\s+from\\s+'.*'"
+      message: "Test individual components in isolation and mock external dependencies"
+      severity: warning
+    - name: "Edge Cases"
+      pattern: "test\\('.*',\\s*\\(\\)\\s*=>\\s*\\{"
+      message: "Test edge cases and error conditions"
+      severity: warning
+    - name: "Test Names"
+      pattern: "test\\('test',"
+      message: "Use descriptive test names"
+      severity: error
+
+## Component Testing (@testing-library/svelte)
+- pattern: "**/*.svelte.test.ts"
+  rules:
+    - name: "Component Testing"
+      pattern: "import\\s+.*\\s+from\\s+'@testing-library/svelte'"
+      message: "Use @testing-library/svelte for component tests"
+      severity: error
+    - name: "Component Props"
+      pattern: "render\\(.*\\)"
+      message: "Test component props and interactions"
+      severity: warning
+    - name: "Component Events"
+      pattern: "fireEvent\\."
+      message: "Test component events"
+      severity: warning
+
+## End-to-End Testing (Playwright)
+- pattern: "e2e/**/*.test.ts"
+  rules:
+    - name: "Critical Journeys"
+      pattern: "test\\('.*',\\s*\\(\\)\\s*=>\\s*\\{"
+      message: "Test critical user journeys"
+      severity: error
+    - name: "Browser Testing"
+      pattern: "test\\.use\\(\\{"
+      message: "Test across different browsers"
+      severity: warning
+    - name: "Accessibility"
+      pattern: "expect\\(.*\\)\\.toBeAccessible"
+      message: "Test accessibility"
+      severity: warning
+
+## Testing Tools
+- pattern: "**/*.{test,spec}.{ts,js}"
+  rules:
+    - name: "Vitest Usage"
+      pattern: "import\\s+.*\\s+from\\s+'vitest'"
+      message: "Use Vitest for unit tests"
+      severity: error
+    - name: "Testing Library"
+      pattern: "import\\s+.*\\s+from\\s+'@testing-library/.*'"
+      message: "Use appropriate testing libraries"
+      severity: error
+    - name: "TypeScript Usage"
+      pattern: "\\.js$"
+      message: "Use TypeScript for test files"
+      severity: error
+
+## Test Organization
+- pattern: "**/*.{test,spec}.{ts,js}"
+  rules:
+    - name: "Test Grouping"
+      pattern: "describe\\('.*',\\s*\\(\\)\\s*=>\\s*\\{"
+      message: "Group related tests together"
+      severity: warning
+    - name: "Test Location"
+      pattern: "src/.*\\.test\\.ts"
+      message: "Keep test files close to the code they test"
+      severity: warning
+    - name: "Test Data"
+      pattern: "const\\s+testData\\s*="
+      message: "Maintain test data separately"
+      severity: warning

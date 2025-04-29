@@ -1,0 +1,100 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+# Code Style Guidelines
+
+## General Principles
+- pattern: "**/*.{ts,js,svelte}"
+  rules:
+    - name: "Clean Code"
+      message: "Write clean, readable, and maintainable code"
+      severity: warning
+    - name: "TypeScript Usage"
+      message: "Use TypeScript for type safety and better developer experience"
+      severity: error
+
+## Svelte Component Guidelines
+- pattern: "**/*.svelte"
+  rules:
+    - name: "TypeScript in Svelte"
+      pattern: "<script>"
+      message: "Use TypeScript in Svelte components with <script lang=\"ts\">"
+      severity: error
+    - name: "Svelte Runes"
+      pattern: "let\\s+\\w+\\s*="
+      message: "Use Svelte 5 runes ($state, $derived, $effect) instead of let declarations"
+      severity: warning
+    - name: "Props Typing"
+      pattern: "export\\s+let\\s+\\w+"
+      message: "Use $props() with TypeScript types instead of export let"
+      severity: error
+
+## Naming Conventions
+- pattern: "**/*.{ts,js,svelte}"
+  rules:
+    - name: "CamelCase Variables"
+      pattern: "let\\s+[a-z]+_[a-z]+"
+      message: "Use camelCase for variable names"
+      severity: error
+    - name: "PascalCase Components"
+      pattern: "class\\s+[a-z]"
+      message: "Use PascalCase for component names"
+      severity: error
+    - name: "Boolean Prefixes"
+      pattern: "let\\s+(?!is|has|should)[a-zA-Z]+"
+      message: "Prefix boolean variables with 'is', 'has', or 'should'"
+      severity: warning
+
+## Formatting
+- pattern: "**/*.{ts,js,svelte}"
+  rules:
+    - name: "Indentation"
+      pattern: "^\\s{3,}"
+      message: "Use 2 spaces for indentation"
+      severity: error
+    - name: "String Quotes"
+      pattern: "\"([^\"]*)\""
+      message: "Use single quotes for strings unless double quotes are required"
+      severity: warning
+    - name: "Semicolons"
+      pattern: "^[^;]+$"
+      message: "Always use semicolons to terminate statements"
+      severity: error
+
+## Comments
+- pattern: "**/*.{ts,js,svelte}"
+  rules:
+    - name: "JSDoc Comments"
+      pattern: "function\\s+\\w+\\s*\\([^)]*\\)\\s*\\{"
+      message: "Use JSDoc-style comments for functions"
+      severity: warning
+    - name: "Commented Code"
+      pattern: "^\\s*//\\s*[^/]"
+      message: "Remove commented-out code before committing"
+      severity: warning
+
+## File Organization
+- pattern: "src/**/*"
+  rules:
+    - name: "Store Location"
+      pattern: "src/(?!lib/stores).*/store\\.ts"
+      message: "Keep stores in src/lib/stores"
+      severity: error
+    - name: "Type Location"
+      pattern: "src/(?!lib/types).*/types\\.ts"
+      message: "Keep types in src/lib/types"
+      severity: error
+
+## Error Handling
+- pattern: "**/*.{ts,js,svelte}"
+  rules:
+    - name: "Try-Catch Blocks"
+      pattern: "throw\\s+new\\s+Error"
+      message: "Use try-catch blocks for expected errors"
+      severity: warning
+    - name: "Error Messages"
+      pattern: "throw\\s+new\\s+Error\\(\"\"\\)"
+      message: "Provide meaningful error messages"
+      severity: error

@@ -1,0 +1,102 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+# Documentation Guidelines
+
+## Code Documentation
+- pattern: "**/*.{ts,js,svelte}"
+  rules:
+    - name: "Public API Documentation"
+      pattern: "export\\s+(function|class|interface)\\s+\\w+"
+      message: "Document all public APIs and interfaces with JSDoc"
+      severity: error
+    - name: "Component Documentation"
+      pattern: "<script\\s+lang=\"ts\">"
+      message: "Document Svelte component props and events"
+      severity: warning
+    - name: "Store Documentation"
+      pattern: "export\\s+const\\s+\\w+Store"
+      message: "Document store interfaces and usage"
+      severity: warning
+
+## Project Documentation
+- pattern: "README.md"
+  rules:
+    - name: "Setup Documentation"
+      pattern: "##\\s+Setup"
+      message: "Document project setup and installation"
+      severity: error
+    - name: "Development Workflow"
+      pattern: "##\\s+Development"
+      message: "Document development workflow"
+      severity: warning
+    - name: "Deployment"
+      pattern: "##\\s+Deployment"
+      message: "Document deployment process"
+      severity: warning
+
+## API Documentation
+- pattern: "src/routes/api/**/*"
+  rules:
+    - name: "API Route Documentation"
+      pattern: "export\\s+(GET|POST|PUT|DELETE)"
+      message: "Document API routes with request/response examples"
+      severity: error
+    - name: "Authentication"
+      pattern: "export\\s+const\\s+handle\\s*="
+      message: "Document authentication requirements"
+      severity: warning
+    - name: "Error Handling"
+      pattern: "throw\\s+new\\s+Error"
+      message: "Document error codes and messages"
+      severity: warning
+
+## User Documentation
+- pattern: "docs/**/*.md"
+  rules:
+    - name: "User Guide Structure"
+      pattern: "##\\s+Usage"
+      message: "Write clear user guides with examples"
+      severity: warning
+    - name: "Screenshots"
+      pattern: "!\\[.*\\]\\(.*\\)"
+      message: "Include screenshots in documentation"
+      severity: warning
+    - name: "Accessibility"
+      pattern: "##\\s+Accessibility"
+      message: "Document accessibility features"
+      severity: warning
+
+## Testing Documentation
+- pattern: "**/*.{test,spec}.{ts,js}"
+  rules:
+    - name: "Test Setup"
+      pattern: "describe\\('.*',\\s*\\(\\)\\s*=>\\s*\\{"
+      message: "Document test setup and requirements"
+      severity: warning
+    - name: "Test Coverage"
+      pattern: "test\\('.*',\\s*\\(\\)\\s*=>\\s*\\{"
+      message: "Document test coverage goals"
+      severity: warning
+    - name: "Test Data"
+      pattern: "const\\s+testData\\s*="
+      message: "Document test data requirements"
+      severity: warning
+
+## Maintenance
+- pattern: "**/*.md"
+  rules:
+    - name: "Documentation Updates"
+      pattern: "Last updated:"
+      message: "Review and update documentation regularly"
+      severity: warning
+    - name: "Breaking Changes"
+      pattern: "##\\s+Breaking Changes"
+      message: "Document breaking changes"
+      severity: error
+    - name: "Migration Guide"
+      pattern: "##\\s+Migration"
+      message: "Document migration guides for major changes"
+      severity: warning

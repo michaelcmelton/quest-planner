@@ -1,7 +1,8 @@
 import type { Quest, QuestsData } from '../types/quests';
+import questsData from '../data/quests.json';
 
-let quests = $state<QuestsData>({});
-let questList = $state<Quest[]>([]);
+let quests = $state<QuestsData>(questsData);
+let questList = $state<Quest[]>(Object.values(questsData).sort((a, b) => a.number - b.number));
 
 export const questStore = {
     subscribe(callback: (state: { quests: QuestsData; questList: Quest[] }) => void) {

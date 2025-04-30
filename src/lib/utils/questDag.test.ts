@@ -109,14 +109,14 @@ describe('QuestDAG', () => {
         const dag = new QuestDAG(mockQuests);
         const result = dag.validateRoute(['quest2', 'quest1', 'quest3']);
         expect(result.isValid).toBe(false);
-        expect(result.errors).toContain('Quest quest2 requires quest1 to be completed first');
+        expect(result.errors).toContain('"Quest 2" requires "Quest 1" to be completed first');
     });
 
     it('should detect missing quests', () => {
         const dag = new QuestDAG(mockQuests);
         const result = dag.validateRoute(['quest1', 'quest4', 'quest3']);
         expect(result.isValid).toBe(false);
-        expect(result.errors).toContain('Quest quest4 not found in quest database');
+        expect(result.errors).toContain('Quest "quest4" not found in quest database');
     });
 
     it('should get available quests based on completed quests', () => {

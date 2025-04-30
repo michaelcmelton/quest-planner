@@ -1,3 +1,4 @@
+import { questStore } from '$lib/stores/questStore.svelte';
 import type { QuestsData } from '../types/quests';
 
 export class QuestDAG {
@@ -39,17 +40,19 @@ export class QuestDAG {
 
         for (let i = 0; i < route.length; i++) {
             const questId = route[i];
+            const quest = this.quests[questId];
             const prerequisites = this.graph.get(questId);
 
             if (!prerequisites) {
-                errors.push(`Quest ${questId} not found in quest database`);
+                errors.push(`Quest "${questId}" not found in quest database`);
                 continue;
             }
 
             // Check if all prerequisites are completed
             for (const prereq of prerequisites) {
                 if (!completed.has(prereq)) {
-                    errors.push(`Quest ${questId} requires ${prereq} to be completed first`);
+                    const prereqQuest = this.quests[prereq];
+                    errors.push(`"${quest.name}" requires "${prereqQuest.name}" to be completed first`);
                 }
             }
 

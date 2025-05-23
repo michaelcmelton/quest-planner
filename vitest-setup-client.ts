@@ -15,4 +15,10 @@ Object.defineProperty(window, 'matchMedia', {
 	}))
 });
 
+// Mock window.location for navigation tests
+Object.defineProperty(window, 'location', {
+	value: { href: '' },
+	writable: true
+});
+
 // add more mocks here if you need them

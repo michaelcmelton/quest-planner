@@ -1,18 +1,38 @@
 <script lang="ts">
+  import { goto } from '$app/navigation';
+  
   export let variant = 'primary';
   export let size = 'medium';
   export let type: 'button' | 'submit' | 'reset' = 'button';
   export let disabled = false;
+  export let href: string | undefined = undefined;
+
+  function handleClick(event: MouseEvent) {
+    if (href) {
+      event.preventDefault();
+      goto(href);
+    }
+  }
 </script>
 
-<button
-  {type}
-  {disabled}
-  class="button {variant} {size}"
-  on:click
->
-  <slot />
-</button>
+{#if href !== undefined}
+  <a
+    {href}
+    class="button {variant} {size}"
+    on:click={handleClick}
+  >
+    <slot />
+  </a>
+{:else}
+  <button
+    {type}
+    {disabled}
+    class="button {variant} {size}"
+    on:click
+  >
+    <slot />
+  </button>
+{/if}
 
 <style>
   .button {
@@ -22,6 +42,9 @@
     border-radius: var(--border-radius);
     font-weight: 500;
     transition: all var(--transition-speed) ease;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
   }
 
   .button:disabled {
@@ -46,6 +69,15 @@
 
   .secondary:hover:not(:disabled) {
     background-color: var(--color-tertiary);
+  }
+
+  .danger {
+    background-color: var(--color-danger, #dc2626);
+    color: var(--color-text-primary);
+  }
+
+  .danger:hover:not(:disabled) {
+    background-color: var(--color-danger-hover, #b91c1c);
   }
 
   /* Sizes */

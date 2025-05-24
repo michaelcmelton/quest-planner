@@ -11211,13 +11211,6 @@
           "boostable": false,
           "required": true,
           "link": "[[Hunter level|Hunter]]"
-        },
-        {
-          "skill": "Attack|99|link=yes}}, OR {{SCP|Strength",
-          "level": 99,
-          "boostable": false,
-          "required": false,
-          "link": "[[Attack|99|link=yes}}, OR {{SCP|Strength level|Attack|99|link=yes}}, OR {{SCP|Strength]]"
         }
       ],
       "quests": [

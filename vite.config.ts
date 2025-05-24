@@ -5,6 +5,13 @@ import { defineConfig } from 'vite';
 export default defineConfig({
 	plugins: [sveltekit()],
 	test: {
+		coverage: {
+			provider: 'v8',
+			reporter: ['text', 'json', 'html'],
+			reportsDirectory: './coverage',
+			exclude: ['src/lib/types/**/*.ts', '*.config.{js,ts}', 'src/app.d.ts', 'src/lib/index.ts', 'scripts/constants.js'],
+			include: ['src/**', 'scripts/**']
+		},
 		workspace: [
 			{
 				extends: './vite.config.ts',
